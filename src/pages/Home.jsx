@@ -1,8 +1,12 @@
 import React from 'react';
 import '../pages/home.css'; // Add custom styles here
+import Ideas from './Ideas';
+import StrengthInNumbers from './StrengthInNumbers';
+import PricingSection from './PricingSection';
 
 const Home = () => {
   return (
+    <>
     <div className="home-page container-fluid py-5">
       <div className="row align-items-center">
         {/* Left Section: Image */}
@@ -54,6 +58,12 @@ const Home = () => {
         </div>
       </div>
     </div>
+    
+
+<Ideas/>
+<StrengthInNumbers/>
+<PricingSection/>
+    </>
   );
 };
 
