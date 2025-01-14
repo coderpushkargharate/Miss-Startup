@@ -1,0 +1,17 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font Colors */
+  --font-color: #1becb8; /* Primary text color */
+
+  /* Fonts */
+  --font-family: 'Arial, sans-serif';
+
+  /* Background Colors */
+  --bg-color: #f8f9fa; /* Light background */
+
+}
