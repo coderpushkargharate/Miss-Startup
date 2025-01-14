@@ -1,174 +1,126 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../pages/ideas.css"; // Custom styling (optional)
 
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+const courses = [
+  {
+    id: 1,
+    category: ["Art", "Design"],
+    level: "Intermediate",
+    title: "Music Theory Learn New student & Fundamentals",
+    price: "$500",
+    author: "artincorsese",
+    rating: 0,
+    image: "src/assets/homeimg/course_image7.jpg",
+  },
+  {
+    id: 2,
+    category: ["Data", "Marketing"],
+    level: "High",
+    title: "Competitive Strategy law for all students",
+    price: "Free",
+    author: "artincorsese",
+    rating: 5,
+    image: "src/assets/homeimg/course_image8.jpg",
+  },
+  {
+    id: 3,
+    category: ["Digital"],
+    level: "Intermediate",
+    title: "Machine Learning A-Z: Hands-On Python and Java",
+    price: "$89",
+    author: "scorsese",
+    rating: 0,
+    image: "src/assets/homeimg/course_image9.jpg",
+  },
+  {
+    id: 4,
+    category: ["Java", "Python"],
+    level: "High",
+    title: "Strategy law and Organization Foundation",
+    price: "$59",
+    author: "courselog",
+    rating: 0,
+    image: "src/assets/homeimg/course_image9.jpg",
+  },
+  {
+    id: 5,
+    category: ["Data", "Marketing"],
+    level: "Beginner",
+    title: "Achieving Advanced in Insights with Big",
+    price: "$90",
+    author: "margaret",
+    rating: 0,
+    image: "src/assets/homeimg/course_image7.jpg",
+  },
+  {
+    id: 6,
+    category: ["Data", "Math"],
+    level: "Intermediate",
+    title: "Bases Matemáticas dios Álgebra Ecuacion",
+    price: "$500",
+    author: "atwood",
+    rating: 3,
+    image: "src/assets/homeimg/course_image7.jpg",
+  },
+];
 
-const Ideas = () => {
-  const categories = [
-    "All Category",
-    "Artificial Intelligence",
-    "Business Analysis",
-    "Computer Science",
-    "Design Architect",
-    "Design",
-    "Marketing",
-    "Digital",
-    "Math",
-    "Java",
-  ];
-
-  const courses = [
-    {
-      id: 1,
-      title: "Music Theory Learn New student & Fundamentals",
-      price: "$500",
-      level: "Intermediate",
-      category: "Design",
-      image: "src/assets/homeimg/hero_aera.png",
-    },
-    {
-      id: 2,
-      title: "Competitive Strategy law for all students",
-      price: "Free",
-      level: "High",
-      category: "Marketing",
-      image: "src/assets/homeimg/hero_aera.png",
-    },
-    {
-      id: 3,
-      title: "Machine Learning A-Z: Hands-On Python and Java",
-      price: "$89",
-      level: "Intermediate",
-      category: "Digital",
-      image: "src/assets/homeimg/hero_aera.png",
-    },
-    {
-      id: 4,
-      title: "Strategy law and Organization Foundation",
-      price: "$59",
-      level: "High",
-      category: "Java",
-      image: "src/assets/homeimg/hero_aera.png",
-    },
-    {
-      id: 5,
-      title: "Achieving Advanced in Insights with Big",
-      price: "$90",
-      level: "Beginner",
-      category: "Marketing",
-      image: "src/assets/homeimg/hero_aera.png",
-    },
-    {
-      id: 6,
-      title: "Bases Matemáticas dios Álgebra Ecuacion",
-      price: "$500",
-      level: "Intermediate",
-      category: "Math",
-      image: "src/assets/homeimg/hero_aera.png",
-    },
-  ];
-
-  const [selectedCategory, setSelectedCategory] = useState("All Category");
-
-  const filteredCourses =
-    selectedCategory === "All Category"
-      ? courses
-      : courses.filter((course) => course.category === selectedCategory);
-
-  // Split categories into chunks of 6 for the carousel
-  const chunkArray = (arr, size) =>
-    arr.reduce((acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]), []);
-  const categoryChunks = chunkArray(categories, 6);
-
-  return (
-    <div className="container my-4">
-      <h2 className="text-center mb-4">Pick a Course to Get Started</h2>
-
-      {/* Category Button Carousel */}
-      <div id="categoryCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          {categoryChunks.map((chunk, index) => (
-            <div
-              key={index}
-              className={`carousel-item ${index === 0 ? "active" : ""}`}
-            >
-              <div className="d-flex justify-content-center">
-                {chunk.map((category) => (
-                  <button
-                    key={category}
-                    className={`btn ${
-                      selectedCategory === category
-                        ? "btn-primary"
-                        : "btn-outline-primary"
-                    } mx-2`}
-                    onClick={() => setSelectedCategory(category)}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
+const CourseCard = ({ course }) => (
+  <div className="col-lg-4 col-md-6 mb-4">
+    <div className="card h-100">
+      <img
+        src={course.image}
+        alt={course.title}
+        className="card-img-top"
+        style={{ height: "200px", objectFit: "cover" }}
+      />
+      <div className="card-body">
+        <div className="d-flex mb-2">
+          {course.category.map((cat, index) => (
+            <span key={index} className="badge bg-primary me-2">
+              {cat}
+            </span>
           ))}
+          <span className={`badge bg-${course.level === "High" ? "danger" : "secondary"}`}>
+            {course.level}
+          </span>
         </div>
-
-        {/* Carousel Controls */}
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#categoryCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#categoryCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      {/* Course Cards */}
-      <div className="row mt-4">
-        {filteredCourses.length > 0 ? (
-          filteredCourses.map((course) => (
-            <div key={course.id} className="col-md-4 mb-4">
-              <div className="card">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="card-img-top"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{course.title}</h5>
-                  <p className="card-text">
-                    <strong>Price:</strong> {course.price}
-                  </p>
-                  <p className="card-text">
-                    <strong>Level:</strong> {course.level}
-                  </p>
-                  <p className="card-text">
-                    <strong>Category:</strong> {course.category}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-center">No courses found for this category.</p>
-        )}
-      </div>
-
-      {/* Browse More Button */}
-      <div className="text-center">
-        <button className="btn btn-secondary">Browse more courses</button>
+        <h5 className="card-title">{course.title}</h5>
+        <p className="card-text text-muted">By {course.author}</p>
+        <div className="d-flex justify-content-between align-items-center">
+          <span className="fw-bold">{course.price}</span>
+          <div className="text-warning">
+            {"★".repeat(course.rating) + "☆".repeat(5 - course.rating)}
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
+
+const Ideas = () => (
+  <div className="container py-5">
+    <h2 className="text-center mb-3">Featured Courses</h2>
+    <p className="text-center mb-4">Pick a Course to Get Started</p>
+
+    <div className="d-flex justify-content-center mb-4">
+      <button className="btn btn-primary mx-2">All Category</button>
+      <button className="btn btn-outline-secondary mx-2">Artificial Intelligence</button>
+      <button className="btn btn-outline-secondary mx-2">Business Analysis</button>
+      <button className="btn btn-outline-secondary mx-2">Computer Science</button>
+      <button className="btn btn-outline-secondary mx-2">Design Architect</button>
+    </div>
+
+    <div className="row">
+      {courses.map((course) => (
+        <CourseCard key={course.id} course={course} />
+      ))}
+    </div>
+
+    <div className="text-center mt-4">
+      <button className="btn btn-danger">Browse more courses →</button>
+    </div>
+  </div>
+);
 
 export default Ideas;

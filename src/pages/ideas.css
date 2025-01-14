@@ -1,0 +1,26 @@
+.card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+  }
+  
+  .btn {
+    text-transform: capitalize;
+  }
+  
+  h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  

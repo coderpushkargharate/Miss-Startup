@@ -1,0 +1,60 @@
+/* Basic styling */
+.navbar {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Hover effect for dropdown items */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+/* Styling for dropdown menu */
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    border-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar background and shadow */
+.navbar-light {
+    background-color: #fff;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: #007bff; /* Toggler icon color */
+}
+
+/* Navbar branding (Logo) */
+.navbar-brand img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* Active state for NavLink (current page) */
+.navbar-nav .nav-link.active {
+    color: #007bff !important;  /* Blue color for active link */
+    text-decoration: underline;  /* Underline for active link */
+}
+
+/* Remove underline from other links when not active */
+.navbar-nav .nav-link:not(.active) {
+    text-decoration: none;
+}
