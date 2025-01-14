@@ -1,0 +1,85 @@
+/* Container for cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cards per row */
+    gap: 1rem;
+    /* Reduce the gap between cards */
+    margin: 2rem auto;
+    /* Center the container horizontally */
+    max-width: 65%;
+    /* Set a maximum width for the container */
+    justify-content: center;
+    /* Align cards in the center horizontally */
+    height: 100%;
+}
+
+/* Individual cards */
+.card {
+    width: 350px;
+    /* Set a fixed width for each card */
+    margin: 0 auto;
+    /* Center the cards horizontally */
+}
+
+/* Card hover effect */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth animation */
+    cursor: pointer;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    /* Move card upward on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Add shadow for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row on medium screens */
+        gap: 1rem;
+        /* Maintain a smaller gap */
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        /* 1 card per row on small screens */
+    }
+
+    .card {
+        width: 90%;
+        /* Make cards responsive for smaller screens */
+    }
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: auto;
+    padding-top: 10px;
+    font-size: 0.875rem;
+    /* Adjust size as needed */
+    color: #444445;
+    /* Optional: Set text color to secondary */
+    border-top: 1px solid #e9ecef;
+    /* Optional: Add a top border for separation */
+}
+
+.date {
+
+    margin-top: 10vh;
+    float: left;
+}
+
+.read-time {
+    margin-top: 10vh;
+    float: right;
+}
