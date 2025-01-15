@@ -16,6 +16,7 @@ const StrengthInNumbers = () => {
         <h6 className="text-uppercase text-warning">Funcfact</h6>
         <h2 className="fw-bold">Strength in Numbers</h2>
       </div>
+      <div className="container">
       <div className="row justify-content-center">
         {stats.map((stat, index) => (
           <div key={index} className="col-6 col-md-3 text-center mb-4">
@@ -32,6 +33,8 @@ const StrengthInNumbers = () => {
           </div>
         ))}
       </div>
+      </div>
+     
     </div>
   );
 };
