@@ -1,25 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Dashboard.css"; // Assuming you have a CSS file for styling
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const [selectedPage, setSelectedPage] = useState("ideas");
-
-  // State for Idea Form
-  const [idea, setIdea] = useState({
-    title: "",
-    description: "",
-  });
-
-  // State for Blog Form
-  const [blog, setBlog] = useState({
-    category: "",
-    title: "",
-    description: "",
-    image: "",
-  });
-
-  // State for Course Form
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [course, setCourse] = useState({
     category: "",
     level: "",
@@ -30,48 +15,14 @@ const Dashboard = () => {
     image: "",
   });
 
-  // Handle Idea Form changes
-  const handleIdeaChange = (e) => {
-    setIdea({ ...idea, [e.target.name]: e.target.value });
-  };
-
-  // Handle Blog Form changes
-  const handleBlogChange = (e) => {
-    setBlog({ ...blog, [e.target.name]: e.target.value });
-  };
-
-  // Handle Course Form changes
   const handleCourseChange = (e) => {
     setCourse({ ...course, [e.target.name]: e.target.value });
   };
 
-  // Submit Idea
-  const handleIdeaSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/api/ideas", idea);
-      alert("Idea added successfully!");
-      setIdea({ title: "", description: "" });
-    } catch (err) {
-      console.error(err);
-      alert("Error adding idea");
-    }
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
   };
 
-  // Submit Blog
-  const handleBlogSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/api/blogs", blog);
-      alert("Blog added successfully!");
-      setBlog({ category: "", title: "", description: "", image: "" });
-    } catch (err) {
-      console.error(err);
-      alert("Error adding blog");
-    }
-  };
-
-  // Submit Course
   const handleCourseSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -118,112 +69,25 @@ const Dashboard = () => {
         </ul>
       </div>
       <div className="content">
-        {/* Idea Form */}
-        {selectedPage === "ideas" && (
-          <div className="container py-5">
-            <h2 className="text-center mb-3">Add Idea</h2>
-            <form onSubmit={handleIdeaSubmit}>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="title"
-                  placeholder="Title"
-                  className="form-control"
-                  value={idea.title}
-                  onChange={handleIdeaChange}
-                />
-              </div>
-              <div className="mb-3">
-                <textarea
-                  name="description"
-                  placeholder="Description"
-                  className="form-control"
-                  value={idea.description}
-                  onChange={handleIdeaChange}
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Add Idea
-              </button>
-            </form>
-          </div>
-        )}
-
-        {/* Blog Form */}
-        {selectedPage === "blog" && (
-          <div className="container py-5">
-            <h2 className="text-center mb-3">Add Blog</h2>
-            <form onSubmit={handleBlogSubmit}>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="category"
-                  placeholder="Category"
-                  className="form-control"
-                  value={blog.category}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="title"
-                  placeholder="Title"
-                  className="form-control"
-                  value={blog.title}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <div className="mb-3">
-                <textarea
-                  name="description"
-                  placeholder="Description"
-                  className="form-control"
-                  value={blog.description}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="image"
-                  placeholder="Image URL"
-                  className="form-control"
-                  value={blog.image}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Add Blog
-              </button>
-            </form>
-          </div>
-        )}
-
         {/* Course Form */}
         {selectedPage === "course" && (
           <div className="container py-5">
             <h2 className="text-center mb-3">Add Course</h2>
             <form onSubmit={handleCourseSubmit}>
               <div className="mb-3">
-                <input
-                  type="text"
+                <select
                   name="category"
-                  placeholder="Category"
                   className="form-control"
                   value={course.category}
                   onChange={handleCourseChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="level"
-                  placeholder="Level"
-                  className="form-control"
-                  value={course.level}
-                  onChange={handleCourseChange}
-                />
+                >
+                  <option value="">Select Category</option>
+                  <option value="Artificial Intelligence">Artificial Intelligence</option>
+                  <option value="Business Analysis">Business Analysis</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Design Architect">Design Architect</option>
+                  <option value="Marketing">Marketing</option>
+                </select>
               </div>
               <div className="mb-3">
                 <input

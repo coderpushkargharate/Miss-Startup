@@ -17,13 +17,18 @@ app.use(cors()); // Enable Cross-Origin Resource Sharing
 // Connect to MongoDB database using the URI from .env file
 mongoose
   .connect(process.env.MONGODB_URI)
-  .then(() => console.log("Database connected successfully"))
-  .catch((err) => console.error("Database connection error:", err));
+  .then(() => {
+    console.log("Database connected successfully");
+  })
+  .catch((err) => {
+    console.error("Database connection error:", err.message);
+  });
 
-
-app.use("/api/courses", courseRoutes); // Use course routes for handling requests
+// Use course routes for handling requests
+app.use("/api/courses", courseRoutes);
 
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
+
 });
