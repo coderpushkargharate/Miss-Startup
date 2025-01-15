@@ -4,7 +4,14 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
   const [selectedPage, setSelectedPage] = useState("ideas");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [blog, setBlog] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    date: new Date(),
+    readTime: "7 MIN READ",
+  });
+
   const [course, setCourse] = useState({
     category: "",
     level: "",
@@ -15,12 +22,30 @@ const Dashboard = () => {
     image: "",
   });
 
+  const handleBlogChange = (e) => {
+    setBlog({ ...blog, [e.target.name]: e.target.value });
+  };
+
   const handleCourseChange = (e) => {
     setCourse({ ...course, [e.target.name]: e.target.value });
   };
 
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
+  const handleBlogSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:5000/api/blogs", blog);
+      alert("Blog added successfully!");
+      setBlog({
+        title: "",
+        description: "",
+        imageUrl: "",
+        date: new Date(),
+        readTime: "7 MIN READ",
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Error adding blog");
+    }
   };
 
   const handleCourseSubmit = async (e) => {
@@ -69,6 +94,57 @@ const Dashboard = () => {
         </ul>
       </div>
       <div className="content">
+        {/* Blog Form */}
+        {selectedPage === "blog" && (
+          <div className="container py-5">
+            <h2 className="text-center mb-3">Add Blog</h2>
+            <form onSubmit={handleBlogSubmit}>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Blog Title"
+                  className="form-control"
+                  value={blog.title}
+                  onChange={handleBlogChange}
+                />
+              </div>
+              <div className="mb-3">
+                <textarea
+                  name="description"
+                  placeholder="Blog Description"
+                  className="form-control"
+                  value={blog.description}
+                  onChange={handleBlogChange}
+                ></textarea>
+              </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="imageUrl"
+                  placeholder="Image URL"
+                  className="form-control"
+                  value={blog.imageUrl}
+                  onChange={handleBlogChange}
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="readTime"
+                  placeholder="Read Time"
+                  className="form-control"
+                  value={blog.readTime}
+                  onChange={handleBlogChange}
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Add Blog
+              </button>
+            </form>
+          </div>
+        )}
+
         {/* Course Form */}
         {selectedPage === "course" && (
           <div className="container py-5">

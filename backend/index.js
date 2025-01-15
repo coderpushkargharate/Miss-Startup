@@ -1,53 +1,65 @@
-// server.js
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');  // Import dotenv package
+
+// Load environment variables from .env file
+dotenv.config();
 
 const app = express();
+
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB Connection
-mongoose.connect("mongodb://localhost:27017/blogDB")
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+// MongoDB connection using environment variable
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Database connected'))
+  .catch((err) => console.error('Database connection error:', err));
 
-// Blog Model
+// Blog schema
 const blogSchema = new mongoose.Schema({
   title: String,
   description: String,
-  image: String,
-  date: String,
+  imageUrl: String,
+  date: Date,
   readTime: String,
 });
 
-const Blog = mongoose.model("Blog", blogSchema);
+const Blog = mongoose.model('Blog', blogSchema);
 
-// Routes
-// Add Blog
-app.post("/api/blog", async (req, res) => {
-  const { title, description, image, date, readTime } = req.body;
-  const newBlog = new Blog({ title, description, image, date, readTime });
-  try {
-    await newBlog.save();
-    res.status(201).send("Blog added");
-  } catch (error) {
-    res.status(400).send("Error adding blog");
-  }
-});
-
-// Get All Blogs
-app.get("/api/blogs", async (req, res) => {
+// Route to fetch all blogs
+app.get('/api/blogs', async (req, res) => {
   try {
     const blogs = await Blog.find();
-    res.status(200).json(blogs);
-  } catch (error) {
-    res.status(500).send("Error fetching blogs");
+    res.json(blogs);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
 });
 
-// Start Server
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+// Route to create a new blog
+app.post('/api/blogs', async (req, res) => {
+  const { title, description, imageUrl, date, readTime } = req.body;
+  const blog = new Blog({
+    title,
+    description,
+    imageUrl,
+    date,
+    readTime,
+  });
+
+  try {
+    await blog.save();
+    res.status(201).json(blog);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Server setup
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
