@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Footer = () => {
   return (
     <footer className="bg-dark text-white pt-5 pb-3">
-      <div className="container">
-        <div className="row">
+      <div className="container ">
+        <div className="row mx-5">
           {/* Company Section */}
           <div className="col-6 col-md-3 mb-4">
             <h5 className="text-uppercase mb-3">Company</h5>
