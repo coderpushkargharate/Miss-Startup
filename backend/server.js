@@ -1,24 +1,29 @@
+// Import required modules
+require('dotenv').config(); // Load environment variables from .env file
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const courseRoutes = require("./routes/courseRoutes");
+const courseRoutes = require("./routes/courseRoutes"); // Import routes for course operations
 
 const app = express();
-const PORT = 5000;
+
+// Define the port (from .env or default to 5000)
+const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(express.json());
-app.use(cors());
+app.use(express.json()); // Parse incoming JSON requests
+app.use(cors()); // Enable Cross-Origin Resource Sharing
 
-// Database Connection
+// Connect to MongoDB database using the URI from .env file
 mongoose
-  .connect("mongodb://127.0.0.1:27017/courseDB", { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Database connected"))
-  .catch((err) => console.error(err));
+  .connect(process.env.MONGODB_URI)
+  .then(() => console.log("Database connected successfully"))
+  .catch((err) => console.error("Database connection error:", err));
 
-// Routes
-app.use("/api/courses", courseRoutes);
 
+app.use("/api/courses", courseRoutes); // Use course routes for handling requests
+
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
