@@ -1,66 +1,107 @@
-import React from "react";
-import "../pages/home.css";
-import { FaSearch } from "react-icons/fa";
-import Ideas from "./Ideas";
-import StrengthInNumbers from "./StrengthInNumbers";
-import PricingSection from "./PricingSection";
-const Home = () => {
-  const handleSearch = () => {
-    const query = document.querySelector('.form-control').value;
-    console.log("Searching for:", query); // You can replace this with actual search logic
-  };
+import "./Blog.css"; // Assuming you have a CSS file for styling
 
-  return (
-    <>
-      <div className="hero-section d-flex" style={{ height: "100vh", background: "#f8f9fa" }}>
-        <div className="container position-relative">
-          <div className="row align-items-center">
-            {/* Left Section - Image */}
-            <div className="col-lg-6 text-center mt-5">
-              <img
-                src="src/assets/homeimg/hero_aera.png"
-                alt="Learning"
-                className="img-fluid ps-5"
-                style={{ borderRadius: "15px" }}
-              />
-            </div>
-            {/* Right Section - Text */}
-            <div className="col-lg-6 text-md-start text-center herotext ps-lg-5 ">
-              <h5 className="text-danger mb-3">The Leader in Online Learning</h5>
-              <h1 className="fw-bold">
-                Learn the Skills you <br /> Need to Succeed
-              </h1>
-              <p className="text-muted mt-3">
-                Solve tasks and check the results right away. Courses <br /> so easy it is impossible not to understand.
-              </p>
-              <div className="search-bar mt-4">
-                <div className="input-group ">
-                  <input
-                    type="text"
-                    className="form-control py-3"
-                    placeholder="Search for courses"
-                  />
-                  <button className="btn btn-danger px-4" onClick={handleSearch}>
-                  <FaSearch />
-                  </button>
+function Blog() {
+    return (
+        <>
+            <div className="card-container mx-15">
+                <div className="card hover-card">
+                    <img src="src/assets/Blog/cashless-every-where.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">How to choose the Best Health Insurance Providers in India in 2025?</h5>
+                        <p className="card-text">Discover the best health insurers in India for 2025. Compare top health insurers based on claim settlement, network hospitals, and overall coverage.</p>
+                        <p className="footer">
+                            <small className="date">31 Dec 2024</small>
+                            <small className="read-time">7 MIN READ</small>
+                        </p>
+                    </div>
                 </div>
-                <div className="mt-3 text-muted">
-                  <p>Position</p>
+                <div className="card hover-card">
+                    <img src="src/assets/Blog/health-insurance-provider.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">What is the Cashless Everywhere Schema in Health Insurance Plans?</h5>
+                        <p className="card-text">Did you hear about the Cashless Everywhere Scheme for health insurance plans? How will that change the health insurance approach for you? Here's all that you need to know!</p>
+                        <p className="footer">
+                            <small className="date">31 Dec 2024</small>
+                            <small className="read-time">7 MIN READ</small>
+                        </p>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div className="position-absolute imganimation">
-              <img src="src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+                <div className="card hover-card">
+                    <img src="src/assets/Blog/heart-patients.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">Health Insurance for Heart Patients: Here's Everything You Need to Know!</h5>
+                        <p className="card-text">Ever wondered what the top health insurance plans are for people with a heart condition? Here are the top health policies that offer coverage
+                            for heart-related surgeries, pre-existing diseases, etc. Buy from Ditto Insurance. Book a call now to learn more!</p>
 
-      <Ideas/>
-      <StrengthInNumbers/>
-      <PricingSection/>
-    </>
-  );
-};
+                        <p className="footer">
 
-export default Home;
+                            <small className="date">31 Dec 2024</small>
+                            <small className="read-time">7 MIN READ</small>
+                        </p>
+                    </div>
+                </div>
+
+                {/* Next row of cards */}
+                <div className="card hover-card mt-5">
+                    <img src="src/assets/Blog/kotakI-term-1-cr.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">How to choose the Best Health Insurance Providers in India in 2025?</h5>
+                        <p className="card-text">Did you hear about the Cashless Everywhere Scheme for health insurance plans? How will that change the health insurance approach for you? Here's all that you need to know!</p>
+                        <p className="footer">
+
+                            <small className="date">31 Dec 2024</small>
+                            <small className="read-time">7 MIN READ</small>
+                        </p>
+                    </div>
+                </div>
+                <div className="card hover-card mt-5">
+                    <img src="src/assets/Blog/SBI-term-1-cr.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">Health Insurance for Heart Patients: Here's Everything You Need to Know!</h5>
+                        <p className="card-text">Ever wondered what the top health insurance plans are for people with a heart condition? Here are the top health policies that offer coverage for heart-related surgeries, pre-existing diseases, etc. Buy from Ditto Insurance. Book a call now to learn more!</p>
+                        <p className="footer">
+
+                            <small className="date">31 Dec 2024</small>
+                            <small className="read-time">7 MIN READ</small>
+                        </p>
+
+                    </div>
+                </div>
+                <div className="card hover-card mt-5">
+                    <img src="src/assets/Blog/term-insurance-providers.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">Health Insurance for Heart Patients: Here's Everything You Need to Know!</h5>
+                        <p className="card-text">Ever wondered what the top health insurance plans are for people with a heart condition? Here are the top health policies that offer coverage for heart-related surgeries, pre-existing diseases, etc. Buy from Ditto Insurance. Book a call now to learn more!</p>
+                        <p className="footer">
+
+                            <small className="date">31 Dec 2024</small>
+                            <small className="read-time">7 MIN READ</small>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            {/* Pagination Section */}
+            <nav aria-label="Page navigation example">
+                <ul className="pagination justify-content-center mt-4">
+                    <li className="page-item">
+                        <a className="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li className="page-item"><a className="page-link" href="#">1</a></li>
+                    <li className="page-item"><a className="page-link" href="#">2</a></li>
+                    <li className="page-item"><a className="page-link" href="#">3</a></li>
+                    <li className="page-item">
+                        <a className="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </>
+    );
+}
+
+export default Blog;

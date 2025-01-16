@@ -24,8 +24,6 @@ const Ideas = () => {
     fetchCourses();
   }, []);
 
- 
-
   const handleCardClick = (id) => {
     navigate(`/course/${id}`);
   };
@@ -105,7 +103,6 @@ const Ideas = () => {
 
       {/* Buttons for Show More and View All */}
       <div className="text-center mt-4">
-       
         <Link to="/mainideas" className="btn btn-primary">
           View All Courses
         </Link>

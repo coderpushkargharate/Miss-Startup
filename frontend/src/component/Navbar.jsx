@@ -67,8 +67,8 @@ const Navbar = () => {
                 Ideas 
               </Link>
               <ul className="dropdown-menu" aria-labelledby="pagesDropdown">
-                <li><Link className="dropdown-item" to="/dashboard">Page 1</Link></li>
-                <li><Link className="dropdown-item" to="/page2">Page 2</Link></li>
+                <li><Link className="dropdown-item" to="/mainideas">Page 1</Link></li>
+                <li><Link className="dropdown-item" to="/dashboard">Page 2</Link></li>
               </ul>
             </li>
 
