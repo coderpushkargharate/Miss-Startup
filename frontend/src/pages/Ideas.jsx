@@ -9,22 +9,28 @@ import Slider from "react-slick";
 const Ideas = () => {
   const [courses, setCourses] = useState([]);
   const [visibleCourses, setVisibleCourses] = useState(6);
+  const [selectedCategory, setSelectedCategory] = useState("All"); // Track selected category
   const navigate = useNavigate();
 
+  // Fetch courses from API
+  const fetchCourses = async (category) => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/courses", {
+        params: { category: category !== "All" ? category : undefined }, // Pass category only if it's not "All"
+      });
+      setCourses(response.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/api/courses");
-        setCourses(response.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+    fetchCourses(selectedCategory);
+  }, [selectedCategory]);
 
-    fetchCourses();
-  }, []);
-
- 
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
 
   const handleCardClick = (id) => {
     navigate(`/course/${id}`);
@@ -37,43 +43,31 @@ const Ideas = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
     <div className="container py-5">
       <h2 className="text-center mb-4" style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}>
-        Featured Courses
+        Ideas
       </h2>
 
-      {/* Horizontal Scroll Section as Carousel */}
+      {/* Category Filter */}
       <div className="mb-4">
         <Slider {...sliderSettings}>
-          <button className="btn btn-outline-primary" style={{ margin: "0 20px" }}>All Category</button>
-          <button className="btn btn-outline-secondary" style={{ margin: "0 20px" }}>Artificial Intelligence</button>
-          <button className="btn btn-outline-secondary" style={{ margin: "0 20px" }}>Business Analysis</button>
-          <button className="btn btn-outline-secondary" style={{ margin: "0 20px" }}>Computer Science</button>
-          <button className="btn btn-outline-secondary" style={{ margin: "0 20px" }}>Design Architect</button>
-          <button className="btn btn-outline-secondary" style={{ margin: "0 20px" }}>Marketing</button>
-          <button className="btn btn-outline-secondary" style={{ margin: "0 20px" }}>Mathematics</button>
+          {["All", "Artificial Intelligence", "Business Analysis", "Computer Science", "Design Architect", "Marketing"].map((category) => (
+            <button
+              key={category}
+              className={`btn ${selectedCategory === category ? "btn-primary" : "btn-outline-secondary"}`}
+              style={{ margin: "0 20px" }}
+              onClick={() => handleCategoryChange(category)}
+            >
+              {category}
+            </button>
+          ))}
         </Slider>
       </div>
 
@@ -103,9 +97,8 @@ const Ideas = () => {
         ))}
       </div>
 
-      {/* Buttons for Show More and View All */}
+      {/* View All Button */}
       <div className="text-center mt-4">
-       
         <Link to="/mainideas" className="btn btn-primary">
           View All Courses
         </Link>

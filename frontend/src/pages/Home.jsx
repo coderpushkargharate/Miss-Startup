@@ -20,12 +20,12 @@ const Home = () => {
               <img
                 src="src/assets/homeimg/hero_aera.png"
                 alt="Learning"
-                className="img-fluid ps-5"
+                className="img-fluid ps-5"  
                 style={{ borderRadius: "15px" }}
               />
             </div>
             {/* Right Section - Text */}
-            <div className="col-lg-6 text-md-start text-center herotext ps-lg-5 ">
+            <div className="col-lg-6 text-md-start text-center herotext  ps-lg-5 ">
               <h5 className="text-danger mb-3">The Leader in Online Learning</h5>
               <h1 className="fw-bold">
                 Learn the Skills you <br /> Need to Succeed
