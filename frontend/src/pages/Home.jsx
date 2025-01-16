@@ -28,7 +28,7 @@ const Home = () => {
             <div className="col-lg-6 text-md-start text-center herotext  ps-lg-5 ">
               <h5 className="text-danger mb-3">The Leader in Online Learning</h5>
               <h1 className="fw-bold">
-                Learn the Skills you 
+                Learn the Skills you <br /> Need to Succeed
               </h1>
               <p className="text-muted mt-3">
                 Solve tasks and check the results right away. Courses <br /> so easy it is impossible not to understand.

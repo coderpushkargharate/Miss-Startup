@@ -5,6 +5,7 @@ import './Navbar.css';  // Assuming you add custom CSS in this file
 const Navbar = () => {
   const location = useLocation();
 
+  // Function to check if the link is active
   const isActive = (path) => location.pathname === path ? "active" : "";
 
   return (
@@ -48,7 +49,7 @@ const Navbar = () => {
                 StartupCourse
               </Link>
               <ul className="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><Link className="dropdown-item" to="/">Home</Link></li>
+                <li><Link className="dropdown-item" to="/">Home 1</Link></li>
                 <li><Link className="dropdown-item" to="/home2">Home 2</Link></li>
               </ul>
             </li>
@@ -66,8 +67,8 @@ const Navbar = () => {
                 Ideas 
               </Link>
               <ul className="dropdown-menu" aria-labelledby="pagesDropdown">
-                <li><Link className="dropdown-item" to="/dashboard">Dashboard</Link></li>
-                <li><Link className="dropdown-item" to="/mainideas">MainIdeas</Link></li>
+                <li><Link className="dropdown-item" to="/dashboard">Page 1</Link></li>
+                <li><Link className="dropdown-item" to="/mainideas">Page 2</Link></li>
               </ul>
             </li>
 

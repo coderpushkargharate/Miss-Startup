@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Blog.css"; // Assuming you have a CSS file for styling
 
 function Blog() {
+
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -34,12 +35,16 @@ function Blog() {
                 <small className="date">{new Date(blog.date).toLocaleDateString()}</small>
                 <small className="read-time">{blog.readTime}</small>
               </p>
+              
             </div>
-          </div>
+          </div> 
+
+          
         ))}
       </div>
     </>
   );
+
 }
 
 export default Blog;
