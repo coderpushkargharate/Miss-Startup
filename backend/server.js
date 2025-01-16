@@ -1,37 +1,45 @@
-// Import required modules
 require('dotenv').config(); // Load environment variables from .env file
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require('body-parser'); // Import bodyParser for handling JSON requests
+const bodyParser = require('body-parser');
 
-// Import routes for course and blog operations
+// Import routes
 const courseRoutes = require("./routes/courseRoutes");
 const blogRoutes = require("./routes/blogRoutes");
+const aiRoutes = require("./routes/aiRoutes");
+const businessRoutes = require("./routes/businessRoutes");
 
 const app = express();
-
-// Define the port (from .env or default to 5000)
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(express.json()); // Parse incoming JSON requests
-app.use(cors()); // Enable Cross-Origin Resource Sharing
-app.use(bodyParser.json()); // Parse JSON body
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
 
-// Connect to MongoDB database using the URI from .env file
+// MongoDB Connection
 mongoose
   .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("Database connected successfully");
-  })
-  .catch((err) => {
-    console.error("Database connection error:", err.message);
-  });
+  .then(() => console.log("Database connected successfully"))
+  .catch((err) => console.error("Database connection error:", err.message));
 
-// Use course and blog routes for handling requests
+// Routes
 app.use("/api/courses", courseRoutes);
 app.use("/api/blogs", blogRoutes);
+app.use("/api/ai", aiRoutes);
+app.use("/api/business", businessRoutes);
+
+// 404 Error Handling
+app.use((req, res, next) => {
+  res.status(404).json({ message: "API endpoint not found" });
+});
+
+// Global Error Handling Middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: "An internal server error occurred", error: err.message });
+});
 
 // Start the server
 app.listen(PORT, () => {

@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import Ideas from "./Ideas";
 import StrengthInNumbers from "./StrengthInNumbers";
 import PricingSection from "./PricingSection";
+// import Testimonials from "./TestimonialsCarousel";
 const Home = () => {
   const handleSearch = () => {
     const query = document.querySelector('.form-control').value;
@@ -59,6 +60,7 @@ const Home = () => {
       <Ideas/>
       <StrengthInNumbers/>
       <PricingSection/>
+      {/* <Testimonials/> */}
     </>
   );
 };

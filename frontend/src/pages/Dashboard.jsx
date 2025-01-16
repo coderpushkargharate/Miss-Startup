@@ -22,49 +22,34 @@ const Dashboard = () => {
     image: "",
   });
 
-  const handleBlogChange = (e) => {
-    setBlog({ ...blog, [e.target.name]: e.target.value });
+  const [business, setBusiness] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    author: "",
+  });
+
+  const [ai, setAi] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const handleInputChange = (setter) => (e) => {
+    setter((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
   };
 
-  const handleCourseChange = (e) => {
-    setCourse({ ...course, [e.target.name]: e.target.value });
-  };
-
-  const handleBlogSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (url, data, setter, successMessage) => {
     try {
-      await axios.post("http://localhost:5000/api/blogs", blog);
-      alert("Blog added successfully!");
-      setBlog({
-        title: "",
-        description: "",
-        imageUrl: "",
-        date: new Date(),
-        readTime: "7 MIN READ",
-      });
-    } catch (err) {
-      console.error(err);
-      alert("Error adding blog");
-    }
-  };
-
-  const handleCourseSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/api/courses", course);
-      alert("Course added successfully!");
-      setCourse({
-        category: "",
-        level: "",
-        title: "",
-        price: "",
-        author: "",
-        rating: 0,
-        image: "",
-      });
-    } catch (err) {
-      console.error(err);
-      alert("Error adding course");
+      await axios.post(url, data);
+      alert(successMessage);
+      setter({});
+    } catch (error) {
+      console.error("Error:", error.response?.data || error.message);
+      alert("Error occurred. Check console for details.");
     }
   };
 
@@ -73,155 +58,109 @@ const Dashboard = () => {
       <div className="sidebar">
         <div className="logo">Dashboard</div>
         <ul>
-          <li
-            className={selectedPage === "ideas" ? "active" : ""}
-            onClick={() => setSelectedPage("ideas")}
-          >
-            Ideas
-          </li>
-          <li
-            className={selectedPage === "blog" ? "active" : ""}
-            onClick={() => setSelectedPage("blog")}
-          >
-            Blog
-          </li>
-          <li
-            className={selectedPage === "course" ? "active" : ""}
-            onClick={() => setSelectedPage("course")}
-          >
-            Course
-          </li>
+          {[ "blog", "course", "business", "ai"].map((page) => (
+            <li
+              key={page}
+              className={selectedPage === page ? "active" : ""}
+              onClick={() => setSelectedPage(page)}
+            >
+              {page.charAt(0).toUpperCase() + page.slice(1)}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="content">
-        {/* Blog Form */}
         {selectedPage === "blog" && (
-          <div className="container py-5">
-            <h2 className="text-center mb-3">Add Blog</h2>
-            <form onSubmit={handleBlogSubmit}>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="title"
-                  placeholder="Blog Title"
-                  className="form-control"
-                  value={blog.title}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <div className="mb-3">
-                <textarea
-                  name="description"
-                  placeholder="Blog Description"
-                  className="form-control"
-                  value={blog.description}
-                  onChange={handleBlogChange}
-                ></textarea>
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="imageUrl"
-                  placeholder="Image URL"
-                  className="form-control"
-                  value={blog.imageUrl}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="readTime"
-                  placeholder="Read Time"
-                  className="form-control"
-                  value={blog.readTime}
-                  onChange={handleBlogChange}
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Add Blog
-              </button>
-            </form>
-          </div>
+          <Form
+            title="Add Blog"
+            data={blog}
+            onChange={handleInputChange(setBlog)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/blogs",
+                blog,
+                setBlog,
+                "Blog added successfully!"
+              )
+            }
+          />
         )}
-
-        {/* Course Form */}
         {selectedPage === "course" && (
-          <div className="container py-5">
-            <h2 className="text-center mb-3">Add Course</h2>
-            <form onSubmit={handleCourseSubmit}>
-              <div className="mb-3">
-                <select
-                  name="category"
-                  className="form-control"
-                  value={course.category}
-                  onChange={handleCourseChange}
-                >
-                  <option value="">Select Category</option>
-                  <option value="Artificial Intelligence">Artificial Intelligence</option>
-                  <option value="Business Analysis">Business Analysis</option>
-                  <option value="Computer Science">Computer Science</option>
-                  <option value="Design Architect">Design Architect</option>
-                  <option value="Marketing">Marketing</option>
-                </select>
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="title"
-                  placeholder="Course Title"
-                  className="form-control"
-                  value={course.title}
-                  onChange={handleCourseChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="price"
-                  placeholder="Price"
-                  className="form-control"
-                  value={course.price}
-                  onChange={handleCourseChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="author"
-                  placeholder="Author"
-                  className="form-control"
-                  value={course.author}
-                  onChange={handleCourseChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="number"
-                  name="rating"
-                  placeholder="Rating"
-                  className="form-control"
-                  value={course.rating}
-                  onChange={handleCourseChange}
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  name="image"
-                  placeholder="Image URL"
-                  className="form-control"
-                  value={course.image}
-                  onChange={handleCourseChange}
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Add Course
-              </button>
-            </form>
-          </div>
+          <Form
+            title="Add Course"
+            data={course}
+            onChange={handleInputChange(setCourse)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/courses",
+                course,
+                setCourse,
+                "Course added successfully!"
+              )
+            }
+          />
+        )}
+        {selectedPage === "business" && (
+          <Form
+            title="Add Business"
+            data={business}
+            onChange={handleInputChange(setBusiness)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/business",
+                business,
+                setBusiness,
+                "Business added successfully!"
+              )
+            }
+          />
+        )}
+        {selectedPage === "ai" && (
+          <Form
+            title="Add AI Course"
+            data={ai}
+            onChange={handleInputChange(setAi)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/ai",
+                ai,
+                setAi,
+                "AI Course added successfully!"
+              )
+            }
+          />
         )}
       </div>
+    </div>
+  );
+};
+
+const Form = ({ title, data, onChange, onSubmit }) => {
+  return (
+    <div className="container py-5">
+      <h2 className="text-center mb-3">{title}</h2>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          onSubmit();
+        }}
+      >
+        {Object.keys(data).map((key) => (
+          <div className="mb-3" key={key}>
+            <input
+              type="text"
+              name={key}
+              placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
+              className="form-control"
+              value={data[key]}
+              onChange={onChange}
+            />
+          </div>
+        ))}
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
