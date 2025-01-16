@@ -50,7 +50,7 @@ const Navbar = () => {
               </Link>
               <ul className="dropdown-menu" aria-labelledby="homeDropdown">
                 <li><Link className="dropdown-item" to="/">Home 1</Link></li>
-                <li><Link className="dropdown-item" to="/home2">Home 2</Link></li>
+                <li><Link className="dropdown-item" to="/AboutUs">AboutUs</Link></li>
               </ul>
             </li>
 

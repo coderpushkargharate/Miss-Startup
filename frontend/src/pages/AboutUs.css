@@ -1,0 +1,130 @@
+.about-us-page {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .about-us-header {
+    
+    /* margin-bottom: 15px; */
+    background-image: url(src/assets/AboutUsimg/banner_image1.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+  }
+  
+  .about-us-header h1 {
+    font-size: 2.5rem;
+    color: #2a5ebe;
+  }
+  
+  .about-us-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .about-us-mission,
+  .about-us-values,
+  .about-us-team,
+  .about-us-contact {
+    margin-bottom: 3rem;
+  }
+  
+  .about-us-mission h2,
+  .about-us-values h2,
+  .about-us-team h2,
+  .about-us-contact h2 {
+    font-size: 2rem;
+    color: #2a5ebe;
+  }
+  
+  .about-us-values ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-us-values li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us-team {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .team-member h3 {
+    font-size: 1.3rem;
+    color: #2a5ebe;
+  }
+  
+  .team-member p {
+    color: #666;
+  }
+  
+  .about-us-contact .contact-btn {
+    background-color: #2a5ebe;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  
+  .about-us-contact .contact-btn:hover {
+    background-color: #1d4f8b;
+  }
+  #AboutUsbanner{
+   width: 100%;
+  }
+  #ourstudy{
+    padding-left: 40%;
+    color: red;
+  }
+  .Our-mission{
+    font-weight:700;
+    font-size: 40px;
+    padding-left: 40%;
+  }
+  .Our-mission-p{
+    margin-top: 20px;
+    font-size: 18px;
+    padding-left: 40%;
+  }
+  #about-storyimg{
+    background: linear-gradient(rgba(7,7,7,0.7),rgba(7,7,7,0.7)),url(src/assets/AboutUsimg/about-story-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to the center of the container */
+    color: rgb(214, 50, 50); /* Bright red for the logo */
+    font-size: 24px; /* Logo size */
+    width: 80px; /* Size of the circle */
+    height: 80px; /* Matches width for a perfect circle */
+    text-align: center; /* Center text horizontally */
+    line-height: 50px; /* Center text vertically */
+    border-radius: 50%; /* Makes it circular */
+    background-color: rgb(215, 218, 221); /* Circle background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+

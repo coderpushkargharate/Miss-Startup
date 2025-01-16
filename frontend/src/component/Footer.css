@@ -1,5 +1,103 @@
-.footerlogo{
+/* Footer Background */
+.footer-bg {
+    background-color: #0D0D39;
+}
+
+/* Link Hover Effects */
+a.text-decoration-none {
+    color: inherit;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a.text-decoration-none:hover {
+    color: #2a5ebe; /* Highlight color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.footerlogo {
     height: 50px;
     width: 250px;
-    
+}
+
+.footer p,
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add hover effect to text links in lists */
+.footer ul li a {
+    color: #ffffff; /* Default white color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #2a5ebe; /* Highlight color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.text-white i:hover {
+    color: #544ec9; /* Highlight social icons on hover */
+}
+
+.text-uppercase {
+    color: aliceblue;
+    font-weight: 900;
+}
+
+/* Social Media Icon Styling */
+#socialmediaimg a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(133, 160, 184);
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    animation: socialmediaimg 0.5s ease-in-out forwards;
+}
+
+/* Drop Animation for Circle */
+#socialmediaimg a::before {
+    content: '';
+    position: absolute;
+    top: -50px; /* Start above the icon */
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #191616;
+    border-radius: 50%;
+    z-index: -1; /* Keep it behind the icon */
+}
+
+/* Hover Effect */
+#socialmediaimg a:hover {
+    transform: scale(1.2); /* Slightly enlarge */
+}
+
+#socialmediaimg a:hover::before {
+    background-color: #544ec9; /* Change background color on hover */
+}
+
+/* Drop Animation */
+@keyframes dropDownCircle {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Gap adjustment for icons */
+#socialmediaimg {
+    display: flex;
+    gap: 15px;
 }

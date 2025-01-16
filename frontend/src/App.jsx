@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import Dashboard from "./pages/Dashboard";
 import Mainideas from "./pages/MainIdeas";
 import CourseDetails from "./pages/CourseDetails";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/mainideas" element={<Mainideas/>}/>
         <Route path="/courses/:id" element={<CourseDetails/>} />
+        <Route path="/aboutus" element={<AboutUs/>}/>
       </Routes>
 
       {/* Footer */}
