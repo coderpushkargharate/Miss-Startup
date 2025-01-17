@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import Ideas from "./Ideas";
 import StrengthInNumbers from "./StrengthInNumbers";
 import PricingSection from "./PricingSection";
+import OurMission from "./OurMission";
 // import Testimonials from "./TestimonialsCarousel";
 const Home = () => {
   const handleSearch = () => {
@@ -17,7 +18,7 @@ const Home = () => {
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-5">
             {/* Left Section - Image */}
-            <div className="col-lg-6 text-center mt-5">
+            <div className="col-lg-6 text-center ">
               <img
                 src="src/assets/homeimg/hero_aera.png"
                 alt="Learning"
@@ -41,7 +42,7 @@ const Home = () => {
                     className="form-control py-3"
                     placeholder="Search for courses"
                   />
-                  <button className="btn btn-danger px-4" onClick={handleSearch}>
+                  <button className="btn btn-danger  px-4" onClick={handleSearch}>
                   <FaSearch />
                   </button>
                 </div>
@@ -56,7 +57,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      <OurMission/>
       <Ideas/>
       <StrengthInNumbers/>
       <PricingSection/>

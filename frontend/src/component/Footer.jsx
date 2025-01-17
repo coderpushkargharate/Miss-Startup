@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <footer className="footer-bg text-dark pt-5 pb-3">
       <div className="container">
-        <div className="row mx-5">
+        <div className="row mx-0 mx-md-5">
           {/* Company Section */}
-          <div className="col-6 col-md-3 mb-4">
+          <div className="col-12 col-md-3 mb-4">
             <a href="#" className="text-white text-decoration-none">
               <img src="src/assets/Logo/logo-white.png" alt="" className="img-fluid w-75" />
             </a>
@@ -29,11 +29,11 @@ const Footer = () => {
                 <i className="bi bi-envelope-fill"></i> support@courselog.com
               </a>
             </p>
-            <div className=" d-flex gap-3" id="socialmediaimg">
+            <div className="d-flex gap-3" id="socialmediaimg">
               <a href="#" className="text-white"><i className="bi bi-facebook"></i></a>
               <a href="#" className="text-white"><i className="bi bi-instagram"></i></a>
               <a href="#" className="text-white"><i className="bi bi-linkedin"></i></a>
-              <a href="#" className="text-white"><i className=""><BsTwitterX /></i></a>
+              <a href="#" className="text-white"><i><BsTwitterX /></i></a>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="d-flex justify-content-end mt-4">
+        <div className="d-flex justify-content-center justify-content-md-end mt-4">
           <div className="text-white">
             <a href="#" className="text-white text-decoration-none mx-2">Privacy Policy</a> |
             <a href="#" className="text-white text-decoration-none mx-2">Terms of Service</a> |

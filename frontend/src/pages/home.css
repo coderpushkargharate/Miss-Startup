@@ -47,6 +47,8 @@ body {
 .search-bar .btn {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  height: 8vh;
+  margin-top: 10px;
 }
 
 /* Focus state for input field */
