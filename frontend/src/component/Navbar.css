@@ -40,7 +40,7 @@
 
 /* Navbar branding (Logo) */
 .navbar-brand img {
-    height: 40px;
+    height: 50px;
     transition: transform 0.3s ease;
 }
 

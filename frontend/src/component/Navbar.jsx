@@ -9,14 +9,13 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path ? "active" : "";
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
       <div className="container">
         {/* Logo on the Left */}
         <Link className="navbar-brand" to="/">
           <img
             src="src/assets/Logo/logo.png" // Replace with your logo path
             alt="Courselog"
-           
           />
         </Link>
 
@@ -35,51 +34,45 @@ const Navbar = () => {
 
         {/* Navbar Links on the Right */}
         <div className="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
-          <ul className="navbar-nav ">
+          <ul className="navbar-nav">
             {/* Home Dropdown */}
-            <li className="nav-item dropdown">
-              <Link
-                className={`nav-link dropdown-toggle me-4 ${isActive("/")}`}
-                to="#"
-                id="homeDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+            {/* Pages Dropdown */}
+            {/* About Link */}
+            <li className="nav-item me-5">
+              <Link className={`nav-link ${isActive("/startupcourse")}`} to="/startupcourse">
                 StartupCourse
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><Link className="dropdown-item" to="/">Home 1</Link></li>
-                <li><Link className="dropdown-item" to="/AboutUs">AboutUs</Link></li>
-              </ul>
             </li>
 
             {/* Pages Dropdown */}
-            <li className="nav-item dropdown">
-              <Link
-                className={`nav-link dropdown-toggle me-4 ${isActive("/page1") || isActive("/page2")}`}
-                to="#"
-                id="pagesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Ideas 
+            {/* About Link */}
+            <li className="nav-item me-5">
+              <Link className={`nav-link ${isActive("/Mainideas")}`} to="/Mainideas">
+                Ideas
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="pagesDropdown">
-                <li><Link className="dropdown-item" to="/dashboard">Page 1</Link></li>
-                <li><Link className="dropdown-item" to="/mainideas">Page 2</Link></li>
-              </ul>
             </li>
 
             {/* Blog Link */}
             <li className="nav-item me-5">
               <Link className={`nav-link ${isActive("/blog")}`} to="/blog">
-              Stories
+                Stories
+              </Link>
+            </li>
+
+            {/* About Link */}
+            <li className="nav-item me-5">
+              <Link className={`nav-link ${isActive("/Aboutus")}`} to="/aboutus">
+                About
+              </Link>
+            </li>
+
+            {/* Login Link */}
+            <li className="nav-item me-5">
+              <Link className={`nav-link ${isActive("/login")}`} to="/login">
+                <button>Login</button>
               </Link>
             </li>
           </ul>
-          
         </div>
       </div>
     </nav>

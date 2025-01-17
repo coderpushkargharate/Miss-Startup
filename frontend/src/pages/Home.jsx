@@ -13,9 +13,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="hero-section d-flex" style={{ height: "100vh", background: "#f8f9fa" }}>
-        <div className="container position-relative">
-          <div className="row align-items-center">
+      <div className="hero-section d-flex mt-5" style={{ height: "100vh", background: "#f8f9fa" }}>
+        <div className="container position-relative mt-5">
+          <div className="row align-items-center mt-5">
             {/* Left Section - Image */}
             <div className="col-lg-6 text-center mt-5">
               <img
@@ -50,7 +50,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="position-absolute imganimation">
+            <div className="position-absolute imganimation mt-5">
               <img src="src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
             </div>
           </div>
