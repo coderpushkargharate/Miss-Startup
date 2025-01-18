@@ -78,9 +78,9 @@ const Testimonials = () => {
     const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + testimonialsToShow);
 
     return (
-        <div className="testimonials-container py-5">
+        <div className=" testimonials-container py-5">
             <h2 className="testimonials-title pb-5">What our customers say...</h2>
-            <div className="testimonials-carousel">
+            <div className="container px-2 testimonials-carousel">
                 <div className="testimonials-carousel-inner">
                     {visibleTestimonials.map((testimonial, index) => (
                         <div key={index} className="testimonial-card">

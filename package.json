@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "aos": "^2.3.4",
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.5",
     "react": "^18.2.0",
