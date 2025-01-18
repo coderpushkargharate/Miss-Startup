@@ -3,12 +3,14 @@ import axios from "axios";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const [selectedPage, setSelectedPage] = useState("ideas");
+  const [selectedPage, setSelectedPage] = useState("blog");
+
+  // Initial state for all forms
   const [blog, setBlog] = useState({
     title: "",
     description: "",
     imageUrl: "",
-    date: new Date(),
+    date: new Date().toISOString().split("T")[0],
     readTime: "7 MIN READ",
   });
 
@@ -38,14 +40,6 @@ const Dashboard = () => {
     rating: 0,
   });
 
-  const [computerScience, setComputerScience] = useState({
-    title: "",
-    description: "",
-    imageUrl: "",
-    price: "",
-    rating: 0,
-  });
-
   const [designArchitect, setDesignArchitect] = useState({
     title: "",
     description: "",
@@ -54,33 +48,55 @@ const Dashboard = () => {
     rating: 0,
   });
 
+  const [science, setScience] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  // Generic input change handler
   const handleInputChange = (setter) => (e) => {
-    setter((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setter((prevState) => ({
+      ...prevState,
+      [name]: name === "rating" || name === "price" ? parseFloat(value) || 0 : value,
+    }));
   };
 
+  // Generic form submission handler
   const handleSubmit = async (url, data, setter, successMessage) => {
     try {
-      const response = await axios.post(url, data);
+      await axios.post(url, data);
       alert(successMessage);
       setter({});
     } catch (error) {
       console.error("Error:", error.response?.data || error.message);
-      alert("Error occurred. Check console for details.");
+      alert("Submission failed. Check console for details.");
     }
   };
 
+  // Render the dashboard
   return (
     <div className="dashboard-container">
       <div className="sidebar">
         <div className="logo">Dashboard</div>
         <ul>
-          {["blog", "course", "business", "ai", "computerScience", "designArchitect"].map((page) => (
+          {[
+            "blog",
+            "course",
+            "business",
+            "ai",
+            "designArchitect",
+            "science",
+          ].map((page) => (
             <li
               key={page}
               className={selectedPage === page ? "active" : ""}
               onClick={() => setSelectedPage(page)}
             >
-              {page.charAt(0).toUpperCase() + page.slice(1).replace(/([A-Z])/g, ' $1')}
+              {page.charAt(0).toUpperCase() + page.slice(1).replace(/([A-Z])/g, " $1")}
             </li>
           ))}
         </ul>
@@ -146,21 +162,7 @@ const Dashboard = () => {
             }
           />
         )}
-        {selectedPage === "computerScience" && (
-          <Form
-            title="Add Computer Science Course"
-            data={computerScience}
-            onChange={handleInputChange(setComputerScience)}
-            onSubmit={() =>
-              handleSubmit(
-                "http://localhost:5000/api/computerScience",
-                computerScience,
-                setComputerScience,
-                "Computer Science Course added successfully!"
-              )
-            }
-          />
-        )}
+       
         {selectedPage === "designArchitect" && (
           <Form
             title="Add Design Architect Course"
@@ -172,6 +174,21 @@ const Dashboard = () => {
                 designArchitect,
                 setDesignArchitect,
                 "Design Architect Course added successfully!"
+              )
+            }
+          />
+        )}
+        {selectedPage === "science" && (
+          <Form
+            title="Add Science Course"
+            data={science}
+            onChange={handleInputChange(setScience)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/science",
+                science,
+                setScience,
+                "Science Course added successfully!"
               )
             }
           />
@@ -198,7 +215,7 @@ const Form = ({ title, data, onChange, onSubmit }) => {
               name={key}
               placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
               className="form-control"
-              value={data[key]}
+              value={data[key] || ""}
               onChange={onChange}
             />
           </div>

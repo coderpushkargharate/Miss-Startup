@@ -16,8 +16,8 @@ const Ideas = () => {
     { name: "Food & Beverage", endpoint: "/api/courses" },
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
     { name: "Business", endpoint: "/api/business" }, // Placeholder
-    { name: "Computer Science", endpoint: "/api/computer" }, // Placeholder
-    { name: "Design Architect", endpoint: "/api/design" }, // Placeholder
+    { name: "Computer Science", endpoint: "/api/science" }, // Placeholder
+    { name: "Design Architect", endpoint: "/api/designArchitect" }, // Placeholder
   ];
 
   // Fetch courses based on the selected category endpoint

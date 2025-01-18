@@ -16,6 +16,11 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   const { title, description, imageUrl, price, rating } = req.body;
 
+  // Validate fields
+  if (!title || !description || !price) {
+    return res.status(400).json({ message: "Title, description, and price are required." });
+  }
+
   const scienceCourse = new Science({
     title,
     description,
