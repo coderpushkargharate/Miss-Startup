@@ -5,55 +5,48 @@ const testimonials = [
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
     },
-
-    {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detail explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
-    },
-
 ];
 
 const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [testimonialsToShow, setTestimonialsToShow] = useState(3);
+    const [testimonialsToShow, setTestimonialsToShow] = useState(4);
 
     const updateItemsToShow = () => {
         if (window.innerWidth < 798) {
@@ -61,7 +54,7 @@ const Testimonials = () => {
         } else if (window.innerWidth < 1024) {
             setTestimonialsToShow(2);
         } else {
-            setTestimonialsToShow(3);
+            setTestimonialsToShow(4);
         }
     };
 
@@ -73,9 +66,7 @@ const Testimonials = () => {
 
     useEffect(() => {
         const slideInterval = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
-                (prevIndex + testimonialsToShow) % testimonials.length
-            );
+            setCurrentIndex((prevIndex) => (prevIndex + testimonialsToShow) % testimonials.length);
         }, 3000);
         return () => clearInterval(slideInterval);
     }, [testimonialsToShow]);
@@ -92,7 +83,7 @@ const Testimonials = () => {
             <div className="testimonials-carousel">
                 <div className="testimonials-carousel-inner">
                     {visibleTestimonials.map((testimonial, index) => (
-                        <div key={index} className="testimonialcard">
+                        <div key={index} className="testimonial-card">
                             <div className="card-header pb-3">
                                 <img
                                     src="https://via.placeholder.com/50"
@@ -103,7 +94,7 @@ const Testimonials = () => {
                             </div>
                             <h3 className="card-name">{testimonial.name}</h3>
                             <p className="card-handle">{testimonial.handle}</p>
-                            <p className="card-message text-white ">{testimonial.message}</p>
+                            <p className="card-message">{testimonial.message}</p>
                         </div>
                     ))}
                 </div>
@@ -112,9 +103,7 @@ const Testimonials = () => {
                 {Array.from({ length: Math.ceil(testimonials.length / testimonialsToShow) }).map((_, index) => (
                     <span
                         key={index}
-                        className={`carousel-dot ${
-                            index === Math.floor(currentIndex / testimonialsToShow) ? "active" : ""
-                        }`}
+                        className={`carousel-dot ${index === Math.floor(currentIndex / testimonialsToShow) ? "active" : ""}`}
                         onClick={() => handleDotClick(index)}
                     ></span>
                 ))}

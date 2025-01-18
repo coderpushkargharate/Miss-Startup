@@ -3,13 +3,15 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
 }
 
 .testimonials-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: orange;
+    color: black;
+    margin-bottom: 20px;
 }
 
 .testimonials-carousel {
@@ -17,52 +19,32 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    
 }
 
 .testimonials-carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
 }
 
-.testimonialcard {
+.testimonial-card {
     flex: 1;
-    max-width: 100%; /* Ensures each card takes up equal width */
-    /* max-height: 100%; */
+    margin: 0 10px;
     box-sizing: border-box;
-    padding: 15px 15px;
+    padding: 15px;
     border-radius: 20px;
-    margin: auto;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #005f73;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: #0c2d5e;
-    color:white;
-}
-
-.testimonial-card h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.testimonial-card .card-handle {
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.testimonial-card .card-message {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    text-align: left; /* Align text to the left */
 }
 
 .card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -71,11 +53,37 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-handle {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.card-message {
+    font-size: 1rem;
+    color: #e3e3e3;
+    margin-bottom: 15px;
 }
 
 .close-icon {
     font-size: 18px;
+    color: #e3e3e3;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .carousel-dots {
@@ -85,8 +93,8 @@
 }
 
 .carousel-dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #ccc;
     border-radius: 50%;
     margin: 0 5px;
@@ -95,26 +103,23 @@
 }
 
 .carousel-dot.active {
-    background-color: #333;
+    background-color: #005f73;
 }
 
 @media (max-width: 1024px) {
     .testimonial-card {
-        max-width: 50%; /* Show 2 testimonials at once */
+        max-width: 45%; /* Show 2 testimonials at once */
     }
 }
 
 @media (max-width: 798px) {
     .testimonial-card {
-        max-width: 100%; /* Show 1 testimonial at once */
+        max-width: 90%; /* Show 1 testimonial at once */
     }
 }
 
 @media (min-width: 798px) {
-    .testimonialcard {
-        flex: 1;
-        max-width: 25%; /* Ensures each card takes up equal width */
-        /* max-height: 100%; */
-        
+    .testimonial-card {
+        max-width: 22%; /* Show 4 testimonials at once */
     }
 }
