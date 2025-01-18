@@ -1,0 +1,120 @@
+.testimonials-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonials-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+.testimonials-carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.testimonials-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonialcard {
+    flex: 1;
+    max-width: 100%; /* Ensures each card takes up equal width */
+    /* max-height: 100%; */
+    box-sizing: border-box;
+    padding: 15px 15px;
+    border-radius: 20px;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #0c2d5e;
+    color:white;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-card .card-handle {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .card-message {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.close-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.carousel-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #333;
+}
+
+@media (max-width: 1024px) {
+    .testimonial-card {
+        max-width: 50%; /* Show 2 testimonials at once */
+    }
+}
+
+@media (max-width: 798px) {
+    .testimonial-card {
+        max-width: 100%; /* Show 1 testimonial at once */
+    }
+}
+
+@media (min-width: 798px) {
+    .testimonialcard {
+        flex: 1;
+        max-width: 25%; /* Ensures each card takes up equal width */
+        /* max-height: 100%; */
+        
+    }
+}

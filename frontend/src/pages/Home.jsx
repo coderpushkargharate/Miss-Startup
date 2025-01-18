@@ -5,6 +5,8 @@ import Ideas from "./Ideas";
 import StrengthInNumbers from "./StrengthInNumbers";
 import PricingSection from "./PricingSection";
 import OurMission from "./OurMission";
+import Testimonials from "./Testimonials";
+import FAQ from "./Faq";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -182,6 +184,8 @@ const Home = () => {
       </div>
       <OurMission />
       <Ideas />
+      <Testimonials/>
+      <FAQ/>  
       {/* <StrengthInNumbers /> */}
       {/* <PricingSection /> */}
     </>

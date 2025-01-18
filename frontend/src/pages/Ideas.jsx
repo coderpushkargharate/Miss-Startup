@@ -7,6 +7,7 @@ const Ideas = () => {
   const [courses, setCourses] = useState([]);
   const [displayedCourses, setDisplayedCourses] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isAiCategory, setIsAiCategory] = useState(false);
 
   const navigate = useNavigate();
 
@@ -14,9 +15,9 @@ const Ideas = () => {
   const categories = [
     { name: "Food & Beverage", endpoint: "/api/courses" },
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
-    { name: "Business", endpoint: "/api/business" },
-    { name: "Computer Science", endpoint: "/api/computer" },
-    { name: "Design Architect", endpoint: "/api/design" },
+    { name: "Business", endpoint: "/api/business" }, // Placeholder
+    { name: "Computer Science", endpoint: "/api/computer" }, // Placeholder
+    { name: "Design Architect", endpoint: "/api/design" }, // Placeholder
   ];
 
   // Fetch courses based on the selected category endpoint
@@ -25,6 +26,7 @@ const Ideas = () => {
       const response = await axios.get(`http://localhost:5000${endpoint}`);
       setCourses(response.data);
       setDisplayedCourses(response.data.slice(0, 6)); // Initially display 6 courses
+      setIsAiCategory(endpoint === "/api/ai");
     } catch (err) {
       console.error("Error fetching courses:", err);
     }
@@ -50,10 +52,7 @@ const Ideas = () => {
 
   return (
     <div className="container py-5">
-      <h2
-        className="text-center mb-4"
-        style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}
-      >
+      <h2 className="text-center mb-4" style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}>
         Explore Courses
       </h2>
 
@@ -62,11 +61,7 @@ const Ideas = () => {
         {categories.map((category) => (
           <button
             key={category.name}
-            className={`btn ${
-              selectedCategory?.name === category.name
-                ? "btn-primary"
-                : "btn-outline-secondary"
-            }`}
+            className={`btn ${selectedCategory?.name === category.name ? "btn-primary" : "btn-outline-secondary"}`}
             style={{
               margin: "10px",
               borderRadius: "20px",
@@ -85,39 +80,22 @@ const Ideas = () => {
       <div className="row">
         {displayedCourses.length > 0 ? (
           displayedCourses.map((course) => (
-            <div
-              key={course._id}
-              className="col-lg-4 col-md-6 mb-4"
-              style={{ cursor: "pointer" }}
-            >
+            <div key={course._id} className="col-lg-4 col-md-6 mb-4" style={{ cursor: "pointer" }}>
               <div className="card h-100 shadow-sm">
                 <img
-                  src={course.image}
+                  src={course.imageUrl || course.image} // Handle both AI and Course image properties
                   alt={course.title}
                   className="card-img-top"
-                  style={{
-                    height: "200px",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
+                  style={{ height: "200px", objectFit: "cover", borderRadius: "8px" }}
                 />
                 <div className="card-body d-flex flex-column">
-                  <h5
-                    className="card-title"
-                    style={{ fontWeight: "600", color: "#444" }}
-                  >
+                  <h5 className="card-title" style={{ fontWeight: "600", color: "#444" }}>
                     {course.title}
                   </h5>
-                  <p
-                    className="text-muted mb-1"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    By {course.author}
+                  <p className="text-muted mb-1" style={{ fontSize: "0.9rem" }}>
+                    By {course.author || "N/A"}
                   </p>
-                  <p
-                    className="text-primary fw-bold"
-                    style={{ fontSize: "1.1rem" }}
-                  >
+                  <p className="text-primary fw-bold" style={{ fontSize: "1.1rem" }}>
                     {course.price}
                   </p>
                 </div>
@@ -125,9 +103,7 @@ const Ideas = () => {
             </div>
           ))
         ) : (
-          <p className="text-center">
-            No courses available. Please select a category.
-          </p>
+          <p className="text-center">No courses available. Please select a category.</p>
         )}
       </div>
 

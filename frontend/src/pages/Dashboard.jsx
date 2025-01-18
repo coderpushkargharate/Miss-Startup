@@ -38,6 +38,22 @@ const Dashboard = () => {
     rating: 0,
   });
 
+  const [computerScience, setComputerScience] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [designArchitect, setDesignArchitect] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
   const handleInputChange = (setter) => (e) => {
     setter((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
   };
@@ -58,13 +74,13 @@ const Dashboard = () => {
       <div className="sidebar">
         <div className="logo">Dashboard</div>
         <ul>
-          {["blog", "course", "business", "ai"].map((page) => (
+          {["blog", "course", "business", "ai", "computerScience", "designArchitect"].map((page) => (
             <li
               key={page}
               className={selectedPage === page ? "active" : ""}
               onClick={() => setSelectedPage(page)}
             >
-              {page.charAt(0).toUpperCase() + page.slice(1)}
+              {page.charAt(0).toUpperCase() + page.slice(1).replace(/([A-Z])/g, ' $1')}
             </li>
           ))}
         </ul>
@@ -126,6 +142,36 @@ const Dashboard = () => {
                 ai,
                 setAi,
                 "AI Course added successfully!"
+              )
+            }
+          />
+        )}
+        {selectedPage === "computerScience" && (
+          <Form
+            title="Add Computer Science Course"
+            data={computerScience}
+            onChange={handleInputChange(setComputerScience)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/computerScience",
+                computerScience,
+                setComputerScience,
+                "Computer Science Course added successfully!"
+              )
+            }
+          />
+        )}
+        {selectedPage === "designArchitect" && (
+          <Form
+            title="Add Design Architect Course"
+            data={designArchitect}
+            onChange={handleInputChange(setDesignArchitect)}
+            onSubmit={() =>
+              handleSubmit(
+                "http://localhost:5000/api/designArchitect",
+                designArchitect,
+                setDesignArchitect,
+                "Design Architect Course added successfully!"
               )
             }
           />

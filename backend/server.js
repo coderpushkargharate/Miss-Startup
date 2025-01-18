@@ -1,4 +1,4 @@
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -9,6 +9,8 @@ const courseRoutes = require("./routes/courseRoutes");
 const blogRoutes = require("./routes/blogRoutes");
 const aiRoutes = require("./routes/aiRoutes");
 const businessRoutes = require("./routes/businessRoutes");
+const scienceRoutes = require("./routes/scienceRoutes");
+const designRoutes = require("./routes/designRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,6 +31,8 @@ app.use("/api/courses", courseRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/ai", aiRoutes);
 app.use("/api/business", businessRoutes);
+app.use("/api/science", scienceRoutes); // Added science route
+app.use("/api/design", designRoutes); // Added design route
 
 // 404 Error Handling
 app.use((req, res, next) => {
