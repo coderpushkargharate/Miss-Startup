@@ -5,43 +5,53 @@ const testimonials = [
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        message: "Great experience, fantastic support team! Highly recommended.",
+        image: "src/assets/homeimg/course_image7.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Rahul",
+        handle: "@rahulspeaks",
+        message: "Great experience, fantastic support team! Highly recommended.",
+        image: "src/assets/homeimg/course_image8.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Sonia",
+        handle: "@soniatweets",
+        message: "Super impressed with the service. Thank you for the quick resolution.",
+        image: "src/assets/homeimg/course_image9.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Priya",
+        handle: "@priyathinks",
+        message: "This is the best customer service I have experienced so far. Keep it up!",
+        image: "src/assets/homeimg/course_image7.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Vikram",
+        handle: "@vikramchats",
+        message: "Professional and responsive. Couldn't ask for better assistance!",
+        image: "src/assets/homeimg/course_image8.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Aditi",
+        handle: "@aditishares",
+        message: "Absolutely delightful experience! Will recommend to others.",
+        image: "src/assets/homeimg/course_image9.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Rohan",
+        handle: "@rohanspeaks",
+        message: "Efficient and reliable service, very happy with the outcome.",
+        image: "src/assets/homeimg/course_image7.jpg",
     },
     {
-        name: "Chirag",
-        handle: "@tweetsbychirag",
-        message: "Thanks for detailed explanation and reaching out on behalf of me. You made me your lifetime customer. #CustomerService at its best."
+        name: "Neha",
+        handle: "@neha_tweets",
+        message: "Such a smooth process. Hats off to the team!",
+        image: "src/assets/homeimg/course_image9.jpg",
+
     },
+    
 ];
 
 const Testimonials = () => {
@@ -78,7 +88,7 @@ const Testimonials = () => {
     const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + testimonialsToShow);
 
     return (
-        <div className=" testimonials-container py-5">
+        <div className="testimonials-container py-5">
             <h2 className="testimonials-title pb-5">What our customers say...</h2>
             <div className="container px-2 testimonials-carousel">
                 <div className="testimonials-carousel-inner">
@@ -86,8 +96,8 @@ const Testimonials = () => {
                         <div key={index} className="testimonial-card">
                             <div className="card-header pb-3">
                                 <img
-                                    src="https://via.placeholder.com/50"
-                                    alt="profile"
+                                    src={testimonial.image}
+                                    alt={`${testimonial.name}'s profile`}
                                     className="profile-image"
                                 />
                                 <span className="close-icon">✖</span>

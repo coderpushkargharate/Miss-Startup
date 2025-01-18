@@ -31,7 +31,7 @@
     flex: 1;
     margin: 0 10px;
     box-sizing: border-box;
-    padding: 15px;
+    padding:15px;
     border-radius: 20px;
     background-color: #005f73;
     color: white;
@@ -40,6 +40,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: left; /* Align text to the left */
+    /* width: 350px; */
 }
 
 .card-header {

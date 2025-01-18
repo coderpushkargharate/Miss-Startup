@@ -70,7 +70,7 @@ const Home = () => {
     <>
       <div className="hero-section d-flex mt-5" style={{ height: "100vh", background: "#f8f9fa" }}>
         <div className="container position-relative mt-5">
-          <div className="row align-items-center mt-5">
+          <div className="row align-items-center mt-3">
             <div className="col-lg-6  text-center">
               <img
                 src="/src/assets/homeimg/hero_aera.png"
@@ -79,7 +79,7 @@ const Home = () => {
                 style={{ borderRadius: "15px" }}
               />
             </div>
-            <div className="col-lg-6 text-md-start text-center herotext ps-lg-5">
+            <div className="col-lg-6 text-md-start text-center herotext mt-5 ps-lg-5">
               <form className="form-container" onSubmit={handleSubmit}>
                 <h2>Book your Free Session</h2>
                 <p>Learn from India’s best teachers</p>
