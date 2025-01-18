@@ -44,7 +44,7 @@ const Dashboard = () => {
 
   const handleSubmit = async (url, data, setter, successMessage) => {
     try {
-      await axios.post(url, data);
+      const response = await axios.post(url, data);
       alert(successMessage);
       setter({});
     } catch (error) {
@@ -58,7 +58,7 @@ const Dashboard = () => {
       <div className="sidebar">
         <div className="logo">Dashboard</div>
         <ul>
-          {[ "blog", "course", "business", "ai"].map((page) => (
+          {["blog", "course", "business", "ai"].map((page) => (
             <li
               key={page}
               className={selectedPage === page ? "active" : ""}

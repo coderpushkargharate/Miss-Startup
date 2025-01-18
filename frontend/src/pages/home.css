@@ -1,12 +1,14 @@
-/* Add Google Fonts */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Apply font globally */
+/* Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Hero Section Styles */
+/* Hero Section */
 .hero-section {
   background: #f8f9fa;
   padding: 2rem 1rem;
@@ -20,7 +22,10 @@ body {
   padding: 0;
 }
 
-/* Hero Section - Text Styling */
+.herotext {
+  margin-bottom: 10rem;
+}
+
 .herotext h1 {
   font-size: 3rem;
   line-height: 1.2;
@@ -32,139 +37,103 @@ body {
   line-height: 1.5;
 }
 
-/* Image Styling */
 .hero-section .col-lg-6 img {
   border-radius: 15px;
 }
 
-/* Search Bar Styling */
-.search-bar .form-control {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  border: 2px solid red;
+/* Form Container */
+.form-container {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  height: auto;
 }
 
-.search-bar .btn {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  height: 8vh;
-  margin-top: 10px;
+.form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-/* Focus state for input field */
-.search-bar .form-control:focus {
-  border-color: #ff4d4d;
-  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+/* Form Fields - Consistent Height */
+.form-container .form-group input,
+.form-container .form-group select,
+.form-container .send-otp-button,
+.form-container .submit-button {
+  height: 2rem; /* Consistent height for all fields */
+  box-sizing: border-box; /* Padding doesn't affect height */
 }
 
-/* Link Styling */
-a {
-  text-decoration: none;
+.form-container .form-group {
+  margin-bottom: 0.7rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.form-container .send-otp-button {
+  width: 100%;
+  margin-top: 0.5rem;
 }
-.herotext{
-  margin-bottom: 150px;
+
+.form-container .submit-button {
+  margin-top: 1rem;
+  background: orange;
+  color: #fff;
+  border: none;
+  padding-bottom: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-.imganimation{
-  top: -50px;
+
+.form-container .submit-button:hover {
+  background: #e67e22;
+}
+
+/* Session Mode Radio */
+.form-container .session-mode {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.form-container .session-mode label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-container .session-mode input {
+  margin-right: 0.5rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+  .form-container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form-container .form-group input,
+  .form-container .form-group select,
+  .form-container .send-otp-button,
+  .form-container .submit-button {
+    height: 2rem; /* Slightly smaller height for smaller screens */
+  }
+}
+
+/* Image Animation */
+.imganimation {
+  position: relative;
+  top:60px;
   left: 70px;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .hero-section .container {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .hero-section .row {
-    flex-direction: column-reverse; /* Stack image and text */
-  }
-
-  .hero-section .col-lg-6 {
-    text-align: center;
-  }
-
-  .hero-section .col-lg-6 img {
-    width: 90%; /* Resize the image */
-    margin-bottom: 2rem;
-  }
-
-  .search-bar .input-group {
-    width: 100%;
-  }
-
-  .herotext h1 {
-    font-size: 2.5rem;
-  }
-
-  .herotext p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section .row {
-    flex-direction: column-reverse; /* Stack image and text */
-    text-align: center;
-  }
-
-  .hero-section .col-lg-6 img {
-    width: 80%;
-  }
-
-  .hero-section .col-lg-6 {
-    text-align: center;
-  }
-
-  .search-bar .input-group {
-    width: 90%;
-  }
-
-  .herotext h1 {
-    font-size: 2rem;
-  }
-
-  .herotext p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-section .row {
-    flex-direction: column-reverse; /* Stack image and text */
-    text-align: center;
-  }
-
-  .hero-section .col-lg-6 img {
-    width: 100%;
-  }
-
-  .herotext h1 {
-    font-size: 1.8rem;
-  }
-
-  .herotext p {
-    font-size: 1rem;
-  }
-
-  .search-bar .input-group {
-    width: 100%;
-  }
-}
-
-/* Position for the background image in the top left */
 .position-absolute img {
   height: auto;
   border-radius: 50%;
   animation: smoothRound 5s infinite ease-in-out;
 }
 
-/* Keyframe animation for image border-radius */
 @keyframes smoothRound {
   0% {
     border-radius: 50%;
