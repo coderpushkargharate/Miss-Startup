@@ -8,11 +8,14 @@
 :root {
   /* Font Colors */
   --font-color: #1becb8; /* Primary text color */
+  
 
+  /* subcolor */
+   --fontsub-color:blue;
   /* Fonts */
   --font-family: 'Arial, sans-serif';
 
   /* Background Colors */
-  --bg-color: #f8f9fa; /* Light background */
+  --bg-color: #5c5a5a; /* Light background */
 
 }

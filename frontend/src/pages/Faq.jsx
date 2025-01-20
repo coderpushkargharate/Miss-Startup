@@ -1,30 +1,46 @@
-import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa'; // Importing search icon from react-icons
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa"; // Importing search icon from react-icons
+import './Faq.css'; // Import the CSS file
 
 const faqs = [
   {
-    question: "Is Dhan safe & trusted broking platform?",
-    answer: "Yes, Dhan is a safe and trusted broking platform with robust security measures and regulatory compliance."
+    question: "What does it take to become an author?",
+    answer:
+      "Our authors are incredible storytellers driven by their passion for technology. They blend their knowledge and enthusiasm to communicate concepts and demonstrate their expertise.",
   },
   {
-    question: "How much time does it take to open a Dhan Account?",
-    answer: "Opening a Dhan account typically takes a few minutes if all documents are in order."
+    question: "How to change my password easily?",
+    answer:
+      "To change your password, go to your account settings, select 'Change Password,' and follow the instructions to reset it securely.",
   },
   {
-    question: "What documents are required to open a corporate demat account?",
-    answer: "To open a corporate demat account, you need documents like PAN card, proof of address, and other KYC documents for the company."
+    question: "How to change my plan using PayPal?",
+    answer:
+      "You can change your plan by navigating to the billing section of your account and selecting 'Update Plan.' Choose PayPal as your payment method.",
   },
   {
-    question: "What are the brokerage charges on Dhan?",
-    answer: "Dhan offers competitive brokerage charges. Visit the official site for detailed information on the fee structure."
+    question: "Who will view my content?",
+    answer:
+      "Your content will be viewed by learners and professionals worldwide who are eager to gain knowledge and develop new skills.",
   },
   {
-    question: "How to transfer shares from your current broker to Dhan?",
-    answer: "You can transfer shares by initiating an off-market transfer or by using the online transfer feature provided by your existing broker."
-  }
+    question: "What does it take to be an excellent author?",
+    answer:
+      "An excellent author is passionate about sharing knowledge, has strong communication skills, and is dedicated to creating high-quality, engaging content.",
+  },
+  {
+    question: "How long does it take to create a video course?",
+    answer:
+      "The time to create a video course depends on the complexity of the topic and the author's availability, but it typically takes a few weeks to a couple of months.",
+  },
+  {
+    question: "What kind of support does Courselog provide?",
+    answer:
+      "Courselog provides comprehensive support, including technical assistance, content review, and marketing resources to help authors succeed.",
+  },
 ];
 
-const FAQmain = () => {
+const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [searchQuery, setSearchQuery] = useState(""); // State to track search input
 
@@ -38,114 +54,52 @@ const FAQmain = () => {
   );
 
   return (
-    <>
+    <div className="container-fluid mt-5">
+      <div className="py-5 text-white text-center description">
+        <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
+        <p className="faq-description">
+          Questions on your mind? Don’t worry, we have the answers!
+        </p>
 
-      <div className="container-fluid mt-5">
-
-
-        <div className='bg-dark  py-5 text-white'>
-          <h2
-            className="py-2 mt-5"
-            style={{ fontSize: "34px", fontWeight: "bold", textAlign: "center" }}
-          >
-            Frequently Asked Questions
-          </h2>
-          <p className="pb-4" style={{ textAlign: "center", color: "#666" }}>
-            Questions on your mind? Don’t worry, we have the answers!
-          </p>
-
-          {/* Search Bar */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: "20px",
-              border: "1px solid #ddd",
-              borderRadius: "100px",
-              padding: "0px 10px",
-              maxWidth: "550px",
-              margin: "0 auto",
-              height: "50px"
-
-            }}
-          >
-            <FaSearch style={{ color: "#888", marginRight: "10px" }} />
-            <input
-              type="text"
-              placeholder="Search FAQs..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              style={{
-                width: "100%",
-                border: "none",
-                outline: "none",
-                fontSize: "16px",
-              }}
-            />
-          </div>
+        {/* Search Bar */}
+        <div className="search-bar">
+          <FaSearch className="search-icon" />
+          <input
+            type="text"
+            placeholder="Search FAQs..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input"
+          />
         </div>
-
-
-
-
-        <div
-          className="pt-5 px-3 "
-          style={{
-            width: "100%",
-            maxWidth: "1100px",
-            margin: "auto",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
-          {filteredFAQs.map((faq, index) => (
-            <div
-              key={index}
-              style={{
-                borderBottom: "1px solid #ddd",
-                padding: "10px 0",
-                cursor: "pointer",
-              }}
-            >
-              <div
-                onClick={() => toggleFAQ(index)}
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  fontSize: "15px",
-                  padding: "10px 0px 10px 0px",
-                }}
-              >
-                {faq.question}
-                <span>{activeIndex === index ? "▲" : "▼"}</span>
-              </div>
-
-              {activeIndex === index && (
-                <div
-                  style={{
-                    padding: "10px 0",
-                    fontSize: "16px",
-                    color: "#555",
-                  }}
-                >
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
-
-          {/* Show message if no FAQs match the search query */}
-          {filteredFAQs.length === 0 && (
-            <p style={{ textAlign: "center", color: "#888" }}>
-              No FAQs found matching your search.
-            </p>
-          )}
-        </div>
-
       </div>
 
-    </>
+      <div className="faq-list">
+        {filteredFAQs.map((faq, index) => (
+          <div key={index} className="faq-item">
+            <div
+              onClick={() => toggleFAQ(index)}
+              className="faq-question"
+            >
+              <span>{faq.question}</span>
+              <span className="faq-toggle">
+                {activeIndex === index ? "−" : "+"}
+              </span>
+            </div>
 
-  )
+            {activeIndex === index && (
+              <div className="faq-answer">{faq.answer}</div>
+            )}
+          </div>
+        ))}
+
+        {/* Show message if no FAQs match the search query */}
+        {filteredFAQs.length === 0 && (
+          <p className="no-faqs">No FAQs found matching your search.</p>
+        )}
+      </div>
+    </div>
+  );
 };
 
-export default FAQmain;
+export default Faq;
