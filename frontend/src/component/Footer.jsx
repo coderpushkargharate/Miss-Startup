@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
+        {/* Bottom Footer */} 
         <div className="d-flex justify-content-center justify-content-md-end mt-4">
           <div className="text-white">
             <a href="#" className="text-white text-decoration-none mx-2">Privacy Policy</a> |
