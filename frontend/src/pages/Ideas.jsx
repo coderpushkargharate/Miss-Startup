@@ -14,7 +14,7 @@ const Ideas = () => {
   // Define categories with their respective API endpoints
   const categories = [
     // { name: "Food & Beverage", endpoint: "/api/courses" },
-    { name: "Artificial Intelligence", endpoint: "/api/ai" },
+    { name: "Food & Beverage", endpoint: "/api/ai" },
     { name: "Business", endpoint: "/api/business" },
     { name: "Computer Science", endpoint: "/api/science" },
     { name: "Design Architect", endpoint: "/api/designArchitect" },

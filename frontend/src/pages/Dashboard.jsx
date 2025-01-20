@@ -87,7 +87,7 @@ const Dashboard = () => {
             
                 <option value="science">Science</option>
                 <option value="business">Business</option>
-                <option value="ai">AI</option>
+                <option value="ai">Food & Beverage</option>
                 <option value="designArchitect">Design Architect</option>
               </select>
             </li>

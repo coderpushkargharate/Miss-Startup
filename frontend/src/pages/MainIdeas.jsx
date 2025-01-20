@@ -10,7 +10,7 @@ const MainIdeas = () => {
   });
 
   const categories = [
-    { name: "Artificial Intelligence", endpoint: "/api/ai" },
+    { name: "Food & Beverage", endpoint: "/api/ai" },
     { name: "Business", endpoint: "/api/business" },
     { name: "Computer Science", endpoint: "/api/science" },
     { name: "Design Architect", endpoint: "/api/designArchitect" },
@@ -90,6 +90,7 @@ const MainIdeas = () => {
                       overflow: "hidden",
                       width: "150px", // Increased image size for better visibility
                       height: "150px", // Increased image size
+                      border:"8px solid #52a9f5"
                     }}
                   >
                     <img
@@ -117,6 +118,7 @@ const MainIdeas = () => {
                       style={{
                         fontSize: "1rem", // Adjusted font size for description
                         lineHeight: "1.6",
+                        width: "60%",
                       }}
                     >
                       {course.description}

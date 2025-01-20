@@ -69,7 +69,7 @@ const Footer = () => {
               <li><a href="#" className="text-white text-decoration-none">Media Kit</a></li>
               <li><a href="#" className="text-white text-decoration-none">Library</a></li>
               <li><a href="#" className="text-white text-decoration-none">Guides</a></li>
-              <li><a href="#" className="text-white text-decoration-none">FAQs</a></li>
+              <li><a href="/faq" className="text-white text-decoration-none">FAQs</a></li>
             </ul>
           </div>
         </div>

@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../pages/home.css";
 import Ideas from "./Ideas";
-import StrengthInNumbers from "./StrengthInNumbers";
-import PricingSection from "./PricingSection";
 import OurMission from "./OurMission";
 import Testimonials from "./Testimonials";
-import FAQ from "./Faq";
+import CounterSection from "./CounterSection";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +69,7 @@ const Home = () => {
       <div className="hero-section d-flex mt-5" style={{ height: "100vh", background: "#f8f9fa" }}>
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
-            <div className="col-lg-6  text-center">
+            <div className="col-lg-6  text-center d-none d-lg-block">
               <img
                 src="/src/assets/homeimg/hero_aera.png"
                 alt="Learning"
@@ -176,7 +174,7 @@ const Home = () => {
                 </button>
               </form>
             </div>
-            <div className="position-absolute imganimation mt-5">
+            <div className="position-absolute imganimation mt-5 d-none d-lg-block">
               <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
             </div>
           </div>
@@ -184,8 +182,8 @@ const Home = () => {
       </div>
       <OurMission />
       <Ideas />
-      <Testimonials/>
-      <FAQ/>  
+      <Testimonials/> 
+      <CounterSection/> 
       {/* <StrengthInNumbers /> */}
       {/* <PricingSection /> */}
     </>
