@@ -14,6 +14,7 @@ import CourseDetails from "./pages/CourseDetails";
 import AboutUs from "./pages/AboutUs";
 import Login from "./login/Login";
 import StartupCourse from "./pages/StartupCourse";
+import FAQ from "./pages/Faq";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -46,11 +47,12 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        {/* <Route path="/course/:courseId" element={<CourseDetails />} /> */}
         <Route path="/mainideas" element={<Mainideas />} />
-        <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/startupcourse" element={<StartupCourse/>}/>
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        <Route path="/faq" element={<FAQ/>}/>
         <Route
           path="/dashboard"
           element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" replace />}

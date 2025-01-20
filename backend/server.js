@@ -5,7 +5,7 @@
   const bodyParser = require('body-parser');
 
   // Import routes
-  const courseRoutes = require("./routes/courseRoutes");
+  // const courseRoutes = require("./routes/courseRoutes");
   const blogRoutes = require("./routes/blogRoutes");
   const aiRoutes = require("./routes/aiRoutes");
   const businessRoutes = require("./routes/businessRoutes");
@@ -27,7 +27,7 @@
     .catch((err) => console.error("Database connection error:", err.message));
 
   // Routes
-  app.use("/api/courses", courseRoutes);
+  // app.use("/api/courses", courseRoutes);
   app.use("/api/blogs", blogRoutes);
   app.use("/api/ai", aiRoutes);
   app.use("/api/business", businessRoutes);

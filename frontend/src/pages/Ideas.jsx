@@ -13,11 +13,11 @@ const Ideas = () => {
 
   // Define categories with their respective API endpoints
   const categories = [
-    { name: "Food & Beverage", endpoint: "/api/courses" },
+    // { name: "Food & Beverage", endpoint: "/api/courses" },
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
-    { name: "Business", endpoint: "/api/business" }, // Placeholder
-    { name: "Computer Science", endpoint: "/api/science" }, // Placeholder
-    { name: "Design Architect", endpoint: "/api/designArchitect" }, // Placeholder
+    { name: "Business", endpoint: "/api/business" },
+    { name: "Computer Science", endpoint: "/api/science" },
+    { name: "Design Architect", endpoint: "/api/designArchitect" },
   ];
 
   // Fetch courses based on the selected category endpoint
@@ -50,6 +50,11 @@ const Ideas = () => {
     fetchCourses(defaultCategory.endpoint);
   }, []);
 
+  // Handle course card click to view more details
+  const handleCardClick = (courseId) => {
+    navigate(`/course/${courseId}`);
+  };
+
   return (
     <div className="container py-5">
       <h2 className="text-center mb-4" style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}>
@@ -80,10 +85,10 @@ const Ideas = () => {
       <div className="row">
         {displayedCourses.length > 0 ? (
           displayedCourses.map((course) => (
-            <div key={course._id} className="col-lg-4 col-md-6 mb-4" style={{ cursor: "pointer" }}>
+            <div key={course._id} className="col-lg-4 col-md-6 mb-4" style={{ cursor: "pointer" }} onClick={() => handleCardClick(course._id)}>
               <div className="card h-100 shadow-sm">
                 <img
-                  src={course.imageUrl || course.image} // Handle both AI and Course image properties
+                  src={course.imageUrl || course.image}
                   alt={course.title}
                   className="card-img-top"
                   style={{ height: "200px", objectFit: "cover", borderRadius: "8px" }}
@@ -92,12 +97,15 @@ const Ideas = () => {
                   <h5 className="card-title" style={{ fontWeight: "600", color: "#444" }}>
                     {course.title}
                   </h5>
-                  <p className="text-muted mb-1" style={{ fontSize: "0.9rem" }}>
-                    By {course.author || "N/A"}
+                 
+                    {/* Fill the card body */}
+                    <p className="card-text" style={{ flexGrow: "1", fontSize: "0.9rem" }}>
+                    {course.description || "No description available."}
                   </p>
                   <p className="text-primary fw-bold" style={{ fontSize: "1.1rem" }}>
                     {course.price}
                   </p>
+                
                 </div>
               </div>
             </div>

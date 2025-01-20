@@ -4,38 +4,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const MainIdeas = () => {
   const [courses, setCourses] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState({
+    name: "Artificial Intelligence",
+    endpoint: "/api/ai",
+  });
 
   const categories = [
-    { name: "Food & Beverage", endpoint: "/api/courses" },
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
     { name: "Business", endpoint: "/api/business" },
-    { name: "Computer Science", endpoint: "/api/computer" },
-    { name: "Design Architect", endpoint: "/api/design" },
+    { name: "Computer Science", endpoint: "/api/science" },
+    { name: "Design Architect", endpoint: "/api/designArchitect" },
   ];
 
   useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/api/courses");
-        setCourses(response.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    fetchCourses();
-  }, []);
-
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-    // Fetch courses related to the selected category
+    // Fetch courses for the selected category when component mounts or selectedCategory changes
     axios
-      .get(`http://localhost:5000${category.endpoint}`)
+      .get(`http://localhost:5000${selectedCategory.endpoint}`)
       .then((response) => {
         setCourses(response.data);
       })
       .catch((err) => console.error(err));
+  }, [selectedCategory]);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
@@ -49,7 +41,7 @@ const MainIdeas = () => {
               <button
                 key={category.name}
                 className={`list-group-item list-group-item-action ${
-                  selectedCategory?.name === category.name
+                  selectedCategory.name === category.name
                     ? "active"
                     : "list-group-item-light"
                 }`}
@@ -94,19 +86,19 @@ const MainIdeas = () => {
                     className="me-md-4 mb-3 mb-md-0"
                     style={{
                       flexShrink: 0,
-                      borderRadius: "50%",
+                      borderRadius: "50%", // Ensures image is circular
                       overflow: "hidden",
-                      width: "120px", // Smaller image size
-                      height: "120px", // Smaller image size
+                      width: "150px", // Increased image size for better visibility
+                      height: "150px", // Increased image size
                     }}
                   >
                     <img
-                      src={course.image}
+                      src={course.imageUrl} // Ensure you're using imageUrl from backend
                       alt={course.title}
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "cover", // Ensures image is nicely cropped and fits in the circle
                       }}
                     />
                   </div>
@@ -114,7 +106,7 @@ const MainIdeas = () => {
                     <h5
                       style={{
                         fontWeight: "700",
-                        fontSize: "1.2rem", // Smaller font size
+                        fontSize: "1.4rem", // Larger font size for title
                         color: "#2c3e50",
                       }}
                     >
@@ -122,15 +114,20 @@ const MainIdeas = () => {
                     </h5>
                     <p
                       className="text-muted"
-                      style={{ fontSize: "0.9rem", lineHeight: "1.5" }} // Reduced font size
+                      style={{
+                        fontSize: "1rem", // Adjusted font size for description
+                        lineHeight: "1.6",
+                      }}
                     >
                       {course.description}
                     </p>
                     <p
                       className="text-primary fw-bold"
-                      style={{ fontSize: "1rem" }} // Slightly smaller price
+                      style={{
+                        fontSize: "1.2rem", // Adjusted price font size
+                      }}
                     >
-                      {course.price}
+                      ${course.price}
                     </p>
                   </div>
                 </div>

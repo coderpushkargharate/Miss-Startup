@@ -45,7 +45,7 @@ const Footer = () => {
               <li><a href="#" className="text-white text-decoration-none">Role IQ</a></li>
               <li><a href="#" className="text-white text-decoration-none">Skill IQ</a></li>
               <li><a href="#" className="text-white text-decoration-none">Partner Program</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Authors</a></li>
+              <li><a href="/faq" className="text-white text-decoration-none">Faq</a></li>
             </ul>
           </div>
 

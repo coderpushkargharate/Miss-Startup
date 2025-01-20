@@ -31,7 +31,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className='py-5 px-3' style={{ width: "100%", maxWidth: "1100px", margin: "auto", fontFamily: "Arial, sans-serif" }}>
+    <div className='py-5 px-3 ' style={{ width: "100%", maxWidth: "1100px", margin: "auto",  fontFamily: "Arial, sans-serif" }}>
       <h2 className='py-3' style={{ fontSize: "34px", fontWeight: "bold", textAlign: "center" }}>Frequently Asked Questions</h2>
       <p className='pb-4' style={{ textAlign: "center", color: "#666" }}>Questions on your mind? Don’t worry, we have the answers!</p>
       

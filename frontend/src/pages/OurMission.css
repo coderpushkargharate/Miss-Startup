@@ -1,0 +1,58 @@
+
+#Mission #ourstudy {
+    padding-left: 30%;
+    color: red;
+}
+
+#Mission .Our-mission {
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 30%;
+}
+
+#Mission .Our-mission-p {
+    margin-top: 25px;
+    font-size: 18px;
+    padding-left: 30%;
+}
+
+#Mission-storyimg {
+    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(src/assets/AboutUsimg/about-story-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 190px rgb(149, 149, 227);
+}
+
+#Mission .logo {
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    animation: pulsate 1.5s infinite;
+    cursor: pointer;
+}
+
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+}
+
