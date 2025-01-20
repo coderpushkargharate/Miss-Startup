@@ -124,8 +124,13 @@ body {
 /* Image Animation */
 .imganimation {
   position: relative;
-  top:60px;
-  left: 70px;
+bottom: 930px;
+right: 0px;
+
+
+}
+.imganimation img{
+  width: 28%;
 }
 
 .position-absolute img {
@@ -144,4 +149,22 @@ body {
   100% {
     border-radius: 50%;
   }
+}
+.hero_aera img{
+  margin-top: 400px;
+}
+/* Mobile Adjustments */
+@media (min-width: 576px) {
+  .hero_aera img{
+    margin-top: 1px;
+  }
+  /* Image Animation */
+.imganimation {
+  position: relative;
+  top:60px;
+  left: 70px;
+}
+.imganimation img{
+  width: 10%;
+}
 }

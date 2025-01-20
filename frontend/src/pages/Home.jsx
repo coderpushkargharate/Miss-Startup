@@ -69,16 +69,16 @@ const Home = () => {
       <div className="hero-section d-flex mt-5" style={{ height: "100vh", background: "#f8f9fa" }}>
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
-            <div className="col-lg-6  text-center d-none d-lg-block">
+            <div className="col-lg-6 hero_aera  ps-lg-3">
               <img
                 src="/src/assets/homeimg/hero_aera.png"
                 alt="Learning"
-                className="img-fluid ms-5 ps-4"
-                style={{ borderRadius: "15px" }}
+                className="img-fluid ms-lg-5 ps-4 mt-lg-5"
+                style={{ borderRadius: "15px"  }}
               />
             </div>
-            <div className="col-lg-6 text-md-start text-center herotext mt-5 ps-lg-5">
-              <form className="form-container" onSubmit={handleSubmit}>
+            <div className="col-lg-6 text-md-start text-center herotext mt-lg-5 ps-lg-5">
+              <form className="form-container mt-5 mt-lg-1" onSubmit={handleSubmit}>
                 <h2>Book your Free Session</h2>
                 <p>Learn from India’s best teachers</p>
 
@@ -174,8 +174,8 @@ const Home = () => {
                 </button>
               </form>
             </div>
-            <div className="position-absolute imganimation mt-5 d-none d-lg-block">
-              <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
+            <div className="position-absolute imganimation mt-5 ">
+              <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" className="img-fluid " alt="" />
             </div>
           </div>
         </div>

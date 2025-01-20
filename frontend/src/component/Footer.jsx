@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="row mx-0 mx-md-5">
           {/* Company Section */}
-          <div className="col-12 col-md-3 mb-4">
+          <div className="col-12 col-md-3 mb-4 ">
             <a href="#" className="text-white text-decoration-none">
               <img src="src/assets/Logo/logo-white.png" alt="" className="img-fluid w-75" />
             </a>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           {/* Platform Section */}
-          <div className="col-6 col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-uppercase mb-3">Platform</h5>
             <ul className="list-unstyled">
               <li><a href="#" className="text-white text-decoration-none">Browse library</a></li>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Company Section */}
-          <div className="col-6 col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-uppercase mb-3">Company</h5>
             <ul className="list-unstyled">
               <li><a href="#" className="text-white text-decoration-none">About Us</a></li>
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* Resources Section */}
-          <div className="col-6 col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-uppercase mb-3">Resources</h5>
             <ul className="list-unstyled">
               <li><a href="#" className="text-white text-decoration-none">Security</a></li>

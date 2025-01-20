@@ -57,12 +57,12 @@ const Ideas = () => {
 
   return (
     <div className="container py-5">
-      <h2 className="text-center mb-4" style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}>
+      <h2 className="text-center mb-4 my-5" style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}>
         Explore Courses
       </h2>
 
       {/* Category Buttons */}
-      <div className="d-flex justify-content-center mb-4 flex-wrap">
+      <div className="d-flex justify-content-center mb-4 flex-wrap mt-5">
         {categories.map((category) => (
           <button
             key={category.name}
