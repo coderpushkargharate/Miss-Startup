@@ -22,7 +22,7 @@ function Blog() {
     <>
       <div className="card-container mx-15 " id="Blog">
         {blogs.map((blog, index) => (
-          <div className="card hover-card mt-5" key={index}>
+          <div className="card  mt-5" key={index}>
             <img
               src={blog.imageUrl || "default-image.jpg"} // Handle default image
               className="card-img-top"

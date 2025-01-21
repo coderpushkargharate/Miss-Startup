@@ -1,5 +1,5 @@
 /* Container for cards */
-.card-container {
+#Blog.card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 cards per row */
@@ -13,26 +13,30 @@
     /* Align cards in the center horizontally */
     height: 100%;
     margin-top: 90px;
+    margin-bottom: 45%;
+    
 }
 
 /* Individual cards */
-.card {
+#Blog.card {
     border: none;
-    width: 350px;
+    width: 350px;   
+    height: auto;
     /* Set a fixed width for each card */
     margin: 0 auto;
     /* Center the cards horizontally */
-    box-shadow: 0 8px 16px rgba(136, 133, 133, 0.2);
+   box-shadow: 2px 2px 7px black;
+   background-color: var( --bg-color2);
 }
 
 /* Card hover effect */
-.hover-card {
+#Blog.hover-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth animation */
     cursor: pointer;
 }
 
-.hover-card:hover {
+#Blog.hover-card:hover {
     transform: translateY(-10px);
     /* Move card upward on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -62,26 +66,26 @@
     }
 }
 
-.card-footer {
+#Blog.card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: auto;
     padding-top: 10px;
-    font-size: 0.875rem;
+    font-size: var(--font-sizeh5);
     /* Adjust size as needed */
-    color: #444445;
+    color: var(--font-colorp);
     /* Optional: Set text color to secondary */
     border-top: 1px solid #e9ecef;
     /* Optional: Add a top border for separation */
 }
 
-.date {
+#Blog.date {
     margin-top: 10vh;
     float: left;
 }
 
-.read-time {
+#Blog.read-time {
     margin-top: 10vh;
     float: right;
 }
@@ -90,3 +94,5 @@
 #Blog h5{
     font-size: var(--font-size);
 }
+
+

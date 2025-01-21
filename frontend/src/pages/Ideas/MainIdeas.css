@@ -93,7 +93,7 @@
     border: 1px solid #ddd;
     border-radius: 12px;
     /* width: 1100px; */
-    background-color: #faeaea;
+    background-color: var(--card-bgcolor);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -128,15 +128,18 @@
   }
   
   .course-title {
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: #34495e;
+    font-weight: var( --font-weight);
+    font-size: var(--font-sizeh2);
+    color: var(--font-colorh2);
+    font-family: var(--font-familyh2);
+    
   }
   
   .course-description {
-    font-size: 1rem;
+    font-size: var(  --font-sizep);
     line-height: 1.6;
-    color: #6c757d;
+    color: var( --font-colorp);
+    font-family: var(--font-familyp);
   }
   
   .course-price {
@@ -148,6 +151,9 @@
   .no-courses {
     font-size: 1.5rem;
     color: #bdc3c7;
+  }
+  #Mainideas {
+    background-color: var(--bg-color1);
   }
   
   /* Media Queries for Small Screens */

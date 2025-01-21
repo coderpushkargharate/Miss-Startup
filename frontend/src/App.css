@@ -12,7 +12,7 @@
 
   --font-colorp: #1becb8; /* Primary text color */
 
-  --font-sizeh2:  18px;
+  --font-sizeh2:  25px;
 
   --font-weight:  bold;
 
@@ -30,8 +30,7 @@
 
   --bg-color2: #c092b5; /* Light background */
 
-  --card-bgcolor:blue;
+  --card-bgcolor:rgb(239, 239, 247);
 
-  --font-size: 18px;
 
 }
