@@ -45,7 +45,7 @@ body {
 }
 
 /* Form Container */
-.form-container {
+.hero-section .form-container {
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
@@ -55,7 +55,7 @@ body {
   height: auto;
 }
 
-.form-container h2 {
+.hero-section .form-container h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -69,16 +69,16 @@ body {
   box-sizing: border-box; /* Padding doesn't affect height */
 }
 
-.form-container .form-group {
+.hero-section .form-container .form-group {
   margin-bottom: 0.7rem;
 }
 
-.form-container .send-otp-button {
+.hero-section .form-container .send-otp-button {
   width: 100%;
   margin-top: 0.5rem;
 }
 
-.form-container .submit-button {
+.hero-section .form-container .submit-button {
   margin-top: 1rem;
   background: orange;
   color: #fff;
@@ -89,29 +89,29 @@ body {
   transition: background 0.3s;
 }
 
-.form-container .submit-button:hover {
+.hero-section .form-container .submit-button:hover {
   background: #e67e22;
 }
 
 /* Session Mode Radio */
-.form-container .session-mode {
+.hero-section .form-container .session-mode {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.4rem;
 }
 
-.form-container .session-mode label {
+.hero-section .form-container .session-mode label {
   font-size: 1rem;
   cursor: pointer;
 }
 
-.form-container .session-mode input {
+.hero-section .form-container .session-mode input {
   margin-right: 0.5rem;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 576px) {
-  .form-container {
+  .hero-section .form-container {
     width: 100%;
     padding: 1.5rem;
   }
@@ -125,23 +125,28 @@ body {
 }
 
 /* Image Animation */
-.imganimation {
+.hero-section .imganimation {
   position: relative;
-bottom: 930px;
+bottom: 950px;
 right: 0px;
 
 
 }
-.imganimation img{
+.hero-section .imganimation img{
   width: 28%;
 }
 
-.position-absolute img {
+.hero-section .position-absolute img {
   height: auto;
   border-radius: 50%;
   animation: smoothRound 5s infinite ease-in-out;
 }
 
+.hero-section input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
 @keyframes smoothRound {
   0% {
     border-radius: 50%;
@@ -153,7 +158,7 @@ right: 0px;
     border-radius: 50%;
   }
 }
-.hero_aera img{
+.hero-section .hero_aera img{
   margin-top: 400px;
 }
 /* Mobile Adjustments */
@@ -162,12 +167,18 @@ right: 0px;
     margin-top: 1px;
   }
   /* Image Animation */
-.imganimation {
+  .hero-section .imganimation {
   position: relative;
   top:60px;
   left: 70px;
 }
-.imganimation img{
+.hero-section .imganimation img{
   width: 10%;
+}
+
+.hero-section {
+
+  height: 100vh;
+
 }
 }
