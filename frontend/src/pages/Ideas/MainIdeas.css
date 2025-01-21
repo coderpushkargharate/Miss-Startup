@@ -151,7 +151,7 @@
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
   .sidebar {
-    left: -350px; /* Initially hidden off-screen */
+    left: -340px; /* Initially hidden off-screen */
  
   }
 
