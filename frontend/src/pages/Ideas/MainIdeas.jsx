@@ -9,7 +9,7 @@ const MainIdeas = () => {
     name: "Artificial Intelligence",
     endpoint: "/api/ai",
   });
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true); // state for sidebar visibility
 
   const categories = [
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
@@ -29,101 +29,73 @@ const MainIdeas = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setSidebarVisible(false); // Close the sidebar on category selection for small screens
   };
 
   const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
+    setIsSidebarVisible(!isSidebarVisible);
   };
 
   return (
-    <div className="container-fluid">
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-md navbar-light bg-light">
-        <a className="navbar-brand" href="#">Main Ideas</a>
+    <div className="container-fluid mt-5" id="Mainideas">
+      <div className="row mt-5">
+        {/* Sidebar Toggle Button (Visible only on small screens) */}
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className="sidebar-toggle-btn d-md-none"
+          onClick={toggleSidebar}
         >
-          <span className="navbar-toggler-icon"></span>
+          &#9776; {/* Hamburger icon */}
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link active" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
-      {/* Toggle Button for Small Screens */}
-      <button
-        className="btn btn-primary d-md-none toggle-sidebar-btn"
-        onClick={toggleSidebar}
-      >
-        {sidebarVisible ? "Close Menu" : "Open Menu"}
-      </button>
-
-      <div className={`sidebar ${sidebarVisible ? "visible" : ""}`}>
-        <h3 className="sidebar-title">Categories</h3>
-        <div className="list-group">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              className={`list-group-item ${
-                selectedCategory.name === category.name ? "active" : ""
-              }`}
-              onClick={() => handleCategoryClick(category)}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="main-content">
-        <h2 className="main-title mt-4">Explore Our Services</h2>
-
-        <div className="row">
-          {courses.length > 0 ? (
-            courses.map((course, index) => (
-              <div
-                key={course._id}
-                className={`col-12 col-sm-6 col-md-4 mb-4`}
+        {/* Left Sidebar (Category Buttons) */}
+        <div
+          className={`sidebar ${isSidebarVisible ? "d-block" : "d-none"} d-md-block`}
+        >
+          <h2 className="sidebar-title">Categories</h2>
+          <div className="list-group">
+            {categories.map((category) => (
+              <button
+                key={category.name}
+                className={`list-group-item ${
+                  selectedCategory.name === category.name ? "active" : ""
+                }`}
+                onClick={() => handleCategoryClick(category)}
               >
-                <div
-                  className={`course-card ${
-                    index % 2 === 0 ? "reverse-layout" : ""
-                  }`}
-                >
-                  <div className="course-image">
-                    <img src={course.imageUrl} alt={course.title} />
-                  </div>
-                  <div className="course-info">
-                    <h5 className="course-title">{course.title}</h5>
-                    <p className="course-description">{course.description}</p>
-                    <p className="course-price">${course.price}</p>
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Content (Courses Display) */}
+        <div className={`main-content ${isSidebarVisible ? "sidebar-visible" : ""}`}>
+          <h2 className="main-title mt-4">Explore Our Services</h2>
+
+          <div className="row w-100">
+            {courses.length > 0 ? (
+              courses.map((course, index) => (
+                <div key={course._id} className="col-12 mb-4">
+                  <div
+                    className={`course-card px-4 ${
+                      index % 2 === 0 ? "reverse-layout" : ""
+                    }`}
+                  >
+                    <div className="course-image">
+                      <img src={course.imageUrl} alt={course.title} />
+                    </div>
+                    <div className="course-info ps-4">
+                      <h5 className="course-title">{course.title}</h5>
+                      <p className="course-description w-75">{course.description}</p>
+                      <p className="course-price">${course.price}</p>
+                    </div>
                   </div>
                 </div>
+              ))
+            ) : (
+              <div className="text-center">
+                <p className="no-courses">No courses available.</p>
               </div>
-            ))
-          ) : (
-            <div className="text-center">
-              <p className="no-courses">No courses available.</p>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>
