@@ -4,3 +4,6 @@
     color: var(--font-colorh2);
     font-family: var(--font-family);
 }
+#Counter{
+    background-color: var( --bg-color1);
+}

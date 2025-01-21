@@ -57,83 +57,89 @@ const Ideas = () => {
   };
 
   return (
-    <div className="container py-5" id="Ideas">
-      <h2 className="text-center mb-4 my-5">
-        Explore Courses
-      </h2>
+    <div className="container-fulid" id="Ideas">
+       <h2 className="text-center mb-4 pt-5">
+          Explore Courses
+        </h2>
+        
+        <div className="container pb-5" >
+      
+        {/* Category Buttons */}
+        <div className="d-flex justify-content-center mb-4 flex-wrap mt-5">
+          {categories.map((category) => (
+            <button
+              key={category.name}
+              className={`btn ${selectedCategory?.name === category.name ? "btn" : "btn-outline-secondary"}`}
+              style={{
+                margin: "10px",
+                borderRadius: "20px",
+                padding: "10px 20px",
+                fontSize: "1rem",
+                fontWeight: "500",
+                backgroundColor: "var(--btn-color)"
+              }}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
 
-      {/* Category Buttons */}
-      <div className="d-flex justify-content-center mb-4 flex-wrap mt-5">
-        {categories.map((category) => (
-          <button
-            key={category.name}
-            className={`btn ${selectedCategory?.name === category.name ? "btn-primary" : "btn-outline-secondary"}`}
-            style={{
-              margin: "10px",
-              borderRadius: "20px",
-              padding: "10px 20px",
-              fontSize: "1rem",
-              fontWeight: "500",
-            }}
-            onClick={() => handleCategoryClick(category)}
-          >
-            {category.name}
-          </button>
-        ))}
-      </div>
+        {/* Course Cards */}
+        <div className="row px-lg-5 pt-2">
+          {displayedCourses.length > 0 ? (
+            displayedCourses.map((course) => (
+              <div key={course._id} className="col-lg-4 col-md-6  mb-4" style={{ cursor: "pointer" }} onClick={() => handleCardClick(course._id)}>
+                <div className="card h-100  shadow-sm">
+                  <img
+                    src={course.imageUrl || course.image}
+                    alt={course.title}
+                    className="card-img-top"
+                    style={{ height: "200px", objectFit: "cover", borderRadius: "8px" }}
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="card-title" style={{ fontWeight: "600", color: "#444" }}>
+                      {course.title}
+                    </h5>
 
-      {/* Course Cards */}
-      <div className="row">
-        {displayedCourses.length > 0 ? (
-          displayedCourses.map((course) => (
-            <div key={course._id} className="col-lg-4 col-md-6 mb-4" style={{ cursor: "pointer" }} onClick={() => handleCardClick(course._id)}>
-              <div className="card h-100 shadow-sm">
-                <img
-                  src={course.imageUrl || course.image}
-                  alt={course.title}
-                  className="card-img-top"
-                  style={{ height: "200px", objectFit: "cover", borderRadius: "8px" }}
-                />
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title" style={{ fontWeight: "600", color: "#444" }}>
-                    {course.title}
-                  </h5>
-                 
                     {/* Fill the card body */}
                     <p className="card-text" style={{ flexGrow: "1", fontSize: "0.9rem" }}>
-                    {course.description || "No description available."}
-                  </p>
-                  <p className="text-primary fw-bold" style={{ fontSize: "1.1rem" }}>
-                    {course.price}
-                  </p>
-                
+                      {course.description || "No description available."}
+                    </p>
+                    <p className="text-primary fw-bold" style={{ fontSize: "1.1rem" }}>
+                      {course.price}
+                    </p>
+
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-center">No courses available. Please select a category.</p>
+            ))
+          ) : (
+            <p className="text-center">No courses available. Please select a category.</p>
+          )}
+        </div>
+
+        {/* Show More Button */}
+        {courses.length > 6 && (
+          <div className="text-center mt-4">
+            <button
+              className="btn "
+              style={{
+                borderRadius: "20px",
+                padding: "10px 30px",
+                fontSize: "1rem",
+                fontWeight: "500",
+                backgroundColor: "var(--btn-color)"
+              }}
+              onClick={handleShowMore}
+            >
+              Show More
+            </button>
+          </div>
         )}
       </div>
-
-      {/* Show More Button */}
-      {courses.length > 6 && (
-        <div className="text-center mt-4">
-          <button
-            className="btn btn-primary"
-            style={{
-              borderRadius: "20px",
-              padding: "10px 30px",
-              fontSize: "1rem",
-              fontWeight: "500",
-            }}
-            onClick={handleShowMore}
-          >
-            Show More
-          </button>
-        </div>
-      )}
     </div>
+
   );
 };
 

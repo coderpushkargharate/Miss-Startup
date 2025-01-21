@@ -3,7 +3,7 @@
     display: flex;
   }
   
-  .sidebar {
+  .dashboard-container .sidebar {
     width: 250px;
     background-color: #2c3e50;
     color: white;
@@ -12,18 +12,18 @@
     height: 100vh;
   }
   
-  .sidebar .logo {
+  .dashboard-container .sidebar .logo {
     font-size: 20px;
     margin-bottom: 20px;
     padding-left: 20px;
   }
   
-  .sidebar ul {
+  .dashboard-container .sidebar ul {
     list-style-type: none;
     padding-left: 0;
   }
   
-  .sidebar ul li {
+  .dashboard-container.sidebar ul li {
     padding: 15px 20px;
     cursor: pointer;
   }
@@ -33,17 +33,17 @@
     background-color: #34495e;
   }
   
-  .content {
+  .dashboard-container .content {
     margin-left: 250px;
     padding: 20px;
     width: 100%;
   }
   
-  .container {
+  .dashboard-container .container {
     margin-top: 20px;
   }
   
-  input, textarea {
+  .dashboard-container input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -60,7 +60,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .dashboard-container button:hover {
     background-color: #2980b9;
   }
   

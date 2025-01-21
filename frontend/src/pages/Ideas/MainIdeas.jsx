@@ -1,3 +1,4 @@
+// React Component
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +10,7 @@ const MainIdeas = () => {
     name: "Artificial Intelligence",
     endpoint: "/api/ai",
   });
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true); // state for sidebar visibility
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
 
   const categories = [
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
@@ -21,9 +22,7 @@ const MainIdeas = () => {
   useEffect(() => {
     axios
       .get(`http://localhost:5000${selectedCategory.endpoint}`)
-      .then((response) => {
-        setCourses(response.data);
-      })
+      .then((response) => setCourses(response.data))
       .catch((err) => console.error(err));
   }, [selectedCategory]);
 
@@ -43,10 +42,10 @@ const MainIdeas = () => {
           className="sidebar-toggle-btn d-md-none"
           onClick={toggleSidebar}
         >
-          &#9776; {/* Hamburger icon */}
+          &#9776;
         </button>
 
-        {/* Left Sidebar (Category Buttons) */}
+        {/* Sidebar */}
         <div
           className={`sidebar ${isSidebarVisible ? "d-block" : "d-none"} d-md-block`}
         >
@@ -66,7 +65,7 @@ const MainIdeas = () => {
           </div>
         </div>
 
-        {/* Main Content (Courses Display) */}
+        {/* Main Content */}
         <div className={`main-content ${isSidebarVisible ? "sidebar-visible" : ""}`}>
           <h2 className="main-title mt-4">Explore Our Services</h2>
 
