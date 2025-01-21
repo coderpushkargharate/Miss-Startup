@@ -15,12 +15,14 @@
     text-transform: capitalize;
   }
   
-  h2 {
-    font-weight: bold;
-    font-size: 1.8rem;
+  #Ideas h2 {
+    font-weight: var(--font-weight);
+    font-size: var(--font-sizeh2);
+    color: var(--font-colorh2);
+    font-family: var(--font-family);
   }
   
-  p {
+  #Ideas p {
     font-size: 1rem;
     color: #6c757d;
   }

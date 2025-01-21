@@ -66,7 +66,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="hero-section d-flex mt-5" style={{ height: "100vh", background: "#f8f9fa" }}>
+      <div className="hero-section d-flex mt-5" style={{ height: "100vh" }}>
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
             <div className="col-lg-6 hero_aera  ps-lg-3">
@@ -169,7 +169,7 @@ const Home = () => {
                   </select>
                 </div>
 
-                <button type="submit" className="submit-button ">
+                <button type="submit" className="submit-button px-2 py-1">
                   Schedule a Free Class
                 </button>
               </form>

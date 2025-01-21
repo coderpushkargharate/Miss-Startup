@@ -10,7 +10,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: #f8f9fa;
+  background: var(--bg-color1);
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
@@ -26,14 +26,17 @@ body {
   margin-bottom: 10rem;
 }
 
-.herotext h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  font-weight: 700;
+.herotext h2 {
+  font-size: var(--font-sizeh2);
+  color: var(--font-colorh2);
+  font-weight: var(--font-weight);
+  font-family: var(--font-familyh2);
 }
 
 .herotext p {
-  font-size: 1.2rem;
+  font-size: var(--font-sizep);
+  color: var(--font-colorp);
+  font-family: var(--font-familyp);
   line-height: 1.5;
 }
 

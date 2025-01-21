@@ -1,9 +1,8 @@
 
 #Mission{
     margin-top: 250px;
-}
-#Mission h2{
-    color: var(--font-color);
+
+    background-color: var(--bg-color2);
 }
 #ourstudy {
     color: red;
@@ -11,15 +10,18 @@
 }
 
 #Mission .Our-mission {
-    font-weight: 700;
-    font-size: 40px;
+    font-weight: var(--font-weight);
+    font-size: var(--font-sizeh2);
+    color: var(--font-colorh2);
+    font-family: var(--font-family);
     /* padding-left: 20%; */
 }
 
 #Mission .Our-mission-p {
     margin-top: 25px;
-    font-size: 18px;
-    /* padding-left: 20%; */
+    font-size: var(--font-sizep);
+  color: var(--font-colorp);
+  font-family: var(--font-familyp);
 }
 
 /* Image Background and Position */
@@ -29,6 +31,7 @@
     background-repeat: no-repeat;
     background-size: cover;
    width: 100%;
+   margin: 20px;
     height: 350px;
     border-radius: 10px;
     box-shadow: 1px 2px 190px rgb(149, 149, 227);
