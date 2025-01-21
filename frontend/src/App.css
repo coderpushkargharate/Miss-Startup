@@ -3,12 +3,23 @@
   padding: 0px;
   box-sizing: border-box;
   /* border: 1px solid red; */
+  
 }
 
 :root {
   /* Font Colors */
-  --font-color: #1becb8; /* Primary text color */
+  --font-colorh2: #1becb8; /* Primary text color */
 
+  --font-colorp: #1becb8; /* Primary text color */
+
+  --font-sizeh2:  18px;
+
+  --font-weight:  bold;
+
+  --font-sizep: 12px;
+
+  --font-sizeh5: 15px;
+  
   /* Fonts */
   --font-family: 'Arial, sans-serif';
 
