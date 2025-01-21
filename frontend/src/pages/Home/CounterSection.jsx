@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-
+import "../Home/Countersection.css"
 function CounterSection() {
     const stats = [
         { value: 10, suffix: "K+", description: "Happy Customers" },
@@ -12,11 +12,11 @@ function CounterSection() {
     return (
         <>
             {/* Fun Fact Section */}
-            <div className="container-fluid text-dark py-5">
+            <div className="container-fluid text-dark py-5" id="Counter">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12 text-center mx-auto mb-5">
-                            <h1>Counter</h1>
+                            <h2>Counter</h2>
                         </div>
                         {stats.map((stat, index) => (
                             <div key={index} className="col-6 col-md-3 text-center mb-4">

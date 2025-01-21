@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../Home/ideas.css"
 
 const Ideas = () => {
   const [courses, setCourses] = useState([]);
@@ -56,8 +57,8 @@ const Ideas = () => {
   };
 
   return (
-    <div className="container py-5">
-      <h2 className="text-center mb-4 my-5" style={{ fontWeight: "700", fontSize: "2rem", color: "#333" }}>
+    <div className="container py-5" id="Ideas">
+      <h2 className="text-center mb-4 my-5">
         Explore Courses
       </h2>
 

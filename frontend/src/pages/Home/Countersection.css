@@ -1,0 +1,6 @@
+#Counter h2{
+    font-weight: var(--font-weight);
+    font-size: var(--font-sizeh2);
+    color: var(--font-colorh2);
+    font-family: var(--font-family);
+}
