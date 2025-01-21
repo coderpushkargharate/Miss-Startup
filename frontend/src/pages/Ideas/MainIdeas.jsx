@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./mainIdeas.css";
 
 const MainIdeas = () => {
   const [courses, setCourses] = useState([]);
@@ -8,6 +9,7 @@ const MainIdeas = () => {
     name: "Artificial Intelligence",
     endpoint: "/api/ai",
   });
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const categories = [
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
@@ -17,7 +19,6 @@ const MainIdeas = () => {
   ];
 
   useEffect(() => {
-    // Fetch courses for the selected category when component mounts or selectedCategory changes
     axios
       .get(`http://localhost:5000${selectedCategory.endpoint}`)
       .then((response) => {
@@ -28,121 +29,101 @@ const MainIdeas = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    setSidebarVisible(false); // Close the sidebar on category selection for small screens
+  };
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
   };
 
   return (
-    <div className="container-fluid mt-5">
-      <div className="row mt-5">
-        {/* Left Sidebar (Category Buttons) */}
-        <div className="col-md-3 p-4 " style={{ position: "fixed", top: "100px", left: "0", height: "calc(100vh - 100px)", overflowY: "auto", backgroundColor: "#f8f9fa" }}>
-          <h3 className="text-center mb-4 ">Categories</h3>
-          <div className="list-group">
-            {categories.map((category) => (
-              <button
-                key={category.name}
-                className={`list-group-item list-group-item-action ${
-                  selectedCategory.name === category.name
-                    ? "active"
-                    : "list-group-item-light"
-                }`}
-                style={{
-                  marginTop:"15px",
-                  borderRadius: "10px",
-                  fontSize: "1.1rem",
-                  fontWeight: "500",
-                }}
-                onClick={() => handleCategoryClick(category)}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
+    <div className="container-fluid">
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <a className="navbar-brand" href="#">Main Ideas</a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <a className="nav-link active" href="#">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
+      </nav>
 
-        {/* Main Content (Courses Display) */}
-        <div className="col-md-9 offset-md-3 py-5 mt-3 px-5">
-          <h2
-            className="text-center mb-5"
-            style={{ fontWeight: "700", fontSize: "2.5rem", color: "#333" }}
-          >
-            Explore Our Services
-          </h2>
+      {/* Toggle Button for Small Screens */}
+      <button
+        className="btn btn-primary d-md-none toggle-sidebar-btn"
+        onClick={toggleSidebar}
+      >
+        {sidebarVisible ? "Close Menu" : "Open Menu"}
+      </button>
 
-          <div className="row">
-            {courses.length > 0 ? (
-              courses.map((course, index) => (
-                <div key={course._id} className="col-12 mb-4">
-                  <div
-                    className={`d-flex flex-column flex-md-row align-items-center shadow-sm p-3 mb-4 ${
-                      index % 2 === 0 ? "flex-md-row-reverse" : ""
-                    }`}
-                    style={{
-                      borderRadius: "10px",
-                      backgroundColor: "#f9f9f9",
-                      overflow: "hidden",
-                      maxWidth: "100%",
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    <div
-                      className="me-md-4 mb-3 mb-md-0"
-                      style={{
-                        flexShrink: 0,
-                        borderRadius: "50%",
-                        overflow: "hidden",
-                        width: "150px",
-                        height: "150px",
-                        border: "8px solid #52a9f5",
-                      }}
-                    >
-                      <img
-                        src={course.imageUrl}
-                        alt={course.title}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
-                    <div style={{ flex: 1 }}>
-                      <h5
-                        style={{
-                          fontWeight: "700",
-                          fontSize: "1.4rem",
-                          color: "#2c3e50",
-                        }}
-                      >
-                        {course.title}
-                      </h5>
-                      <p
-                        className="text-muted"
-                        style={{
-                          fontSize: "1rem",
-                          lineHeight: "1.6",
-                          width: "60%",
-                        }}
-                      >
-                        {course.description}
-                      </p>
-                      <p
-                        className="text-primary fw-bold"
-                        style={{
-                          fontSize: "1.2rem",
-                        }}
-                      >
-                        ${course.price}
-                      </p>
-                    </div>
+      <div className={`sidebar ${sidebarVisible ? "visible" : ""}`}>
+        <h3 className="sidebar-title">Categories</h3>
+        <div className="list-group">
+          {categories.map((category) => (
+            <button
+              key={category.name}
+              className={`list-group-item ${
+                selectedCategory.name === category.name ? "active" : ""
+              }`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+        <h2 className="main-title mt-4">Explore Our Services</h2>
+
+        <div className="row">
+          {courses.length > 0 ? (
+            courses.map((course, index) => (
+              <div
+                key={course._id}
+                className={`col-12 col-sm-6 col-md-4 mb-4`}
+              >
+                <div
+                  className={`course-card ${
+                    index % 2 === 0 ? "reverse-layout" : ""
+                  }`}
+                >
+                  <div className="course-image">
+                    <img src={course.imageUrl} alt={course.title} />
+                  </div>
+                  <div className="course-info">
+                    <h5 className="course-title">{course.title}</h5>
+                    <p className="course-description">{course.description}</p>
+                    <p className="course-price">${course.price}</p>
                   </div>
                 </div>
-              ))
-            ) : (
-              <div className="text-center">
-                <p style={{ fontSize: "1.5rem", color: "#999" }}>No courses available.</p>
               </div>
-            )}
-          </div>
+            ))
+          ) : (
+            <div className="text-center">
+              <p className="no-courses">No courses available.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

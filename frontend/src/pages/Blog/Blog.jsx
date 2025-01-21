@@ -20,7 +20,7 @@ function Blog() {
 
   return (
     <>
-      <div className="card-container mx-15 ">
+      <div className="card-container mx-15 " id="Blog">
         {blogs.map((blog, index) => (
           <div className="card hover-card mt-5" key={index}>
             <img

@@ -85,3 +85,8 @@
     margin-top: 10vh;
     float: right;
 }
+
+
+#Blog h5{
+    font-size: var(--font-size);
+}
