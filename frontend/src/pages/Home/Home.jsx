@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../pages/home.css";
+import "../Home/home.css"
 import Ideas from "./Ideas";
 import OurMission from "./OurMission";
 import Testimonials from "./Testimonials";

@@ -1,5 +1,5 @@
 import { VscTriangleRight } from "react-icons/vsc";
-import "../pages/OurMission.css";
+import "../Home/OurMission.css";
 
 function OurMission() {
     return (

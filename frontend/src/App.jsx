@@ -6,16 +6,14 @@ import "./App.css";
 
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
-import Home from "./pages/Home";
-import Blog from "./pages/Blog";
-import Dashboard from "./pages/Dashboard";
-import Mainideas from "./pages/MainIdeas";
-import CourseDetails from "./pages/CourseDetails";
-import AboutUs from "./pages/AboutUs";
+import Blog from "./pages/Blog/Blog";
+import Mainideas from "./pages/Ideas/MainIdeas";
+import AboutUs from "./pages/About/AboutUs";
 import Login from "./login/Login";
-import StartupCourse from "./pages/StartupCourse";
-import FAQ from "./pages/Faq";
-
+import StartupCourse from "./pages/StartupCourse/StartupCourse";
+import FAQ from "./pages/FAQ/Faq";
+import Home from "./pages/Home/Home";
+import Dashboard from "./dashboard/Dashboard";
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
