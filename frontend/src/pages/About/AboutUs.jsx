@@ -62,6 +62,77 @@ const AboutUs = () => {
 
 
 
+
+                {/* Our Vision Section */}
+
+
+                <div className="container-fluid" id="OurVision">
+                    <div className="container" >
+                        <div className="row " >
+                            <div className="col-6">
+                                <img src="src/assets/AboutUsimg/post79-edx-about-us-vision.webp" alt=""  id="OurVisionimg"/>
+                            </div>
+                            <div className="col-6">
+                                <h2 className="OurVisionh2">Our Vision</h2>
+                                <p className="OurVisionp">2U believes in the power of high-quality online education to create a better future for all.
+                                    Through edX, our online learning platform, we see a world where learners everywhere have access to…</p>
+                                <ul className="OurVisionul">
+                                    <li>Expert-led educational experiences.</li>
+                                    <li>Flexible pathways to personal and professional achievement.</li>
+                                    <li>Educational opportunities at every investment level.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Delivering world-class section */}
+
+
+                <div className="container-fluid " id="Delivering" >
+                    <div className="container">
+                        <div className="row ">
+                            <div className="col-6" id="Deliveringp">
+                                <span className="Ourstoryspan">Our story</span>
+                                <h2 className="Ourstoryh2">Delivering world-class learning outcomes at scale</h2>
+                                <p className="Ourstoryp">Guided by our founding mission to eliminate the back row in higher education, 2U has spent over 15 years advancing the technology and innovation to deliver world-class learning outcomes at scale. In 2021, 2U acquired edX to create a global online learning platform that has delivered life-changing learning experiences to millions of people worldwide.
+                                    <br></br><br></br>
+
+                                    Today, under the leadership of 2U CEO Paul Lalljie and edX Founder and 2U Chief Academic Officer Anant Agarwal, edX connects millions of people with affordable, career-relevant learning opportunities.
+
+                                </p>
+                                <button className="Deliveringbutton">Meet Our leaders</button>
+                            </div>
+                            <div className="col-6">
+                                <img src="src/assets/AboutUsimg/post79-edx-about-us-tech-person.png" alt="" id="deleveringimg" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div className="container fluid position-relative" id="Great-Place" mt-5>
+                    <h2 className="Great-Placeh2 mt-5 py-3">We are a Great Place to Work!</h2>
+                    <p className="Great-Placep w-75">
+                        “A great place to work isn't just about the physical environment—it's a culture that fosters growth, collaboration, and fulfilment.
+                        It's where every individual is valued, innovation thrives, success is shared, where passion meets purpose and every day is an opportunity to make a difference.” Join us in building Raise.</p>
+                    <div className=" cardred">
+                        card
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
                 {/* Cards Section */}
                 <div className="container-fluid my-5">
                     <div className="container">
@@ -206,15 +277,7 @@ const AboutUs = () => {
 
                     </div>
 
-                    <div className="container fluid position-relative" id="Great-Place" mt-5>
-                        <h2 className="Great-Placeh2 mt-5 py-3">We are a Great Place to Work!</h2>
-                        <p className="Great-Placep w-75">
-                            “A great place to work isn't just about the physical environment—it's a culture that fosters growth, collaboration, and fulfilment.
-                            It's where every individual is valued, innovation thrives, success is shared, where passion meets purpose and every day is an opportunity to make a difference.” Join us in building Raise.</p>
-                            <div className=" cardred">
-                                card
-                            </div>
-                    </div>
+
                 </div>
 
 

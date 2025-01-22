@@ -69,7 +69,7 @@ const Home = () => {
       <div className="hero-section d-flex mt-5" style={{ height: "100vh" }}>
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
-            <div className="col-lg-6 hero_aera  ps-lg-3">
+            <div className="col-lg-6  text-center">
               <img
                 src="src/assets/homeimg/homemade_cakes_4-removebg-preview.png"
                 alt="Learning"
@@ -171,11 +171,11 @@ const Home = () => {
 
                 <button type="submit" className="submit-button px-2 py-1">
                   Schedule a Free Class
-                </button>
+                </button> 
               </form>
             </div>
-            <div className="position-absolute imganimation mt-5 ">
-              <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" className="img-fluid " alt="" />
+            <div className="position-absolute imganimation mt-5">
+              <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
             </div>
           </div>
         </div>

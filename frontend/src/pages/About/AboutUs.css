@@ -178,3 +178,67 @@
     right: 150px;
     background-color: #FF1629;
 }
+
+/* Our Vision Section */
+
+
+#OurVision{
+    background-color:#F9F8F6;
+}
+#OurVisionimg{
+    height: 65vh;
+    width: 80vh;
+    margin-left: -70px;
+
+}
+.OurVisionh2{
+    margin-top: 50px;
+    font-size: 35px;
+}
+.OurVisionp{
+    margin-top: 35px;
+    font-size: 18px;
+    color:rgb(70, 68, 68)
+}
+.OurVisionul{
+    margin-top: 35px;
+    font-size: 18px;
+    color: rgb(77, 74, 74);
+}
+
+
+/* Delivering world-class section */
+
+#deleveringimg{
+    position: absolute;
+  height: 65vh;
+  width: 65vh;
+  right: 18vh;
+  margin-top: 0px;
+ 
+}
+#Delivering{
+    background-color: #00262B ;
+    width: 100%;
+    color: white;
+    height: 70vh;
+
+}
+.Ourstoryh2{
+  font-size: 33px;
+}
+.Ourstoryp{
+    font-size: 18px;
+}
+#Deliveringp{
+    margin-top: 25px;
+    width: 42% ;
+}
+.Deliveringbutton{
+    background-color: white;
+    color: black;
+}
+
+#Delivering{
+    margin-top: 90px;
+}
