@@ -6,7 +6,7 @@ function OurMission() {
         <>
             {/* Mission Section */}
             <div className="container-fluid px-lg-5" id="Mission">
-                <div className="row ">
+                <div className="row px-lg-5">
                     <div className="col-12 col-lg-6 ps-lg-5 d-flex flex-column mt-5">
                         <div className="col-12 py-3 fs-5 " id="ourstudy">
                             Our Journey

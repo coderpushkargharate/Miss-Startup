@@ -7,6 +7,9 @@ const router = express.Router();
 router.post("/", async (req, res) => {
   const { title, description, imageUrl, price, rating } = req.body;
 
+
+
+  
   try {
     const newAiCourse = new Ai({ title, description, imageUrl, price, rating });
     await newAiCourse.save();

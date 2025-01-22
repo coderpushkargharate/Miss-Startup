@@ -24,7 +24,7 @@ const Ideas = () => {
   // Fetch courses based on the selected category endpoint
   const fetchCourses = async (endpoint) => {
     try {
-      const response = await axios.get(`http://localhost:5000${endpoint}`);
+      const response = await axios.get(`https://miss-startup.onrender.com${endpoint}`);
       setCourses(response.data);
       setDisplayedCourses(response.data.slice(0, 6)); // Initially display 6 courses
       setIsAiCategory(endpoint === "/api/ai");
