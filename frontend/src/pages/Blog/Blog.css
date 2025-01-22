@@ -1,92 +1,80 @@
 /* Container for cards */
 #Blog.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 cards per row */
-    gap: 2.3rem;
-    /* Reduce the gap between cards */
-    margin: 2rem auto;
-    /* Center the container horizontally */
-    max-width: 72%;
-    /* Set a maximum width for the container */
-    justify-content: center;
-    /* Align cards in the center horizontally */
-    height: auto;
-    margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.3rem;
+  margin: 2rem auto;
+  max-width: 72%;
+  justify-content: center;
+  height: auto;
+  margin-top: 90px;
+}
+
+/* Individual cards */
+#Blog.card {
+  border: none;
+  width: 100%;  /* Make the card width responsive */
+  max-width: 350px; /* Limit the max width of cards */
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 2px 2px 7px black;
+  background-color: var(--bg-color2);
+}
+
+/* Card hover effect */
+#Blog.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #Blog.card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 5px;
   }
-  
-  /* Individual cards */
+  /* Container for cards */
+#Blog.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.3rem;
+  margin: 2rem auto;
+  max-width: 100%;
+  justify-content: center;
+  height: auto;
+  margin-top: 90px;
+}
+
+}
+
+@media (max-width: 576px) {
+  #Blog.card-container {
+    grid-template-columns: 1fr;
+  }
+
   #Blog.card {
-    border: none;
-    width: 350px;
-    height: auto;
-    /* Set a fixed width for each card */
-    margin: 0 auto;
-    /* Center the cards horizontally */
-    box-shadow: 2px 2px 7px black;
-    background-color: var(--bg-color2);
+    width: 90%; /* Adjust to fit smaller screens */
+    max-width: none; /* Remove max-width limit on small screens */
   }
-  
-  /* Card hover effect */
-  #Blog.card:hover {
-    transform: translateY(-10px);
-    /* Move card upward on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Add shadow for hover effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth animation */
-    cursor: pointer;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    #Blog.card-container {
-      grid-template-columns: repeat(2, 1fr);
-      /* 2 cards per row on medium screens */
-      gap: 1rem;
-      /* Maintain a smaller gap */
-      margin-top: 5px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    #Blog.card-container {
-      grid-template-columns: 1fr;
-      /* 1 card per row on small screens */
-    }
-  
-    #Blog.card {
-      width: 90%;
-      /* Make cards responsive for smaller screens */
-    }
-  }
-  
-  /* Footer styling inside card */
-  #Blog .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: var(--font-sizeh5);
-    /* Adjust size as needed */
-    color: var(--font-colorp);
-    /* Optional: Set text color to secondary */
-    border-top: 1px solid #e9ecef;
-    /* Optional: Add a top border for separation */
-  }
-  
-  /* Date and read time styling */
-  #Blog .date,
-  #Blog .read-time {
-    font-size: 0.9rem;
-  }
-  
-  #Blog .date {
-    /* Adjust for better alignment */
-  }
-  
-  #Blog .read-time {
-    /* Adjust for better alignment */
-  }
-  
+}
+
+/* Footer styling inside card */
+#Blog .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: var(--font-sizeh5);
+  color: var(--font-colorp);
+  border-top: 1px solid #e9ecef;
+}
+
+/* Date and read time styling */
+#Blog .date,
+#Blog .read-time {
+  font-size: 0.9rem;
+}

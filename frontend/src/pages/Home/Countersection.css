@@ -1,8 +1,8 @@
 #Counter h2{
-    font-weight: var(--font-weight);
     font-size: var(--font-sizeh2);
     color: var(--font-colorh2);
-    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-family: var(--font-familyh2);
 }
 #Counter{
     background-color: var( --bg-color1);

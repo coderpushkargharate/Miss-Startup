@@ -13,7 +13,7 @@ function CounterSection() {
         <>
             {/* Fun Fact Section */}
             <div className="container-fluid text-dark py-5" id="Counter">
-                <div className="container">
+                <div className="container py-2">
                     <div className="row justify-content-center">
                         <div className="col-12 text-center mx-auto mb-5">
                             <h2>Counter</h2>

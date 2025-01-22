@@ -102,6 +102,12 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.testimonials-title{
+    font-size: var(--font-sizeh2);
+    color: var(--font-colorh2);
+    font-weight: var(--font-weight);
+    font-family: var(--font-familyh2);
+}
 
 .testimonials-container .carousel-dot.active {
     background-color: #005f73;

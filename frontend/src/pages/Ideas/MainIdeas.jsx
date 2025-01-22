@@ -1,4 +1,3 @@
-// React Component
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,7 +9,7 @@ const MainIdeas = () => {
     name: "Artificial Intelligence",
     endpoint: "/api/ai",
   });
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const categories = [
     { name: "Artificial Intelligence", endpoint: "/api/ai" },
@@ -24,7 +23,18 @@ const MainIdeas = () => {
       .get(`http://localhost:5000${selectedCategory.endpoint}`)
       .then((response) => setCourses(response.data))
       .catch((err) => console.error(err));
-  }, [selectedCategory]);
+
+    // Handle body scroll when sidebar is toggled
+    if (isSidebarVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Ensure scroll is enabled after unmount
+    };
+  }, [selectedCategory, isSidebarVisible]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -78,7 +88,11 @@ const MainIdeas = () => {
                       index % 2 === 0 ? "reverse-layout" : ""
                     }`}
                   >
-                    <div className="course-image">
+                    <div
+                      className={`course-image ${
+                        index % 2 === 0 ? "border-yellow" : "border-blue"
+                      }`}
+                    >
                       <img src={course.imageUrl} alt={course.title} />
                     </div>
                     <div className="course-info ps-4">

@@ -77,8 +77,8 @@ const Home = () => {
                 style={{ borderRadius: "15px"  }}
               />
             </div>
-            <div className="col-lg-6 text-md-start text-center herotext mt-lg-5 ps-lg-5">
-              <form className="form-container mt-5 mt-lg-1" onSubmit={handleSubmit}>
+            <div className="col-lg-6 text-md-start text-center  herotext mt-lg-5 ps-lg-5">
+              <form className="form-container  mt-5 mt-lg-1" onSubmit={handleSubmit}>
                 <h2>Book your Free Session</h2>
                 <p>Learn from India’s best teachers</p>
 
