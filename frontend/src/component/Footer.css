@@ -1,53 +1,53 @@
 /* Footer Background */
-.footer-bg {
+ .footer-bg {
     background-color: #0D0D39;
 }
 /* Link Hover Effects */
-a.text-decoration-none {
+#Footer a.text-decoration-none {
     color: inherit;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-a.text-decoration-none:hover {
+#Footer a.text-decoration-none:hover {
     color: #2a5ebe; /* Highlight color on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
-.footerlogo {
+#Footer .footerlogo {
     height: 50px;
     width: 250px;
 }
 
-.footer p,
-.footer ul {
+#Footer .footer p,
+#Footer .footer ul {
     margin: 0;
     padding: 0;
 }
 
 /* Add hover effect to text links in lists */
-.footer ul li a {
+#Footer .footer ul li a {
     color: #ffffff; /* Default white color */
     text-decoration: none; /* No underline */
     transition: color 0.3s ease;
 }
 
-.footer ul li a:hover {
+#Footer .footer ul li a:hover {
     color: #2a5ebe; /* Highlight color on hover */
     transform: scale(1.1); /* Slight zoom effect */
 }
 
-.text-white i:hover {
+#Footer .text-white i:hover {
     color: #544ec9; /* Highlight social icons on hover */
 }
 
-.text-uppercase {
+#Footer .text-uppercase {
     color: aliceblue;
     font-weight: 900;
 }
 
 /* Social Media Icon Styling */
-#socialmediaimg a {
+#Footer #socialmediaimg a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ a.text-decoration-none:hover {
 }
 
 /* Drop Animation for Circle */
-#socialmediaimg a::before {
+#Footer #socialmediaimg a::before {
     content: '';
     position: absolute;
     top: -50px; /* Start above the icon */
@@ -75,11 +75,11 @@ a.text-decoration-none:hover {
 }
 
 /* Hover Effect */
-#socialmediaimg a:hover {
+#Footer #socialmediaimg a:hover {
     transform: scale(1.2); /* Slightly enlarge */
 }
 
-#socialmediaimg a:hover::before {
+#Footer #socialmediaimg a:hover::before {
     background-color: #544ec9; /* Change background color on hover */
 }
 
@@ -96,42 +96,42 @@ a.text-decoration-none:hover {
 }
 
 /* Gap adjustment for icons */
-#socialmediaimg {
+#Footer #socialmediaimg {
     display: flex;
     gap: 15px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .row {
+    #Footer .row {
         margin-left: 0;
         margin-right: 0;
     }
-    .col-12 {
+    #Footer .col-12 {
         padding-left: 0;
         padding-right: 0;
     }
-    #socialmediaimg {
+    #Footer #socialmediaimg {
         gap: 10px;
     }
-    .footer-bg {
+    #Footer .footer-bg {
         padding-top: 3rem;
         padding-bottom: 2rem;
     }
 }
 
 @media (max-width: 576px) {
-    .footer-bg {
+    #Footer .footer-bg {
         padding-top: 2rem;
         padding-bottom: 1rem;
     }
-    .footerlogo {
+    #Footer .footerlogo {
         width: 150px;
     }
-    .col-12.col-md-3 {
+    #Footer .col-12.col-md-3 {
         margin-bottom: 1.5rem;
     }
-    #socialmediaimg a {
+    #Footer #socialmediaimg a {
         width: 35px;
         height: 35px;
         font-size: 16px;

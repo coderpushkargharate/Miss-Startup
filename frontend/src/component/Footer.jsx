@@ -5,7 +5,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="footer-bg text-dark pt-5 pb-3">
+    <footer className="footer-bg text-dark pt-5 pb-3" id="Footer">
       <div className="container">
         <div className="row mx-0 mx-md-5">
           {/* Company Section */}

@@ -1,17 +1,17 @@
-.card {
+#Ideas .card {
     transition: transform 0.2s ease-in-out;
     height: 30px;
   }
   
-  .card:hover {
+  #Ideas .card:hover {
     transform: translateY(-10px);
   }
   
-  .badge {
+  #Ideas .badge {
     font-size: 0.75rem;
   }
   
-  .btn {
+  #Ideas .btn {
     text-transform: capitalize;
   }
   

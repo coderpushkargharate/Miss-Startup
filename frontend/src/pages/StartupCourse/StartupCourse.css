@@ -12,20 +12,20 @@ body {
   text-align: center;
 }
 
-.startup-header h1 {
+.startup-course .startup-header h1 {
   font-size: 2.8rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-.startup-header p {
+.startup-course .startup-header p {
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 40px;
 }
 
 /* Card Container */
-.card-container {
+.startup-course .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
@@ -34,7 +34,7 @@ body {
 }
 
 /* Card Styles */
-.course-card {
+.startup-course .course-card {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -44,13 +44,13 @@ body {
   max-width: 350px;
 }
 
-.course-card:hover {
+.startup-course .course-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Card Content */
-.card-content {
+.startup-course .card-content {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -58,20 +58,20 @@ body {
   text-align: center;
 }
 
-.course-title {
+.startup-course .course-title {
   font-size: 1.6rem;
   color: #007BFF;
   margin-bottom: 15px;
   font-weight: bold;
 }
 
-.course-description {
+.startup-course .course-description {
   font-size: 1rem;
   color: #666;
   margin-bottom: 20px;
 }
 
-.course-features {
+.startup-course .course-features {
   list-style: none;
   padding: 0;
   margin: 20px 0;
@@ -79,7 +79,7 @@ body {
   text-align: left;
 }
 
-.course-features li {
+.startup-course .course-features li {
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 10px;
@@ -87,7 +87,7 @@ body {
   position: relative;
 }
 
-.course-features li::before {
+.startup-course .course-features li::before {
   content: "✓";
   color: #28a745;
   font-size: 1.2rem;
@@ -97,14 +97,14 @@ body {
 }
 
 /* Price and Button */
-.price {
+.startup-course .price {
   font-size: 1.5rem;
   color: #28a745;
   font-weight: bold;
   margin: 15px 0;
 }
 
-.enroll-button {
+.startup-course .enroll-button {
   background-color: #007BFF;
   color: #fff;
   border: none;
@@ -116,7 +116,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.enroll-button:hover {
+.startup-course .enroll-button:hover {
   background-color: #0056b3;
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -124,15 +124,15 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .startup-header h1 {
+  .startup-course .startup-header h1 {
     font-size: 2.2rem;
   }
 
-  .startup-header p {
+  .startup-course .startup-header p {
     font-size: 1rem;
   }
 
-  .card-container {
+  .startup-course .card-container {
     grid-template-columns: 1fr;
   }
 }

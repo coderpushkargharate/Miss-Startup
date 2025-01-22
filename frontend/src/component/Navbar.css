@@ -5,24 +5,24 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand img {
+.navbar .navbar-brand img {
     height: 50px;
     transition: transform 0.3s ease;
 }
 
-.navbar-brand img:hover {
+.navbar .navbar-brand img:hover {
     transform: scale(1.05);
 }
 
 /* Navbar Links */
-.navbar-nav .nav-link {
+.navbar .navbar-nav .nav-link {
     font-size: 16px;
     font-weight: bold;
     color: #333;
     transition: color 0.3s ease-in-out;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover {
     color: #007bff;
     text-decoration: underline;
     transform: scale(1.1); /* Slightly enlarge the text */
@@ -31,47 +31,47 @@
 
 
 /* Active State for Links */
-.navbar-nav .nav-link.active {
+.navbar .navbar-nav .nav-link.active {
     color: #007bff !important;
     text-decoration: underline;
 }
 
 /* Contact Section */
-.phonenum {
+.navbar .phonenum {
     font-size: 16px;
     font-weight: bold;
     color: #333;
 }
 
-.phonenum:hover {
+.navbar .phonenum:hover {
     color: #007bff;
     text-decoration: underline;
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
-    .navbar-nav {
+    .navbar .navbar-nav {
         text-align: center;
     }
 
   
    
 
-    .phonenum {
+    .navbar .phonenum {
         font-size: 14px;
     }
 }
 
 @media (max-width: 320px) {
-    .navbar-brand img {
+    .navbar .navbar-brand img {
         height: 40px;
     }
 
-    .navbar-nav .nav-link {
+    .navbar .navbar-nav .nav-link {
         font-size: 14px;
     }
 
-    .phonenum {
+    .navbar .phonenum {
         font-size: 12px;
     }
 }

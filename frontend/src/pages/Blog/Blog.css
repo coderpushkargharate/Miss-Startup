@@ -3,17 +3,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 cards per row */
-    gap: 2rem;
+    gap: 2.3rem;
     /* Reduce the gap between cards */
     margin: 2rem auto;
     /* Center the container horizontally */
-    max-width: 65%;
+    max-width: 72%;
     /* Set a maximum width for the container */
     justify-content: center;
     /* Align cards in the center horizontally */
     height: 100%;
     margin-top: 90px;
-    margin-bottom: 45%;
+
     
 }
 
@@ -55,12 +55,12 @@
 }
 
 @media (max-width: 576px) {
-    .card-container {
+    #Blog .card-container {
         grid-template-columns: 1fr;
         /* 1 card per row on small screens */
     }
 
-    .card {
+    #Blog .card {
         width: 90%;
         /* Make cards responsive for smaller screens */
     }

@@ -61,10 +61,10 @@ body {
 }
 
 /* Form Fields - Consistent Height */
-.form-container .form-group input,
-.form-container .form-group select,
-.form-container .send-otp-button,
-.form-container .submit-button {
+.hero-section .form-container .form-group input,
+.hero-section .form-container .form-group select,
+.hero-section .form-container .send-otp-button,
+.hero-section .form-container .submit-button {
   height: 2rem; /* Consistent height for all fields */
   box-sizing: border-box; /* Padding doesn't affect height */
 }

@@ -71,7 +71,7 @@
     border-radius: 5px;
 }
 
-.about-us-contact .contact-btn:hover {
+#about .about-us-contact .contact-btn:hover {
     background-color: #1d4f8b;
 }
 
@@ -182,25 +182,25 @@
 /* Our Vision Section */
 
 
-#OurVision{
+#about #OurVision{
     background-color:#F9F8F6;
 }
-#OurVisionimg{
+#about #OurVisionimg{
     height: 65vh;
     width: 80vh;
     margin-left: -70px;
 
 }
-.OurVisionh2{
+#about .OurVisionh2{
     margin-top: 50px;
     font-size: 35px;
 }
-.OurVisionp{
+#about .OurVisionp{
     margin-top: 35px;
     font-size: 18px;
     color:rgb(70, 68, 68)
 }
-.OurVisionul{
+#about.OurVisionul{
     margin-top: 35px;
     font-size: 18px;
     color: rgb(77, 74, 74);
@@ -209,7 +209,7 @@
 
 /* Delivering world-class section */
 
-#deleveringimg{
+#about #about#deleveringimg{
     position: absolute;
   height: 65vh;
   width: 65vh;
@@ -217,28 +217,28 @@
   margin-top: 0px;
  
 }
-#Delivering{
+#about #Delivering{
     background-color: #00262B ;
     width: 100%;
     color: white;
     height: 70vh;
 
 }
-.Ourstoryh2{
+#about .Ourstoryh2{
   font-size: 33px;
 }
-.Ourstoryp{
+#about .Ourstoryp{
     font-size: 18px;
 }
-#Deliveringp{
+#about #Deliveringp{
     margin-top: 25px;
     width: 42% ;
 }
-.Deliveringbutton{
+#about .Deliveringbutton{
     background-color: white;
     color: black;
 }
 
-#Delivering{
+#about #Delivering{
     margin-top: 90px;
 }

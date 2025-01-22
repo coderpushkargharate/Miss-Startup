@@ -1,18 +1,18 @@
 /* General Styles */
-.faq-title {
+#Faq .faq-title {
   font-size: 34px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.faq-description {
+#Faq .faq-description {
   color: var(--fontsub-color);
   font-size: 16px;
   margin: 0 auto;
   max-width: 600px;
 }
 
-.search-bar {
+#Faq .search-bar {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -25,15 +25,15 @@
   height: 45px;
   /* background-color: #222; */
 }
-.description{
+#Faq .description{
     background-color: var(--bg-color);
 }
-.search-icon {
+#Faq .search-icon {
   color: #888;
   margin-right: 10px;
 }
 
-.search-input {
+#Faq .search-input {
   width: 100%;
   border: none;
   outline: none;
@@ -42,20 +42,20 @@
   color: #fff;
 }
 
-.faq-list {
+#Faq .faq-list {
   width: 100%;
   max-width: 1100px;
   margin: auto;
   font-family: Arial, sans-serif;
 }
 
-.faq-item {
+#Faq .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
   cursor: pointer;
 }
 
-.faq-question {
+#Faq .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,55 +63,55 @@
   padding: 10px 0;
 }
 
-.faq-toggle {
+#Faq .faq-toggle {
   font-size: 20px;
   font-weight: bold;
 }
 
-.faq-answer {
+#Faq .faq-answer {
   padding: 10px 0;
   font-size: 16px;
   color: #555;
 }
 
-.no-faqs {
+#Faq.no-faqs {
   text-align: center;
   color: #888;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .faq-title {
+  #Faq .faq-title {
     font-size: 26px !important;
   }
 
-  .faq-description {
+  #Faq .faq-description {
     font-size: 14px !important;
   }
 
-  .container-fluid {
+  #Faq .container-fluid {
     padding: 15px !important;
   }
 
-  .search-input {
+  #Faq .search-input {
     font-size: 14px !important;
   }
 
-  .container-fluid div {
+  #Faq .container-fluid div {
     padding: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .faq-title {
+  #Faq .faq-title {
     font-size: 22px !important;
   }
 
-  .faq-description {
+  #Faq .faq-description {
     font-size: 12px !important;
   }
 
-  .search-input {
+  #Faq .search-input {
     font-size: 12px !important;
   }
 }

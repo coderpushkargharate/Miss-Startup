@@ -54,7 +54,7 @@ const Faq = () => {
   );
 
   return (
-    <div className="container-fluid mt-5">
+    <div className="container-fluid mt-5" id="Faq">
       <div className="py-5 text-white text-center description">
         <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
         <p className="faq-description">

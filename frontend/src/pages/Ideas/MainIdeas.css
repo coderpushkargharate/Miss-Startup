@@ -150,20 +150,20 @@
 
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
-  .sidebar {
+  #Mainideas .sidebar {
     left: -350px; /* Initially hidden off-screen */
  
   }
 
-  .sidebar.d-block {
+  #Mainideas .sidebar.d-block {
     left: 0; /* Show sidebar when toggled */
   }
 
-  .main-content {
+  #Mainideas  .main-content {
     margin-left: 0; /* Full width when sidebar is hidden */
   }
 
-  .main-content.sidebar-visible {
+  #Mainideas .main-content.sidebar-visible {
     margin-left: 350px; /* Adjust content when sidebar is visible */
   }
 
@@ -171,15 +171,15 @@
     display: block;
   }
 
-  .category-toggle-btn {
+  #Mainideas  .category-toggle-btn {
     display: block;
   }
 
-  .list-group {
+  #Mainideas .list-group {
     display: none;
   }
 
-  .list-group.d-block {
+  #Mainideas .list-group.d-block {
     display: block;
   }
 }
