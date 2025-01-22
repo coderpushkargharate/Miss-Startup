@@ -71,9 +71,9 @@ const Home = () => {
           <div className="row align-items-center mt-3">
             <div className="col-lg-6 hero_aera  ps-lg-3">
               <img
-                src="/src/assets/homeimg/hero_aera.png"
+                src="src/assets/homeimg/homemade_cakes_4-removebg-preview.png"
                 alt="Learning"
-                className="img-fluid ms-lg-5 ps-4 mt-lg-5"
+                className="img-fluid ps-lg-5 ms-lg-5 ps-4 mt-lg-5"
                 style={{ borderRadius: "15px"  }}
               />
             </div>

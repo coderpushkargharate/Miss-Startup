@@ -10,7 +10,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: var(--bg-color1);
+  background: white;
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
