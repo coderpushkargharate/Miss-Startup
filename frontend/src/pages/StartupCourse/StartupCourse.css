@@ -1,18 +1,138 @@
-.card {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.startup-course {
+  padding: 40px 20px;
+  background-color: #f7f9fc;
+  text-align: center;
+}
+
+.startup-header h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.startup-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+/* Card Styles */
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.course-title {
+  font-size: 1.6rem;
+  color: #007BFF;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.course-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.course-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.course-features li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.course-features li::before {
+  content: "✓";
+  color: #28a745;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Price and Button */
+.price {
+  font-size: 1.5rem;
+  color: #28a745;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.enroll-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.enroll-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .startup-header h1 {
+    font-size: 2.2rem;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
+
+  .startup-header p {
+    font-size: 1rem;
   }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border: none;
+
+  .card-container {
+    grid-template-columns: 1fr;
   }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
+}
