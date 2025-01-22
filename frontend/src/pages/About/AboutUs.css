@@ -74,7 +74,6 @@
 #about .about-us-contact .contact-btn:hover {
     background-color: #1d4f8b;
 }
-
 #about #ourstudy {
     padding-left: 30%;
     color: red;
@@ -193,7 +192,11 @@
 }
 #about .OurVisionh2{
     margin-top: 50px;
-    font-size: 35px;
+    font-size: var(--font-sizeh2);
+    font-weight: var(--font-weight);
+    color: var(--font-colorp);
+
+
 }
 #about .OurVisionp{
     margin-top: 35px;
@@ -209,36 +212,24 @@
 
 /* Delivering world-class section */
 
-#about #about#deleveringimg{
-    position: absolute;
-  height: 65vh;
-  width: 65vh;
-  right: 18vh;
-  margin-top: 0px;
- 
-}
-#about #Delivering{
-    background-color: #00262B ;
-    width: 100%;
-    color: white;
-    height: 70vh;
+#about #OurValues{
+    background-color: #F8FAFC;
 
 }
-#about .Ourstoryh2{
-  font-size: 33px;
-}
-#about .Ourstoryp{
-    font-size: 18px;
-}
-#about #Deliveringp{
-    margin-top: 25px;
-    width: 42% ;
-}
-#about .Deliveringbutton{
-    background-color: white;
-    color: black;
+
+#about .OurValuesh2{
+    color: var(--font-colorp);
+    font-size: var(--font-sizeh2);
+    font-weight: var(--font-weight);
+
 }
 
-#about #Delivering{
-    margin-top: 90px;
+#about .OurCultureh2{
+    color: var(--font-colorp);
+    font-size: var(--font-sizeh2);
+    font-weight: var(--font-weight);
+}
+
+#about #OurCulture{
+    background-color: rgb(246, 246, 246);
 }
