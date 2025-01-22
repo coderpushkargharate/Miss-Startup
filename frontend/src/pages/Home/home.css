@@ -7,7 +7,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.heroimg img{
+  margin-top: 410px;
+}
 /* Hero Section */
 .hero-section {
   background: white;
@@ -15,6 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 115vh;
 }
 
 .hero-section .container {
@@ -121,13 +124,14 @@ body {
   .form-container .send-otp-button,
   .form-container .submit-button {
     height: 2rem; /* Slightly smaller height for smaller screens */
+    
   }
 }
 
 /* Image Animation */
 .hero-section .imganimation {
   position: relative;
-bottom: 950px;
+bottom: 1000px;
 right: 0px;
 
 
@@ -142,6 +146,10 @@ right: 0px;
   animation: smoothRound 5s infinite ease-in-out;
 }
 
+.send-otp-button{
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
 .hero-section input, textarea {
   width: 100%;
   padding: 10px;
@@ -180,5 +188,8 @@ right: 0px;
 
   height: 100vh;
 
+}
+.heroimg img{
+  margin-top: 0px;
 }
 }

@@ -66,14 +66,14 @@ const Home = () => {
 
   return (
     <>
-      <div className="hero-section d-flex mt-5" style={{ height: "100vh" }}>
+      <div className="hero-section d-flex mt-4" >
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
-            <div className="col-lg-6  text-center">
+            <div className="col-lg-6 mt-lg-5 ps-lg-5 heroimg text-center">
               <img
                 src="src/assets/homeimg/homemade_cakes_4-removebg-preview.png"
                 alt="Learning"
-                className="img-fluid ps-lg-5 ms-lg-5 ps-4 mt-lg-5"
+                className="img-fluid ps-lg-5 ms-lg-5 "
                 style={{ borderRadius: "15px"  }}
               />
             </div>

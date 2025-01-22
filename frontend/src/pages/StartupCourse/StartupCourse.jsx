@@ -38,11 +38,11 @@ const StartupCourse = () => {
 
   return (
     <div className="startup-course mt-5">
-      <header className="startup-header">
+      <header className="startup-header pt-lg-5">
         <h1>Startup Courses</h1>
         <p>Empowering entrepreneurs with the right knowledge to succeed.</p>
       </header>
-      <div className="card-container">
+      <div className="card-container mx-lg-5 py-lg-3">
         {courses.map((course, index) => (
           <div key={index} className="course-card">
             <div className="card-content">
