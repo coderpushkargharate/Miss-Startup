@@ -14,6 +14,7 @@ import StartupCourse from "./pages/StartupCourse/StartupCourse";
 import FAQ from "./pages/FAQ/Faq";
 import Home from "./pages/Home/Home";
 import Dashboard from "./dashboard/Dashboard";
+import CardForm from "./pages/CardForm";
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -43,6 +44,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
         </>
       )}
       <Routes>
+        <Route path="cardForm" element={<CardForm/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         {/* <Route path="/course/:courseId" element={<CourseDetails />} /> */}
