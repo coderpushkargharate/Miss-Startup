@@ -101,7 +101,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setBlog)}
               onSubmit={() =>
                 handleSubmit(
-                  "https://miss-startup.onrender.com/api/blogs",
+                  "http://localhost:5000/api/blogs",
                   blog,
                   setBlog,
                   "Blog added successfully!"
@@ -117,7 +117,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setBusiness)}
               onSubmit={() =>
                 handleSubmit(
-                  "https://miss-startup.onrender.com/api/business",
+                  "http://localhost:5000/api/business",
                   business,
                   setBusiness,
                   "Business added successfully!"
@@ -132,7 +132,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setAi)}
               onSubmit={() =>
                 handleSubmit(
-                  "https://miss-startup.onrender.com/api/ai",
+                  "http://localhost:5000/api/ai",
                   ai,
                   setAi,
                   "AI Course added successfully!"
@@ -147,7 +147,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setDesignArchitect)}
               onSubmit={() =>
                 handleSubmit(
-                  "https://miss-startup.onrender.com/api/designArchitect",
+                  "http://localhost:5000/api/designArchitect",
                   designArchitect,
                   setDesignArchitect,
                   "Design Architect Course added successfully!"
@@ -162,7 +162,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setScience)}
               onSubmit={() =>
                 handleSubmit(
-                  "https://miss-startup.onrender.com/science",
+                  "http://localhost:5000/api/science",
                   science,
                   setScience,
                   "Science Course added successfully!"
