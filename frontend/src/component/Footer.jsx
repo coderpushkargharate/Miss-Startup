@@ -44,8 +44,8 @@ const Footer = () => {
               <li><a href="#" className="text-white text-decoration-none">Browse library</a></li>
               <li><a href="#" className="text-white text-decoration-none">Role IQ</a></li>
               <li><a href="#" className="text-white text-decoration-none">Skill IQ</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Partner Program</a></li>
-              <li><a href="/faq" className="text-white text-decoration-none">Faq</a></li>
+              <li><a href="/FAQ" className="text-white text-decoration-none">Partner Program</a></li>
+              <li><a href="/FAQ" className="text-white text-decoration-none">Faq</a></li>
             </ul>
           </div>
 
@@ -69,7 +69,6 @@ const Footer = () => {
               <li><a href="#" className="text-white text-decoration-none">Media Kit</a></li>
               <li><a href="#" className="text-white text-decoration-none">Library</a></li>
               <li><a href="#" className="text-white text-decoration-none">Guides</a></li>
-              <li><a href="#" className="text-white text-decoration-none">FAQs</a></li>
             </ul>
           </div>
         </div>

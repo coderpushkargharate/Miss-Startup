@@ -51,7 +51,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
         <Route path="/startupcourse" element={<StartupCourse/>}/>
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/faq" element={<FAQ/>}/>
-        {/* <Route path="/FAQmain" element={<FAQmain/>}/> */}
+        
 
         <Route
           path="/dashboard"
