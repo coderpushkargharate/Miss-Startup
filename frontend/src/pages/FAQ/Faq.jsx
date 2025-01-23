@@ -106,7 +106,8 @@ const Faq = () => {
       {filteredFAQs.length === 0 && (
         <p className="no-faqs">No FAQs found matching your search.</p>
       )}
-    </div>
+    {/* </div> */}
+    </>
   );
 };
 
