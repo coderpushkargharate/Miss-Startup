@@ -54,12 +54,13 @@ const Faq = () => {
   );
 
   return (
-    <div className="container-fluid mt-5" id="Faq">
-      <div className="py-5 text-white text-center description">
-        <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
-        <p className="faq-description">
-          Questions on your mind? Don’t worry, we have the answers!
-        </p>
+    <>
+      <div className="container-fluid mt-5" id="Faq">
+        <div className="py-5 text-white text-center description">
+          <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
+          <p className="faq-description">
+            Questions on your mind? Don’t worry, we have the answers!
+          </p>
 
           {/* Search Bar */}
           <div className="search-bar">
@@ -73,21 +74,13 @@ const Faq = () => {
             />
           </div>
         </div>
-
       </div>
 
-
-
-
-
-      {/* Faq list secvtion */}
+      {/* FAQ list section */}
       <div className="faq-list">
         {filteredFAQs.map((faq, index) => (
           <div key={index} className="faq-item">
-            <div
-              onClick={() => toggleFAQ(index)}
-              className="faq-question"
-            >
+            <div onClick={() => toggleFAQ(index)} className="faq-question">
               <span>{faq.question}</span>
               <span className="faq-toggle">
                 {activeIndex === index ? "−" : "+"}
@@ -100,13 +93,12 @@ const Faq = () => {
           </div>
         ))}
 
-
+        {/* Show message if no FAQs match the search query */}
+        {filteredFAQs.length === 0 && (
+          <p className="no-faqs">No FAQs found matching your search.</p>
+        )}
       </div>
-      {/* Show message if no FAQs match the search query */}
-      {filteredFAQs.length === 0 && (
-        <p className="no-faqs">No FAQs found matching your search.</p>
-      )}
-    </div>
+    </>
   );
 };
 

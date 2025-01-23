@@ -1,12 +1,5 @@
-
-
-
-@media only screen and (min-width:768px) {
-
-
-
 #about{
-    margin-top: 110px;
+    margin-top: 80px;
 }
 
 #about .about-us-header {
@@ -80,20 +73,17 @@
     background-color: #1d4f8b;
 }
 #about #ourstudy {
-    padding-left: 30%;
     color: red;
 }
 
 #about .Our-mission {
     font-weight: 700;
     font-size: 40px;
-    padding-left: 30%;
 }
 
 #about .Our-mission-p {
     margin-top: 25px;
     font-size: 18px;
-    padding-left: 30%;
 }
 
 #about-storyimg {
@@ -192,7 +182,7 @@
 #about #OurVisionimg{
     height: 65vh;
     width: 80vh;
-    margin-left: -70px;
+    /* margin-left: -70px; */
 
 }
 #about .OurVisionh2{
