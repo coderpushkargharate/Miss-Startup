@@ -54,8 +54,8 @@ const Faq = () => {
   );
 
   return (
-    <div className="container-fluid mt-5" id="Faq">
-      <div className="py-5 text-white text-center description">
+    <div className="container-fluid" id="Faq">
+      <div className="py-5 text-center description">
         <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
         <p className="faq-description">
           Questions on your mind? Don’t worry, we have the answers!
