@@ -75,38 +75,6 @@ const Faq = () => {
         </div>
 
       </div>
-
-
-
-
-
-      {/* Faq list secvtion */}
-      <div className="faq-list">
-        {filteredFAQs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <div
-              onClick={() => toggleFAQ(index)}
-              className="faq-question"
-            >
-              <span>{faq.question}</span>
-              <span className="faq-toggle">
-                {activeIndex === index ? "−" : "+"}
-              </span>
-            </div>
-
-            {activeIndex === index && (
-              <div className="faq-answer">{faq.answer}</div>
-            )}
-          </div>
-        ))}
-
-
-      </div>
-      {/* Show message if no FAQs match the search query */}
-      {filteredFAQs.length === 0 && (
-        <p className="no-faqs">No FAQs found matching your search.</p>
-      )}
-    </div>
   );
 };
 

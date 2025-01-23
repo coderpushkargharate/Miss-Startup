@@ -97,18 +97,11 @@ const AboutUs = () => {
             </div>
 
             {/* Our Vision Section */}
-            <div className="container-fluid" id="OurVision">
+            <div className="container-fluid" id="Providingbrilliant">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
-                            <img
-                                src="src/assets/AboutUsimg/post79-edx-about-us-vision.webp"
-                                alt=""
-                                id="OurVisionimg"
-                            />
-                        </div>
-                        <div className="col-6">
-                            <h2 className="OurVisionh2">Our Vision</h2>
+                    <div className="col-6">
+                            <h2 className="OurVisionh2">Providing brilliant ideas for your business.</h2>
                             <p className="OurVisionp">
                                 2U believes in the power of high-quality online education to create a better future for all. Through edX, our online learning platform, we see a world where learners everywhere have access to…
                             </p>
@@ -118,6 +111,14 @@ const AboutUs = () => {
                                 <li>Educational opportunities at every investment level.</li>
                             </ul>
                         </div>
+                    <div className="col-6">
+                            <img
+                                src="src/assets/AboutUsimg/img3.png"
+                                alt=""
+                                id="OurVisionimg"
+                            />
+                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -248,4 +249,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
- 
