@@ -55,13 +55,11 @@ const Faq = () => {
 
   return (
     <div className="container-fluid mt-5" id="Faq">
-
-      <div className="container-fluid " id="Faqdescription">
-        <div className="py-5 text-white text-center description">
-          <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
-          <p className="faq-descriptionp">
-            Questions on your mind? Don’t worry, we have the answers!
-          </p>
+      <div className="py-5 text-white text-center description">
+        <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
+        <p className="faq-description">
+          Questions on your mind? Don’t worry, we have the answers!
+        </p>
 
           {/* Search Bar */}
           <div className="search-bar">

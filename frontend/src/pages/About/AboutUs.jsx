@@ -51,23 +51,28 @@ const AboutUs = () => {
 
     return (
         <div className="container-fluid" id="about">
-            {/* Mission Section */}
-            <div className="row  py-5 mb-5">
-                <div className="col-6 d-flex flex-column mt-5">
-                    <div className="col-12 py-3 fs-5 " id="ourstudy">
-                        Our Journey
+             {/* Mission Section */}
+             <div className="container-fluid">
+                <div className="row mx-lg-5 py-lg-4">
+                    <div className="col-12 ps-lg-5 col-lg-6 mt-lg-4 d-flex flex-column ">
+                        <div className="col-12 py-3 fs-5 " id="ourstudy">
+                            Our Journey
+                        </div>
+                        <h2 className="Our-mission">
+                            Our Mission is to Deliver Fresh, Healthy, and Affordable Meals.
+                        </h2>
+                        <p className="Our-mission-p">
+                            We specialize in home-cooked meals for students, professionals, and families, ensuring quality and taste in every bite.
+                        </p>
                     </div>
-                    <h2 className="Our-mission">
-                        Our Mission is to Deliver Fresh, Healthy, and Affordable Meals.
-                    </h2>
-                    <p className="Our-mission-p">
-                        We specialize in home-cooked meals for students, professionals, and families, ensuring quality and taste in every bite.
-                    </p>
-                </div>
-                <div className="col-6 mt-5 ms-5 position-relative" id="about-storyimg">
-                    <VscTriangleRight className="logo " />
+                    <div className="col-12 col-lg-6 mt-5  position-relative" id="Mission-storyimg">
+                        <VscTriangleRight className="logo" />
+                    </div>
                 </div>
             </div>
+
+
+
 
             {/* Fun Fact Section */}
             <div className="container-flui text-dark py-5">
@@ -91,36 +96,12 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            {/* Our Vision Section */}
-            <div className="container-fluid" id="OurVision">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-6">
-                            <img
-                                src="src/assets/AboutUsimg/post79-edx-about-us-vision.webp"
-                                alt=""
-                                id="OurVisionimg"
-                            />
-                        </div>
-                        <div className="col-6">
-                            <h2 className="OurVisionh2">Our Vision</h2>
-                            <p className="OurVisionp">
-                                2U believes in the power of high-quality online education to create a better future for all. Through edX, our online learning platform, we see a world where learners everywhere have access to…
-                            </p>
-                            <ul className="OurVisionul">
-                                <li>Expert-led educational experiences.</li>
-                                <li>Flexible pathways to personal and professional achievement.</li>
-                                <li>Educational opportunities at every investment level.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
 
             {/* Our Values Section */}
 
             <div className="container-fluid" id="OurValues">
-                <div className="container px-5 my-5 py-5" >
+                <div className="container px-lg-5  py-5" >
                     <h2 className=" OurValuesh2 mb-4  text-center py-3 pb-4">Our Values</h2>
                     <div className="row g-5">
                         {values.slice(0, 6).map((value, index) => (
@@ -144,7 +125,7 @@ const AboutUs = () => {
 
 
             {/*  Our Culture Cards Section */}
-            <div className="container-fluid my-5 p-5" id="OurCulture">
+            <div className="container-fluid p-5" id="OurCulture">
                 <div className="container">
                     <h2 className="OurCultureh2 text-center mb-4">Our Culture</h2>
                     <p className="text-center mb-5">
@@ -195,7 +176,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 {/* Row 2 */}
-                <div className="row px-5">
+                <div className="row mx-1">
                     <div className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
                         <div className="card h-100 shadow-sm" style={{ width: "18rem" }}>
                             <div className="card-body text-center">
