@@ -76,18 +76,11 @@ const Faq = () => {
         </div>
       </div>
 
-
-
-
-
-      {/* Faq list secvtion */}
-      <div className="faq-list">
+      {/* FAQ list section */}
+      <div className="faq-list mx-5">
         {filteredFAQs.map((faq, index) => (
           <div key={index} className="faq-item">
-            <div
-              onClick={() => toggleFAQ(index)}
-              className="faq-question"
-            >
+            <div onClick={() => toggleFAQ(index)} className="faq-question">
               <span>{faq.question}</span>
               <span className="faq-toggle">
                 {activeIndex === index ? "−" : "+"}
@@ -100,13 +93,11 @@ const Faq = () => {
           </div>
         ))}
 
-
+        {/* Show message if no FAQs match the search query */}
+        {filteredFAQs.length === 0 && (
+          <p className="no-faqs">No FAQs found matching your search.</p>
+        )}
       </div>
-      {/* Show message if no FAQs match the search query */}
-      {filteredFAQs.length === 0 && (
-        <p className="no-faqs">No FAQs found matching your search.</p>
-      )}
-    {/* </div> */}
     </>
   );
 };

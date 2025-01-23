@@ -1,33 +1,33 @@
-#Faq .container-fluid {
+.container-fluid {
   background-color: #333;
 }
 
-#Faq .description {
+.description {
   padding: 2rem 1rem;
 }
 
-#Faq .faq-title {
+.faq-title {
   font-size: 2rem;
   font-weight: bold;
 }
 
-#Faq .faq-description {
+.faq-description {
   font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 
-#Faq .search-bar {
+.search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
 }
 
-#Faq .search-icon {
+.search-icon {
   margin-right: 0.5rem;
 }
 
-#Faq .search-input {
+.search-input {
   padding: 0.5rem;
   width: 50%;
   max-width: 400px;
@@ -35,16 +35,16 @@
   border-radius: 5px;
 }
 
-#Faq .faq-list {
+.faq-list {
   padding: 1rem;
 }
 
-#Faq .faq-item {
+.faq-item {
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
-#Faq .faq-question {
+.faq-question {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -53,14 +53,14 @@
   border-radius: 5px;
 }
 
-#Faq .faq-answer {
+.faq-answer {
   margin-top: 0.5rem;
   padding: 0.5rem;
   background: #f1f1f1;
   border-radius: 5px;
 }
 
-#Faq .no-faqs {
+.no-faqs {
   text-align: center;
   color: #888;
 }
