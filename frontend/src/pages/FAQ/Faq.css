@@ -1,15 +1,19 @@
 /* General Styles */
 #Faq .faq-title {
-  font-size: 34px;
-  font-weight: bold;
+  font-size: var(--font-sizeh2);
+  font-weight: var(--font-weight);
   margin-bottom: 10px;
+  color: var(--font-colorp);
+  font-family: var(--font-familyh2);
+
 }
 
-#Faq .faq-description {
-  color: var(--fontsub-color);
-  font-size: 16px;
+#Faq .faq-descriptionp {
+  color: var(--font-colorp);
+  font-size: var(--font-sizep);
   margin: 0 auto;
   max-width: 600px;
+  font-weight: var(--font-weight);
 }
 
 #Faq .search-bar {
@@ -18,16 +22,19 @@
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 100px;
-  padding:  15px;
+  padding: 15px;
   max-width: 90%;
   width: 550px;
   margin: 20px auto;
   height: 45px;
   /* background-color: #222; */
 }
-#Faq .description{
-    background-color: var(--bg-color);
+
+#Faq #Faqdescription {
+  background-color: var(--card-bgcolor);
 }
+
+
 #Faq .search-icon {
   color: #888;
   margin-right: 10px;
@@ -76,7 +83,7 @@
 
 #Faq.no-faqs {
   text-align: center;
-  color: #888;
+  color: #383636;
 }
 
 /* Responsive Styles */
@@ -101,6 +108,8 @@
     padding: 8px;
   }
 }
+
+
 
 @media (max-width: 480px) {
   #Faq .faq-title {

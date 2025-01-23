@@ -55,25 +55,34 @@ const Faq = () => {
 
   return (
     <div className="container-fluid mt-5" id="Faq">
-      <div className="py-5 text-white text-center description">
-        <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
-        <p className="faq-description">
-          Questions on your mind? Don’t worry, we have the answers!
-        </p>
 
-        {/* Search Bar */}
-        <div className="search-bar">
-          <FaSearch className="search-icon" />
-          <input
-            type="text"
-            placeholder="Search FAQs..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
+      <div className="container-fluid " id="Faqdescription">
+        <div className="py-5 text-white text-center description">
+          <h2 className="faq-title mt-5">Frequently Asked Questions</h2>
+          <p className="faq-descriptionp">
+            Questions on your mind? Don’t worry, we have the answers!
+          </p>
+
+          {/* Search Bar */}
+          <div className="search-bar">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search FAQs..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
+          </div>
         </div>
+
       </div>
 
+
+
+
+
+      {/* Faq list secvtion */}
       <div className="faq-list">
         {filteredFAQs.map((faq, index) => (
           <div key={index} className="faq-item">
@@ -93,11 +102,12 @@ const Faq = () => {
           </div>
         ))}
 
-        {/* Show message if no FAQs match the search query */}
-        {filteredFAQs.length === 0 && (
-          <p className="no-faqs">No FAQs found matching your search.</p>
-        )}
+
       </div>
+      {/* Show message if no FAQs match the search query */}
+      {filteredFAQs.length === 0 && (
+        <p className="no-faqs">No FAQs found matching your search.</p>
+      )}
     </div>
   );
 };

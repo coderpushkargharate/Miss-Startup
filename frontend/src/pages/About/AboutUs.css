@@ -1,235 +1,252 @@
 
 
-#about{
-    margin-top: 110px;
-}
 
-#about .about-us-header {
-    background:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.2)), url(src/assets/AboutUsimg/banner_image1.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 45vh;
+@media only screen and (min-width:768px) {
+
+
+
+    #about{
+        margin-top: 110px;
+    }
+    
+    #about .about-us-header {
+        background:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.2)), url(src/assets/AboutUsimg/banner_image1.png);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 45vh;
+        
+    }
+    
+    #about .about-us-header h1 {
+        font-size: 2.5rem;
+        color: #2a5ebe;
+    }
+    
+    #about .about-us-mission,
+    #about .about-us-values,
+    #about .about-us-team,
+    #about .about-us-contact {
+        margin-bottom: 3rem;
+    }
+    
+    #about .about-us-values ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    #about .about-us-values li {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    #about .about-us-team {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+    
+    #about .team-member {
+        text-align: center;
+    }
+    
+    #about .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    #about .team-member h3 {
+        font-size: 1.3rem;
+        color: #2a5ebe;
+    }
+    
+    #about .team-member p {
+        color: #666;
+    }
+    
+    #about .about-us-contact .contact-btn {
+        background-color: #2a5ebe;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        border-radius: 5px;
+    }
+    
+    #about .about-us-contact .contact-btn:hover {
+        background-color: #1d4f8b;
+    }
+    #about #ourstudy {
+        padding-left: 30%;
+        color: red;
+    }
+    
+    #about .Our-mission {
+        font-weight: 700;
+        font-size: 40px;
+        padding-left: 30%;
+    }
+    
+    #about .Our-mission-p {
+        margin-top: 25px;
+        font-size: 18px;
+        padding-left: 30%;
+    }
+    
+    #about-storyimg {
+        background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(src/assets/AboutUsimg/about-story-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 35%;
+        height: 350px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 190px rgb(149, 149, 227);
+    }
+    
+    #about .logo {
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 0, 0);
+        font-size: 24px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+        animation: pulsate 1.5s infinite;
+        cursor: pointer;
+    }
+    
+    
+    @keyframes pulsate {
+        0% {
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
+        }
+        100% {
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+    }
+    
+    
+    /* cards Section  */
+    #about .card {
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    #about .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    #about .card-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #2a5ebe;
+    }
+    
+    #about .card-text {
+        font-size: 1rem;
+        color: #666;
+    }
+    #about #Great-Place{
+        background-color: #103053;
+        height: 200px;
+        border-radius: 30px;
+        color: aliceblue;
+    }
+    #about .Great-Placeh2{
+        font-size: 30px;
+    }
+    #about .Great-Placep{
+        font-size: 18px;
+        color:#6C6F72;
+    }
+    
+    #about .cardred{
+        box-shadow: 2px 2px 18px red;
+        width: 90px;
+        height: 100px;
+        padding: 20px;
+        position: absolute;
+        top: -8px;
+        right: 150px;
+        background-color: #FF1629;
+    }
+    
+    /* Our Vision Section */
+    
+    
+    #about #OurVision{
+        background-color:#F9F8F6;
+    }
+    #about #OurVisionimg{
+        height: 65vh;
+        width: 80vh;
+        margin-left: -70px;
+    
+    }
+    #about .OurVisionh2{
+        margin-top: 50px;
+        font-size: var(--font-sizeh2);
+        font-weight: var(--font-weight);
+        color: var(--font-colorp);
+    
+    
+    }
+    #about .OurVisionp{
+        margin-top: 35px;
+        font-size: 18px;
+        color:rgb(70, 68, 68)
+    }
+    #about.OurVisionul{
+        margin-top: 35px;
+        font-size: 18px;
+        color: rgb(77, 74, 74);
+    }
+    
+    
+    /* Delivering world-class section */
+    
+    #about #OurValues{
+        background-color: #F8FAFC;
+    
+    }
+    
+    #about .OurValuesh2{
+        color: var(--font-colorp);
+        font-size: var(--font-sizeh2);
+        font-weight: var(--font-weight);
+    
+    }
+    
+    #about .OurCultureh2{
+        color: var(--font-colorp);
+        font-size: var(--font-sizeh2);
+        font-weight: var(--font-weight);
+    }
+    
+    #about #OurCulture{
+        background-color: rgb(246, 246, 246);
+    }
+    
+    #about {
+        background-color: var();
+    }
+    
+
     
 }
 
-#about .about-us-header h1 {
-    font-size: 2.5rem;
-    color: #2a5ebe;
-}
+ 
 
-#about .about-us-mission,
-#about .about-us-values,
-#about .about-us-team,
-#about .about-us-contact {
-    margin-bottom: 3rem;
-}
-
-#about .about-us-values ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#about .about-us-values li {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-#about .about-us-team {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-}
-
-#about .team-member {
-    text-align: center;
-}
-
-#about .team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#about .team-member h3 {
-    font-size: 1.3rem;
-    color: #2a5ebe;
-}
-
-#about .team-member p {
-    color: #666;
-}
-
-#about .about-us-contact .contact-btn {
-    background-color: #2a5ebe;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-#about .about-us-contact .contact-btn:hover {
-    background-color: #1d4f8b;
-}
-#about #ourstudy {
-    padding-left: 30%;
-    color: red;
-}
-
-#about .Our-mission {
-    font-weight: 700;
-    font-size: 40px;
-    padding-left: 30%;
-}
-
-#about .Our-mission-p {
-    margin-top: 25px;
-    font-size: 18px;
-    padding-left: 30%;
-}
-
-#about-storyimg {
-    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(src/assets/AboutUsimg/about-story-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 35%;
-    height: 350px;
-    border-radius: 10px;
-    box-shadow: 1px 2px 190px rgb(149, 149, 227);
-}
-
-#about .logo {
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 0, 0);
-    font-size: 24px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
-    animation: pulsate 1.5s infinite;
-    cursor: pointer;
-}
-
-
-@keyframes pulsate {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
-    }
-}
-
-
-/* cards Section  */
-#about .card {
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#about .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-#about .card-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #2a5ebe;
-}
-
-#about .card-text {
-    font-size: 1rem;
-    color: #666;
-}
-#about #Great-Place{
-    background-color: #103053;
-    height: 200px;
-    border-radius: 30px;
-    color: aliceblue;
-}
-#about .Great-Placeh2{
-    font-size: 30px;
-}
-#about .Great-Placep{
-    font-size: 18px;
-    color:#6C6F72;
-}
-
-#about .cardred{
-    box-shadow: 2px 2px 18px red;
-    width: 90px;
-    height: 100px;
-    padding: 20px;
-    position: absolute;
-    top: -8px;
-    right: 150px;
-    background-color: #FF1629;
-}
-
-/* Our Vision Section */
-
-
-#about #OurVision{
-    background-color:#F9F8F6;
-}
-#about #OurVisionimg{
-    height: 65vh;
-    width: 80vh;
-    margin-left: -70px;
-
-}
-#about .OurVisionh2{
-    margin-top: 50px;
-    font-size: var(--font-sizeh2);
-    font-weight: var(--font-weight);
-    color: var(--font-colorp);
-
-
-}
-#about .OurVisionp{
-    margin-top: 35px;
-    font-size: 18px;
-    color:rgb(70, 68, 68)
-}
-#about.OurVisionul{
-    margin-top: 35px;
-    font-size: 18px;
-    color: rgb(77, 74, 74);
-}
-
-
-/* Delivering world-class section */
-
-#about #OurValues{
-    background-color: #F8FAFC;
-
-}
-
-#about .OurValuesh2{
-    color: var(--font-colorp);
-    font-size: var(--font-sizeh2);
-    font-weight: var(--font-weight);
-
-}
-
-#about .OurCultureh2{
-    color: var(--font-colorp);
-    font-size: var(--font-sizeh2);
-    font-weight: var(--font-weight);
-}
-
-#about #OurCulture{
-    background-color: rgb(246, 246, 246);
-}
+    
