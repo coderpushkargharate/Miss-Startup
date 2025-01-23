@@ -43,13 +43,18 @@ const Navbar = () => {
                     className="collapse navbar-collapse justify-content-end me-5"
                     id="navbarNav"
                     ref={navbarCollapseRef}
-                    onClick={closeNavbar} // Close navbar on any click inside this container
                 >
+                    {/* Close button for mobile */}
+                    <span className="close-btn " onClick={closeNavbar}>
+                        &times; <span className="ps-5">Finlec</span>
+                    </span>
+
                     <ul className="navbar-nav">
-                        <li className="nav-item me-5">
+                        <li className="nav-item me-5 mt-5 mt-lg-0 ">
                             <Link
                                 className={`nav-link ${isActive("/startupcourse")}`}
                                 to="/startupcourse"
+                                onClick={closeNavbar}
                             >
                                 StartupCourse
                             </Link>
@@ -58,6 +63,7 @@ const Navbar = () => {
                             <Link
                                 className={`nav-link ${isActive("/Mainideas")}`}
                                 to="/Mainideas"
+                                onClick={closeNavbar}
                             >
                                 Ideas
                             </Link>
@@ -66,6 +72,7 @@ const Navbar = () => {
                             <Link
                                 className={`nav-link ${isActive("/blog")}`}
                                 to="/blog"
+                                onClick={closeNavbar}
                             >
                                 Stories
                             </Link>
@@ -74,6 +81,7 @@ const Navbar = () => {
                             <Link
                                 className={`nav-link ${isActive("/aboutus")}`}
                                 to="/aboutus"
+                                onClick={closeNavbar}
                             >
                                 About
                             </Link>

@@ -57,7 +57,7 @@ const MainIdeas = () => {
 
         {/* Sidebar */}
         <div
-          className={`sidebar ${isSidebarVisible ? "d-block" : "d-none"} d-md-block`}
+          className={`sidebar ${isSidebarVisible ? "active" : ""}`}
         >
           <h2 className="sidebar-title">Categories</h2>
           <div className="list-group">

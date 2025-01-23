@@ -58,9 +58,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 50%; /* Open menu width */
+        width: 100%; /* Open menu width */
         height: 100vh; /* Full viewport height */
-        background-color: rgb(141, 188, 202); /* Black background */
+        background-color: #813588; /* Black background */
         z-index: 1050;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
@@ -106,6 +106,23 @@
     }
 }
 
+/* Add styles for the close button */
+.navbar-collapse .close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-collapse .close-btn:hover {
+    color: #007bff;
+}
+
+
 /* Extra Small Screen Adjustments */
 @media (max-width: 576px) {
     .navbar-brand img {
@@ -119,5 +136,11 @@
     .phonenum {
         font-size: 12px;
     }
+}
+
+@media (min-width: 768px){
+  .close-btn{
+    display: none;
+  }
 }
 

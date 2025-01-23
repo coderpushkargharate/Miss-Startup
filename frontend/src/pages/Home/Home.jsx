@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import axios from "axios";
 import "../Home/home.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Ideas from "./Ideas";
 import OurMission from "./OurMission";
 import Testimonials from "./Testimonials";
@@ -64,6 +66,14 @@ const Home = () => {
     }
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration (in milliseconds)
+      once: true,     // Whether animation should happen only once
+      offset: 200,    // Offset (in pixels) from the original trigger point
+    });
+  }, []);
+
   return (
     <>
       <div className="hero-section d-flex mt-4" >
@@ -78,7 +88,7 @@ const Home = () => {
               />
             </div>
             <div className="col-lg-6 text-md-start text-center  herotext mt-lg-5 ps-lg-5">
-              <form className="form-container  mt-5 mt-lg-1" onSubmit={handleSubmit}>
+              <form className="form-container  mt-5 mt-lg-1" onSubmit={handleSubmit} data-aos="fade-up">
                 <h2>Book your Free Session</h2>
                 <p>Learn from India’s best teachers</p>
 
@@ -174,7 +184,7 @@ const Home = () => {
                 </button> 
               </form>
             </div>
-            <div className="position-absolute imganimation mt-5">
+            <div className="position-absolute imganimation mt-5" >
               <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
             </div>
           </div>

@@ -59,7 +59,7 @@ const Ideas = () => {
   return (
     <div className="container-fulid" id="Ideas">
        <h2 className="text-center mb-4 pt-5">
-          Explore Courses
+          Ideas
         </h2>
         
         <div className="container pb-5" >
