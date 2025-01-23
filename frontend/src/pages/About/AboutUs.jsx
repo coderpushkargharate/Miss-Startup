@@ -1,8 +1,17 @@
-import React from "react";
+// import React from "react";
+// App.js or your main component
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import CountUp from "react-countup"; // Make sure to install react-countup
 import "./AboutUs.css";
 import { VscTriangleRight } from "react-icons/vsc";
 import "bootstrap-icons/font/bootstrap-icons.css"; // Import Bootstrap Icons
+import { FaStickyNote } from "react-icons/fa";
+import { FaDigitalTachograph } from "react-icons/fa";
+import { IoIosPeople } from "react-icons/io";
+import { TiTickOutline } from "react-icons/ti";
 
 const AboutUs = () => {
     const values = [
@@ -49,10 +58,20 @@ const AboutUs = () => {
         { value: 98, suffix: "%", description: "Customer Satisfaction" },
     ];
 
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          easing: 'ease-in-out', // Animation easing style
+          once: true, // Whether animation should happen only once - while scrolling down
+          mirror: false, // Whether elements should animate out while scrolling past them
+        });
+      }, []);
+      
     return (
         <div className="container-fluid" id="about">
-             {/* Mission Section */}
-             <div className="container-fluid">
+            {/* Mission Section */}
+            <div className="container-fluid">
                 <div className="row mx-lg-5 py-lg-4">
                     <div className="col-12 ps-lg-5 col-lg-6 mt-lg-4 d-flex flex-column ">
                         <div className="col-12 py-3 fs-5 " id="ourstudy">
@@ -96,29 +115,84 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            {/* Our Vision Section */}
+            {/* Providingbrilliant Section */}
             <div className="container-fluid" id="Providingbrilliant">
                 <div className="container">
-                    <div className="row">
-                    <div className="col-6">
-                            <h2 className="OurVisionh2">Providing brilliant ideas for your business.</h2>
-                            <p className="OurVisionp">
-                                2U believes in the power of high-quality online education to create a better future for all. Through edX, our online learning platform, we see a world where learners everywhere have access to…
-                            </p>
-                            <ul className="OurVisionul">
-                                <li>Expert-led educational experiences.</li>
-                                <li>Flexible pathways to personal and professional achievement.</li>
-                                <li>Educational opportunities at every investment level.</li>
+                    <div className="row px-lg-5">
+                        <div className="col-12 col-lg-6 ps-lg-5 py-5" data-aos="fade-right">
+                            <button className="Providingbrilliantbutton">Why Choose us</button>
+                            <h2 className="Providingbrillianth2">Providing brilliant ideas for your business.</h2>
+                            <p className="Providingbrilliantp ">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.                            </p>
+                            <ul className="Providingbrilliantul">
+
+
+                                <div className="d-flex">
+                                    <div>
+                                        <FaDigitalTachograph style={{ fontSize: "80px", color: "#30BD9B", paddingRight: "20px", marginTop: "-19px" }} />
+                                    </div>
+                                    <div>
+                                        <h5>Expertise in Digital Innovation</h5>
+                                        <p className="Providingbrilliantp ">  Sollicitudin mauris maecenas gravida eu interdum luctus tellus magnis augue.</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div className="d-flex my-2"  style={{ boxShadow:"2px 2px 15px rgb(207, 196, 196)",padding:"0px 15px",borderRadius:"10px" }}><span
+                                    style={{
+                                        display: "inline-block",
+                                        position: "relative", // Added for proper positioning of the overlay icon
+                                        borderRadius: "8px", // Optional: Rounded edges
+                                        padding: "10px", // Space around the icon
+                                        marginLeft: "-15px",
+                                    }}
+                                >
+                                    {/* Base Icon (FaStickyNote) */}
+                                    <FaStickyNote style={{ fontSize: "70px", color: "#30BD9B", paddingRight: "20px", marginTop: "-12px" }} />
+
+                                    {/* Overlay Icon (TiTickOutline) */}
+                                    <TiTickOutline
+                                        style={{
+                                            fontSize: "30px",
+                                            color: "white", // Changed overlay tick mark color for better contrast
+                                            position: "absolute",
+                                            top: "30%",
+                                            left: "35%",
+                                            transform: "translate(-50%, -50%)",
+                                        }}
+                                    />
+                                </span>
+
+
+                                    <div>
+                                        <h5>Proven Track Record of Success</h5>
+                                        <p className="Providingbrilliantp ">  Sollicitudin mauris maecenas gravida eu interdum luctus tellus magnis augue.</p>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex">
+
+                                    <div>
+                                        <IoIosPeople style={{ fontSize: "80px", color: "#30BD9B", paddingRight: "20px", marginTop: "-19px" }} />
+                                    </div>
+                                    <div>
+                                        <h5>Dedicated and Experienced Team</h5>
+                                        <p className="Providingbrilliantp "> Sollicitudin mauris maecenas gravida eu interdum luctus tellus magnis augue.</p>
+                                    </div>
+                                </div>
+
                             </ul>
                         </div>
-                    <div className="col-6">
+                        <div className="col-12 col-lg-6 ps-lg-5" data-aos="fade-left">
                             <img
                                 src="src/assets/AboutUsimg/img3.png"
                                 alt=""
-                                id="OurVisionimg"
+                                id="Providingbrilliantimg"
+                                className="img-fluid w-100"
                             />
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
@@ -137,10 +211,10 @@ const AboutUs = () => {
                                         style={{ color: "#28a745" }}
                                     ></i>
                                     <div>
-                                    <h5>{value.title}</h5>
-                                    <p className="text-muted">{value.description}</p>
+                                        <h5>{value.title}</h5>
+                                        <p className="text-muted">{value.description}</p>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         ))}

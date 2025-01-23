@@ -1,14 +1,14 @@
-#about{
+#about {
     margin-top: 80px;
 }
 
 #about .about-us-header {
-    background:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.2)), url(src/assets/AboutUsimg/banner_image1.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url(src/assets/AboutUsimg/banner_image1.png);
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 45vh;
-    
+
 }
 
 #about .about-us-header h1 {
@@ -72,6 +72,7 @@
 #about .about-us-contact .contact-btn:hover {
     background-color: #1d4f8b;
 }
+
 #about #ourstudy {
     color: red;
 }
@@ -118,9 +119,11 @@
     0% {
         box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
     }
+
     50% {
         box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
     }
+
     100% {
         box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
     }
@@ -148,21 +151,24 @@
     font-size: 1rem;
     color: #666;
 }
-#about #Great-Place{
+
+#about #Great-Place {
     background-color: #103053;
     height: 200px;
     border-radius: 30px;
     color: aliceblue;
 }
-#about .Great-Placeh2{
+
+#about .Great-Placeh2 {
     font-size: 30px;
 }
-#about .Great-Placep{
+
+#about .Great-Placep {
     font-size: 18px;
-    color:#6C6F72;
+    color: #6C6F72;
 }
 
-#about .cardred{
+#about .cardred {
     box-shadow: 2px 2px 18px red;
     width: 90px;
     height: 100px;
@@ -176,16 +182,18 @@
 /* Our Vision Section */
 
 
-#about #Providingbrilliant{
-    background-color:#F9F8F6;
+#about #Providingbrilliant {
+    background-color: #F9F8F6;
 }
-#about #Providingbrilliantimg{
-    height: 65vh;
-    width: 80vh;
+
+#about #Providingbrilliantimg {
+    height: 85vh;
+    width: 90vh;
     /* margin-left: -70px; */
 
 }
-#about .OurVisionh2{
+
+#about .Providingbrillianth2 {
     margin-top: 50px;
     font-size: var(--font-sizeh2);
     font-weight: var(--font-weight);
@@ -193,38 +201,106 @@
 
 
 }
-#about .OurVisionp{
-    margin-top: 35px;
-    font-size: 18px;
-    color:rgb(70, 68, 68)
+
+#about .Providingbrilliantul h5{
+    font-weight: 600;
+    font-size: 22px;
 }
-#about.OurVisionul{
+
+#about .Providingbrilliantp {
+    font-size: 18px;
+    color: rgb(70, 68, 68)
+}
+
+#about.Providingbrilliantul {
     margin-top: 35px;
     font-size: 18px;
     color: rgb(77, 74, 74);
 }
 
+#about .Providingbrilliantbutton{
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    padding-top: 4px;
+    text-align: center;
+    background-color: #30BD9B;
+}
+
 
 /* Delivering world-class section */
 
-#about #OurValues{
+#about #OurValues {
     background-color: #F8FAFC;
 
 }
 
-#about .OurValuesh2{
+#about .OurValuesh2 {
     color: var(--font-colorp);
     font-size: var(--font-sizeh2);
     font-weight: var(--font-weight);
 
 }
 
-#about .OurCultureh2{
+#about .OurCultureh2 {
     color: var(--font-colorp);
     font-size: var(--font-sizeh2);
     font-weight: var(--font-weight);
 }
 
-#about #OurCulture{
+#about #OurCulture {
     background-color: rgb(246, 246, 246);
+}
+
+#about .Providingbrilliantul li{
+    list-style: none;
+}
+
+#about .Providingbrillianticon {
+  /* height: 200px; */
+}
+
+
+
+#about .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#about .card-preview {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+#about label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+#about input,
+textarea {
+    padding: 8px;
+    font-size: 14px;
+}
+
+#about button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
