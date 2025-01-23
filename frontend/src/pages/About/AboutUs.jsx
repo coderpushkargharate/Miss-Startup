@@ -12,6 +12,7 @@ import { FaStickyNote } from "react-icons/fa";
 import { FaDigitalTachograph } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { TiTickOutline } from "react-icons/ti";
+import { CiMail } from "react-icons/ci";
 
 const AboutUs = () => {
     const values = [
@@ -61,13 +62,13 @@ const AboutUs = () => {
 
     useEffect(() => {
         AOS.init({
-          duration: 1000, // Animation duration in milliseconds
-          easing: 'ease-in-out', // Animation easing style
-          once: true, // Whether animation should happen only once - while scrolling down
-          mirror: false, // Whether elements should animate out while scrolling past them
+            duration: 1000, // Animation duration in milliseconds
+            easing: 'ease-in-out', // Animation easing style
+            once: true, // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
         });
-      }, []);
-      
+    }, []);
+
     return (
         <div className="container-fluid" id="about">
             {/* Mission Section */}
@@ -139,7 +140,7 @@ const AboutUs = () => {
 
 
 
-                                <div className="d-flex my-2"  style={{ boxShadow:"2px 2px 15px rgb(207, 196, 196)",padding:"0px 15px",borderRadius:"10px" }}><span
+                                <div className="d-flex my-2" style={{ boxShadow: "2px 2px 15px rgb(207, 196, 196)", padding: "0px 15px", borderRadius: "10px" }}><span
                                     style={{
                                         display: "inline-block",
                                         position: "relative", // Added for proper positioning of the overlay icon
@@ -274,49 +275,34 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-                {/* Row 2 */}
-                <div className="row mx-1">
-                    <div className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
-                        <div className="card h-100 shadow-sm" style={{ width: "18rem" }}>
-                            <div className="card-body text-center">
-                                <h5 className="card-title">Passionate about the business</h5>
-                                <p className="card-text">
-                                    Do it because you are passionate about it, not because it's your job.
-                                </p>
-                            </div>
+            </div>
+
+
+            <div className="container-fluid">
+                <div className="container mailid">
+                    <div className="conatiner row ">
+
+                        <div className="col-6 ">
+                            <h2>Seize the digital spotlight and boost your business with Digancy.</h2>
                         </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
-                        <div className="card h-100 shadow-sm" style={{ width: "18rem" }}>
-                            <div className="card-body text-center">
-                                <h5 className="card-title">Open culture & conversations</h5>
-                                <p className="card-text">
-                                    You are among all of us, and we all are with you.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
-                        <div className="card h-100 shadow-sm" style={{ width: "18rem" }}>
-                            <div className="card-body text-center">
-                                <h5 className="card-title">Talent and Competency</h5>
-                                <p className="card-text">
-                                    We believe in skills and competency, over certifications.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
-                        <div className="card h-100 shadow-sm" style={{ width: "18rem" }}>
-                            <div className="card-body text-center">
-                                <h5 className="card-title">Talent and Competency</h5>
-                                <p className="card-text">
-                                    We believe in skills and competency, over certifications.
-                                </p>
+                        <div className="col-6">
+                            <div><p>CUSTOMER SUPPORT</p></div>
+                            <div>
+                                <span style={{
+                                    backgroundColor: "#30BD9B",
+                                    borderRadius: "50%",
+                                    padding: "15px",
+                                    display: "inline-block"
+                                }}>
+                                    <CiMail style={{ fontSize: "40px", color: "#ffffff" }} />
+                                </span>
+                                hello@yourdomain.tld
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     );

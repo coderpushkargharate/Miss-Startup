@@ -304,3 +304,14 @@ textarea {
     border: none;
     cursor: pointer;
 }
+
+/* mailid section */
+#about .mailid{
+    background-color: #2A2B3F;
+    height: 170px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    padding-top: 40px;
+    
+}
