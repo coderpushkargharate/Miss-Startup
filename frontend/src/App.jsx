@@ -14,6 +14,7 @@ import StartupCourse from "./pages/StartupCourse/StartupCourse";
 import FAQ from "./pages/FAQ/Faq";
 import Home from "./pages/Home/Home";
 import Dashboard from "./dashboard/Dashboard";
+import ContactUs from "./pages/ContactUs/ContactUs";
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -51,6 +52,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
         <Route path="/startupcourse" element={<StartupCourse/>}/>
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/faq" element={<FAQ/>}/>
+        <Route path="/ContactUs" element={<ContactUs/>}/>
         
 
         <Route

@@ -44,7 +44,7 @@ const Footer = () => {
               <li><a href="#" className="text-white text-decoration-none">Browse library</a></li>
               <li><a href="#" className="text-white text-decoration-none">Role IQ</a></li>
               <li><a href="#" className="text-white text-decoration-none">Skill IQ</a></li>
-              <li><a href="/FAQ" className="text-white text-decoration-none">Partner Program</a></li>
+              <li><a href="#" className="text-white text-decoration-none">Partner Program</a></li>
               <li><a href="/FAQ" className="text-white text-decoration-none">Faq</a></li>
             </ul>
           </div>
@@ -53,10 +53,10 @@ const Footer = () => {
           <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-uppercase mb-3">Company</h5>
             <ul className="list-unstyled">
-              <li><a href="#" className="text-white text-decoration-none">About Us</a></li>
+              <li><a href="/AboutUs " className="text-white text-decoration-none">About Us</a></li>
               <li><a href="#" className="text-white text-decoration-none">Pricing</a></li>
               <li><a href="#" className="text-white text-decoration-none">Blog</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Contact Us</a></li>
+              <li><a href="/ContactUs" className="text-white text-decoration-none">Contact Us</a></li>
               <li><a href="#" className="text-white text-decoration-none">Career</a></li>
             </ul>
           </div>

@@ -1,0 +1,135 @@
+/* ContactUs.css */
+
+/* Centering the Contact Us Header */
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#ContactUs .contact-headerh2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#ContactUs .contact-headerp {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+
+
+/* Container Styling */
+#ContactUs h1,
+#ContactUs p {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Contact Form Styles */
+#ContactUs .contact-form {
+    max-width: 500px;
+    height: 570px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-shadow: 2px 2px 15px rgb(175, 173, 173);
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#ContactUs .contact-form h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#ContactUs .contact-form p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input & Textarea Styling */
+#ContactUs .form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+#ContactUs .form-group input,
+#ContactUs .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#ContactUs textarea {
+    height: 100px;
+    border-radius: 10px;
+    width: 50px;
+    resize: none;
+}
+
+/* Button Styling */
+#ContactUs button {
+    background-color: #30BD9B;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    
+}
+
+#ContactUs button:hover {
+    background-color: blueviolet;
+}
+
+/* Map Styles */
+#ContactUs #Map {
+    height: 500px;
+    width: 100%;
+    margin: 30px;
+    padding: auto;
+}
+
+/* Contact Us Image Styling */
+#ContactUs #ContactUsimg {
+    width: 70vh;
+}
+
+
+/* Get-in-touch Section */
+#ContactUs .card-body{
+    box-shadow: 2px 2px 15px rgb(225, 223, 223);
+    border-radius: 10px;
+}
+
+#ContactUs .btn-primary{
+    margin-top: 10px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: #F5F5F7;
+}
+
+/* mailid section */
+#ContactUs .mailid {
+    background-color: #2A2B3F;
+    height: 170px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    padding-top: 40px;
+
+}
