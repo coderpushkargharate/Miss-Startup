@@ -79,7 +79,7 @@ const Home = () => {
       <div className="hero-section d-flex mt-4" >
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
-            <div className="col-lg-6 mt-lg-5 ps-lg-5 heroimg text-center">
+            <div className="col-lg-6 mt-lg-5  ps-lg-5 heroimg text-center">
               <img
                 src="src/assets/homeimg/homemade_cakes_4-removebg-preview.png"
                 alt="Learning"

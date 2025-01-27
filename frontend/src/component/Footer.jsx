@@ -54,8 +54,8 @@ const Footer = () => {
             <h5 className="text-uppercase mb-3">Company</h5>
             <ul className="list-unstyled">
               <li><a href="/AboutUs " className="text-white text-decoration-none">About Us</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Pricing</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Blog</a></li>
+              <li><a href="/StartupCourse" className="text-white text-decoration-none">Pricing</a></li>
+              <li><a href="/Blog" className="text-white text-decoration-none">Blog</a></li>
               <li><a href="/ContactUs" className="text-white text-decoration-none">Contact Us</a></li>
               <li><a href="#" className="text-white text-decoration-none">Career</a></li>
             </ul>

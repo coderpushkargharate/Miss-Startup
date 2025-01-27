@@ -71,6 +71,7 @@ function ContactUs() {
                                                     onChange={handleChange}
                                                     placeholder="What's your name?"
                                                     required
+                                                    className='inbtn'
                                                 />
                                             </div>
                                             <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
@@ -82,6 +83,7 @@ function ContactUs() {
                                                     onChange={handleChange}
                                                     placeholder="Contact Number"
                                                     required
+                                                    className='inbtn'
                                                 />
                                             </div>
                                         </div>
@@ -96,6 +98,7 @@ function ContactUs() {
                                                     onChange={handleChange}
                                                     placeholder="Drop us your email"
                                                     required
+                                                    className='inbtn'
                                                 />
                                             </div>
                                             <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
@@ -107,11 +110,12 @@ function ContactUs() {
                                                     onChange={handleChange}
                                                     placeholder="What's the scoop?"
                                                     required
+                                                    className='inbtn'
                                                 />
                                             </div>
                                         </div>
 
-                                        <div className="form-group">
+                                        <div className="form-group px-3">
                                             <h5>Message</h5>
                                             <textarea
                                                 name="message"
@@ -119,9 +123,10 @@ function ContactUs() {
                                                 onChange={handleChange}
                                                 placeholder="What's on your mind?"
                                                 required
+                                                className='inbtn '   
                                             />
                                         </div>
-                                        <button type="submit">Send Message</button>
+                                        <button type="submit " className="ms-3">Send Message</button>
                                     </form>
                                 </div>
                             </div>
@@ -152,8 +157,8 @@ function ContactUs() {
                                         <div className="card">
 
                                             <div className="card-body">
-                                                <a href="#" className="btn btn-primary">
-                                                    <IoLocationOutline style={{ fontSize: "30px", color: " #30BD9B",marginTop:"7px"}} />
+                                                <a href="#" className="btn ">
+                                                    <IoLocationOutline style={{ fontSize: "30px", color: " #30BD9B",marginTop:"8px"}} />
                                                 </a>
                                                 <h5 className="card-title mt-5">Head Office</h5>
                                                 <p className="card-text">
@@ -170,7 +175,7 @@ function ContactUs() {
                                         <div className="card">
 
                                             <div className="card-body">
-                                                <a href="#" className="btn btn-primary">
+                                                <a href="#" className="btn ">
                                                     <FaPhoneAlt style={{ fontSize: "30px", color: " #30BD9B",marginTop:"8px" }} />
                                                 </a>
                                                 <h5 className="card-title mt-5">Let's Talk</h5>
@@ -188,8 +193,8 @@ function ContactUs() {
                                         <div className="card">
 
                                             <div className="card-body">
-                                                <a href="#" className="btn btn-primary">
-                                                    <CiMail style={{ fontSize: "30px", color: " #30BD9B",marginTop:"7px" }} />
+                                                <a href="#" className="btn ">
+                                                    <CiMail style={{ fontSize: "30px", color: " #30BD9B",marginTop:"8px" }} />
                                                 </a>
                                                 <h5 className="card-title mt-5">Email Support</h5>
                                                 <p className="card-text">
