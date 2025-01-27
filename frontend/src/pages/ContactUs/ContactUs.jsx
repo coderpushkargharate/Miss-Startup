@@ -123,7 +123,7 @@ function ContactUs() {
                                                 onChange={handleChange}
                                                 placeholder="What's on your mind?"
                                                 required
-                                                className='inbtn '   
+                                                className='inbtn '
                                             />
                                         </div>
                                         <button type="submit " className="ms-3">Send Message</button>
@@ -136,9 +136,15 @@ function ContactUs() {
                         {/* Map Section */}
                         <div className="row mt-5 py-5">
                             <div className="12">
-                                <div>
-                                    <img src="src/assets/ContactUs/2983550.jpg" alt="" id="Map" />
-                                </div>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.6199322736065!2d73.85061839999999!3d18.455557900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eba80741dcd1%3A0xd02135b384e482ec!2sFinlec%20India%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1737960979240!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="300"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
                             </div>
                         </div>
 
@@ -158,7 +164,7 @@ function ContactUs() {
 
                                             <div className="card-body">
                                                 <a href="#" className="btn ">
-                                                    <IoLocationOutline style={{ fontSize: "30px", color: " #30BD9B",marginTop:"8px"}} />
+                                                    <IoLocationOutline style={{ fontSize: "30px", color: " #30BD9B", marginTop: "8px" }} />
                                                 </a>
                                                 <h5 className="card-title mt-5">Head Office</h5>
                                                 <p className="card-text">
@@ -171,12 +177,12 @@ function ContactUs() {
                                     </div>
 
                                     {/* Card 2 */}
-                                    <div className="col-md-4">
+                                    <div className="col-md-4 ">
                                         <div className="card">
 
                                             <div className="card-body">
                                                 <a href="#" className="btn ">
-                                                    <FaPhoneAlt style={{ fontSize: "30px", color: " #30BD9B",marginTop:"8px" }} />
+                                                    <FaPhoneAlt style={{ fontSize: "30px", color: " #30BD9B", marginTop: "8px" }} />
                                                 </a>
                                                 <h5 className="card-title mt-5">Let's Talk</h5>
                                                 <p className="card-text">
@@ -194,7 +200,7 @@ function ContactUs() {
 
                                             <div className="card-body">
                                                 <a href="#" className="btn ">
-                                                    <CiMail style={{ fontSize: "30px", color: " #30BD9B",marginTop:"8px" }} />
+                                                    <CiMail style={{ fontSize: "30px", color: " #30BD9B", marginTop: "8px" }} />
                                                 </a>
                                                 <h5 className="card-title mt-5">Email Support</h5>
                                                 <p className="card-text">
@@ -214,25 +220,25 @@ function ContactUs() {
 
 
                         {/* MailId Section  */}
-                        <div className="container-fluid">
+                        <div className="container-fluid py-5">
                             <div className="container mailid">
-                                <div className="conatiner row ">
-
-                                    <div className="col-6 ">
-                                        <h2>Seize the digital spotlight and boost your business with Digancy.</h2>
+                                <div className="conatiner ro d-flex justify-content-around  flex-wrap">
+                                    <div className="col- ">
+                                        <h2>Seize the digital spotlight and boost your <br /> business with Digancy.</h2>
                                     </div>
-                                    <div className="col-6">
-                                        <div><p>CUSTOMER SUPPORT</p></div>
-                                        <div>
-                                            <span style={{
+                                    <div className=" d-flex">
+                                        <div className='me-3'><span style={{
                                                 backgroundColor: "#30BD9B",
                                                 borderRadius: "50%",
                                                 padding: "15px",
                                                 display: "inline-block"
                                             }}>
-                                                <CiMail style={{ fontSize: "40px", color: "#ffffff" }} />
-                                            </span>
-                                            hello@yourdomain.tld
+                                                <CiMail style={{ fontSize: "30px", color: "#ffffff" }} />
+                                            </span></div>
+                                        <div>
+                                            
+                                            <p>CUSTOMER SUPPORT</p>
+                                           <span style={{ fontSize: "20px", color: "#30BD9B" }}> hello@yourdomain.tld</span>
                                         </div>
                                     </div>
                                 </div>
