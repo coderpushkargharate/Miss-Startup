@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Company Section */}
           <div className="col-12 col-md-3 mb-4">
             <Link to="#" className="text-white text-decoration-none">
-              <img src="src/assets/Logo/logo-white.png" alt="Logo" className="img-fluid w-75" />
+              <img src="./src/assets/Logo/logo-white.png" alt="Logo" className="img-fluid w-75" />
             </Link>
             <p className="mb-1 mt-3">
               <Link to="#" className="text-white text-decoration-none d-block">
@@ -52,9 +52,9 @@ const Footer = () => {
           <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-white mb-3">Company</h5>
             <ul className="list-unstyled">
-              <li><Link to="/AboutUs" className="text-white text-decoration-none">About Us</Link></li>
-              <li><Link to="/StartupCourse" className="text-white text-decoration-none">Pricing</Link></li>
-              <li><Link to="/Blog" className="text-white text-decoration-none">Blog</Link></li>
+              <li><Link to="/AboutUs" className="text-white text-decoration-none mt-2">About Us</Link></li>
+              <li><Link to="/StartupCourse" className="text-white text-decoration-none mt-2">Pricing</Link></li>
+              <li><Link to="/Blog" className="text-white text-decoration-none mt-2  ">Blog</Link></li>
               
             </ul>
           </div>
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="d-flex justify-content-center justify-content-md-end mt-4">
           <div className="text-white">
-            <Link to="#" className="text-white text-decoration-none mx-2">Privacy Policy</Link> |
+            <Link to="#" className="text-white text-decoration-none mx-2 mt-2">Privacy Policy</Link> |
             <Link to="#" className="text-white text-decoration-none mx-2">Terms of Service</Link> |
           </div>
           &nbsp;&nbsp;&nbsp;&nbsp;

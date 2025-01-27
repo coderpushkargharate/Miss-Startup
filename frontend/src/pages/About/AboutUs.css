@@ -88,7 +88,7 @@
 }
 
 #about-storyimg {
-    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(src/assets/AboutUsimg/about-story-bg.png);
+    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(./src/assets/AboutUsimg/about-story-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;

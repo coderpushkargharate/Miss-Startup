@@ -187,7 +187,7 @@ const AboutUs = () => {
                         </div>
                         <div className="col-12 col-lg-6 ps-lg-5" data-aos="fade-left">
                             <img
-                                src="src/assets/AboutUsimg/img3.png"
+                                src="./src/assets/AboutUsimg/img3.png"
                                 alt=""
                                 id="Providingbrilliantimg"
                                 className="img-fluid w-100"
