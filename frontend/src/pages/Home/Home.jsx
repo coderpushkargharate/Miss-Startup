@@ -192,8 +192,9 @@ const Home = () => {
       </div>
       <OurMission />
       <Ideas />
-      <Testimonials/> 
       <CounterSection/> 
+      <Testimonials/> 
+   
       {/* <StrengthInNumbers /> */}
       {/* <PricingSection /> */}
     </>

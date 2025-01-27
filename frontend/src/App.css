@@ -26,9 +26,9 @@
   /* Background Colors */
   --bg-color1: rgb(86, 178, 234); /* Light background */
 
-  --bg-color2: #F4F4F4; /* Light background */
+  --bg-color2: #fcfcfc; /* Light background */
 
-  --card-bgcolor:rgb(239, 239, 247);
+  --card-bgcolor:rgb(239, 243, 247);
 
   --btn-color:orange;
 }

@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 130vh;
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
 }
 
 .hero-section .container {
