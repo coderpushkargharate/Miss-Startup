@@ -84,7 +84,7 @@ const Dashboard = () => {
                 value={selectedPage}
                 onChange={(e) => setSelectedPage(e.target.value)}
               >
-            
+
                 <option value="science">Science</option>
                 <option value="business">Business</option>
                 <option value="ai">Food & Beverage</option>
@@ -101,7 +101,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setBlog)}
               onSubmit={() =>
                 handleSubmit(
-                  "http://localhost:5000/api/blogs",
+                  "https://miss-startup-1913.onrender.com/api/blogs",
                   blog,
                   setBlog,
                   "Blog added successfully!"
@@ -109,7 +109,7 @@ const Dashboard = () => {
               }
             />
           )}
-          
+
           {selectedPage === "business" && (
             <Form
               title="Add Business"
@@ -117,7 +117,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setBusiness)}
               onSubmit={() =>
                 handleSubmit(
-                  "http://localhost:5000/api/business",
+                  "https://miss-startup-1913.onrender.com/api/business",
                   business,
                   setBusiness,
                   "Business added successfully!"
@@ -132,7 +132,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setAi)}
               onSubmit={() =>
                 handleSubmit(
-                  "http://localhost:5000/api/ai",
+                  "https://miss-startup-1913.onrender.com/api/ai",
                   ai,
                   setAi,
                   "AI Course added successfully!"
@@ -147,7 +147,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setDesignArchitect)}
               onSubmit={() =>
                 handleSubmit(
-                  "http://localhost:5000/api/designArchitect",
+                  "https://miss-startup-1913.onrender.com/api/designArchitect",
                   designArchitect,
                   setDesignArchitect,
                   "Design Architect Course added successfully!"
@@ -162,7 +162,7 @@ const Dashboard = () => {
               onChange={handleInputChange(setScience)}
               onSubmit={() =>
                 handleSubmit(
-                  "http://localhost:5000/api/science",
+                  "https://miss-startup-1913.onrender.com/api/science",
                   science,
                   setScience,
                   "Science Course added successfully!"

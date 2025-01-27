@@ -20,7 +20,7 @@ const MainIdeas = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000${selectedCategory.endpoint}`)
+      .get(`https://miss-startup-1913.onrender.com${selectedCategory.endpoint}`)
       .then((response) => setCourses(response.data))
       .catch((err) => console.error(err));
 

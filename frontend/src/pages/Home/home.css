@@ -18,8 +18,25 @@ body {
   justify-content: center;
   align-items: center;
   height: 130vh;
-  background-color: var(--bg-color2);
+  /* background-color: var(--bg-color2); */
+  background-image: url(https://img.freepik.com/premium-photo/free-abstract-plain-white-background-wallpaper_1097558-5656.jpg);
+  width: 100%;
+  position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: zoomBackground 10s ease-in-out infinite alternate;
 }
+
+@keyframes zoomBackground {
+  0% {
+    background-size: 100%; /* Start with normal size */
+  }
+  100% {
+    background-size: 110%; /* Slight zoom effect */
+  }
+}
+
 
 .hero-section .container {
   max-width: 1200px;
