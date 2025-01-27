@@ -1,55 +1,49 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const path = require('path');
+require("dotenv").config();
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB Connection
-mongoose
-  .connect('mongodb://localhost:27017/free_sessions', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.error('Error connecting to MongoDB:', err));
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((err) => console.error("MongoDB connection error:", err));
 
-// Mongoose Schema and Model
-const SessionSchema = new mongoose.Schema({
-  childName: { type: String, required: true },
-  mobileNumber: { type: String, required: true },
-  email: { type: String, required: true },
-  state: { type: String, required: true },
-  sessionMode: { type: String, required: true },
+// Schema and Model
+const contactSchema = new mongoose.Schema({
+    name: String,
+    phone: String,
+    email: String,
+    subject: String,
+    message: String,
+    submittedAt: { type: Date, default: Date.now },
 });
 
-const Session = mongoose.model('Session', SessionSchema);
+const Contact = mongoose.model("Contact", contactSchema);
 
-// API Routes
-app.post('/api/sessions', async (req, res) => {
-  try {
-    const { childName, mobileNumber, email, state, sessionMode } = req.body;
+// API Route to Save Form Data
+app.post("/api/contact", async (req, res) => {
+    try {
+        const { name, phone, email, subject, message } = req.body;
 
-    // Save data to database
-    const newSession = new Session({ childName, mobileNumber, email, state, sessionMode });
-    await newSession.save();
+        const newContact = new Contact({ name, phone, email, subject, message });
+        await newContact.save();
 
-    res.status(200).json({ message: 'Session successfully scheduled!' });
-  } catch (error) {
-    console.error('Error saving session:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
-
-// Serve React Frontend
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+        res.status(201).json({ message: "Form data saved successfully" });
+    } catch (error) {
+        console.error("Error saving form data:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
 });
 
 // Start Server
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });

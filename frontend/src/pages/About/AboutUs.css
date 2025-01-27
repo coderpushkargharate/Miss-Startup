@@ -202,7 +202,7 @@
 
 }
 
-#about .Providingbrilliantul h5{
+#about .Providingbrilliantul h5 {
     font-weight: 600;
     font-size: 22px;
 }
@@ -218,7 +218,7 @@
     color: rgb(77, 74, 74);
 }
 
-#about .Providingbrilliantbutton{
+#about .Providingbrilliantbutton {
     border-radius: 20px;
     width: 200px;
     height: 30px;
@@ -252,12 +252,12 @@
     background-color: rgb(246, 246, 246);
 }
 
-#about .Providingbrilliantul li{
+#about .Providingbrilliantul li {
     list-style: none;
 }
 
 #about .Providingbrillianticon {
-  /* height: 200px; */
+    /* height: 200px; */
 }
 
 
@@ -306,12 +306,25 @@ textarea {
 }
 
 /* mailid section */
-#about .mailid{
+#about .mailid {
     background-color: #2A2B3F;
     height: 170px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     color: white;
     padding-top: 40px;
-    
+
+}
+
+
+#about .mailid::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 85px;
+    /* right: 1px; */
+    width: 88.6%;
+    height: 9px;
+    background: linear-gradient(to left, rgb(223, 85, 85), #7473C4, #3AB2A1);
+    border-radius: 0 0 30px 30px;
 }

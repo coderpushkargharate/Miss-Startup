@@ -41,19 +41,32 @@
     border-radius: 30px 30px 0px 0px;
     padding: 20px;
     margin-bottom: 20px;
-    position: relative; /* For positioning the pseudo-element */
-    background: #fff; /* Ensure the background is solid */
+    position: relative;
+    /* For positioning the pseudo-element */
+    background: #fff;
+    /* Ensure the background is solid */
 }
 
 #ContactUs .contact-form::after {
     content: '';
     position: absolute;
-    bottom: -9px; /* Aligns the gradient border */
+    bottom: -9px;
+    /* Aligns the gradient border */
     left: 0;
     width: 100%;
-    height: 9px; /* Matches the intended border size */
-    background: linear-gradient(to left, rgb(170, 107, 107), blue, yellow);
-    border-radius: 0 0 30px 30px; /* Matches the border radius of the form */
+    height: 9px;
+    /* Matches the intended border size */
+    background: linear-gradient(to left, rgb(223, 85, 85), #7473C4, #3AB2A1);
+    border-radius: 0 0 30px 30px;
+    /* Matches the border radius of the form */
+}
+
+#ContactUs .inbtn {
+    background-color: #F9FBFF;
+    border: none;
+    box-shadow: 1px 1px 17px rgb(205, 205, 205);
+    padding: 2px;
+    border-radius: 3px;
 }
 
 #ContactUs .contact-form h2 {
@@ -100,7 +113,7 @@
     border-radius: 20px;
     cursor: pointer;
     width: 200px;
-    
+
 }
 
 #ContactUs button:hover {
@@ -122,39 +135,58 @@
 
 
 /* Get-in-touch Section */
-#ContactUs .card-body{
+#ContactUs .card-body {
     box-shadow: 2px 2px 15px rgb(225, 223, 223);
     border-radius: 10px;
 }
 
+#ContactUs .card .card-body .btn {
+    background-color: #F5F5F7;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#ContactUs .card .card-body:hover {
+    background: linear-gradient(to right, #fdfdfd, #fbfcff);
+    /* Light gradient background */
+    transform: scale(1.03);
+    /* Slightly enlarge the form */
+    box-shadow: 4px 4px 20px rgb(150, 150, 150);
+    /* More prominent shadow */
+}
+
+
+
+/* 
 #ContactUs .btn-primary{
     margin-top: 10px;
     height: 70px;
     width: 70px;
     border-radius: 50px;
     background-color: #F5F5F7;
-}
+} */
 
 /* mailid section */
 #ContactUs .mailid {
     background-color: #2A2B3F;
     height: 170px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     color: white;
     padding-top: 40px;
 
 }
-#ContactUs .btn{
-    background-color: #9c9797;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-#ContactUs .inbtn{
-    background-color: rgb(237, 255, 255);
-    border: none;
-    box-shadow: 1px 1px 17px rgb(205, 205, 205);
-    padding: 2px;
-    border-radius: 3px;
+
+
+#ContactUs .mailid::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 1;
+    right: 13px;
+    width: 98%;
+    height: 9px;
+    background: linear-gradient(to left, rgb(223, 85, 85), #7473C4, #3AB2A1);
+    border-radius: 0 0 30px 30px;
 }

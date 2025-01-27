@@ -279,33 +279,33 @@ const AboutUs = () => {
 
 
 
-{/* MailId Section  */}
-            <div className="container-fluid">
+            {/* MailId Section  */}
+            <div className="container-fluid py-5 position-relative">
                 <div className="container mailid">
-                    <div className="conatiner row ">
-
-                        <div className="col-6 ">
-                            <h2>Seize the digital spotlight and boost your business with Digancy.</h2>
+                    <div className="conatiner ro d-flex justify-content-around  flex-wrap">
+                        <div className="col- ">
+                            <h2>Seize the digital spotlight and boost your <br /> business with Digancy.</h2>
                         </div>
-                        <div className="col-6">
-                            <div><p>CUSTOMER SUPPORT</p></div>
+                        <div className=" d-flex">
+                            <div className='me-3'><span style={{
+                                backgroundColor: "#30BD9B",
+                                borderRadius: "50%",
+                                padding: "15px",
+                                display: "inline-block"
+                            }}>
+                                <CiMail style={{ fontSize: "30px", color: "#ffffff" }} />
+                            </span></div>
                             <div>
-                                <span style={{
-                                    backgroundColor: "#30BD9B",
-                                    borderRadius: "50%",
-                                    padding: "15px",
-                                    display: "inline-block"
-                                }}>
-                                    <CiMail style={{ fontSize: "40px", color: "#ffffff" }} />
-                                </span>
-                                hello@yourdomain.tld
+
+                                <p>CUSTOMER SUPPORT</p>
+                                <span style={{ fontSize: "20px", color: "#30BD9B" }}> hello@yourdomain.tld</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
         </div>
     );
 };
