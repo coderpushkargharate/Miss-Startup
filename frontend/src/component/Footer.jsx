@@ -54,11 +54,11 @@ const Footer = () => {
           <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-uppercase mb-3">Company</h5>
             <ul className="list-unstyled">
-              <li><a href="/AboutUs " className="text-white text-decoration-none">About Us</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Pricing</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Blog</a></li>
-              <li><a href="/ContactUs" className="text-white text-decoration-none">Contact Us</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Career</a></li>
+              <li><Link to="/AboutUs " className="text-white text-decoration-none">About Us</Link></li>
+              <li><Link to="#" className="text-white text-decoration-none">Pricing</Link></li>
+              <li><Link to="#" className="text-white text-decoration-none">Blog</Link></li>
+              <li><Link to="/ContactUs" className="text-white text-decoration-none">Contact Us</Link></li>
+              <li><Link to="#" className="text-white text-decoration-none">Career</Link></li>
             </ul>
           </div>
 
