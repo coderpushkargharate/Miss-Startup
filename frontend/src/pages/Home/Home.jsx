@@ -1,14 +1,14 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../Home/home.css"
+import "../Home/home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Ideas from "./Ideas";
 import OurMission from "./OurMission";
 import Testimonials from "./Testimonials";
 import CounterSection from "./CounterSection";
-import img1 from "/src/assets/homeimg/hero_area_pattern_4 (1).png"
-
+import img1 from "./Homeimg/homemade_cakes_4-removebg-preview.png";
+import img2 from "./Homeimg/hero_area_pattern_4 (1).png";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -71,27 +71,30 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration (in milliseconds)
-      once: true,     // Whether animation should happen only once
-      offset: 200,    // Offset (in pixels) from the original trigger point
+      once: true, // Whether animation should happen only once
+      offset: 200, // Offset (in pixels) from the original trigger point
     });
   }, []);
 
   return (
     <>
-    
-      <div className="hero-section d-flex mt-4" >
+      <div className="hero-section d-flex mt-4">
         <div className="container position-relative mt-5">
           <div className="row align-items-center mt-3">
-            <div className="col-lg-6 mt-lg-5  ps-lg-5 heroimg text-center">
+            <div className="col-lg-6 mt-lg-5 ps-lg-5 heroimg text-center">
               <img
-                src="./src/assets/homeimg/homemade_cakes_4-removebg-preview.png"
+                src={img1}
                 alt="Learning"
-                className="img-fluid ps-lg-5 ms-lg-5 "
-                style={{ borderRadius: "15px"  }}
+                className="img-fluid ps-lg-5 ms-lg-5"
+                style={{ borderRadius: "15px" }}
               />
             </div>
-            <div className="col-lg-6 text-md-start text-center  herotext mt-lg-5 ps-lg-5">
-              <form className="form-container  mt-5 mt-lg-1" onSubmit={handleSubmit} data-aos="fade-up">
+            <div className="col-lg-6 text-md-start text-center herotext mt-lg-5 ps-lg-5">
+              <form
+                className="form-container mt-5 mt-lg-1"
+                onSubmit={handleSubmit}
+                data-aos="fade-up"
+              >
                 <h2>Book your Free Session</h2>
                 <p>Learn from India’s best teachers</p>
 
@@ -138,7 +141,11 @@ const Home = () => {
                     onChange={handleInputChange}
                     required
                   />
-                  <button type="button" onClick={handleSendOtp} className="send-otp-button">
+                  <button
+                    type="button"
+                    onClick={handleSendOtp}
+                    className="send-otp-button"
+                  >
                     Send OTP
                   </button>
                 </div>
@@ -184,22 +191,19 @@ const Home = () => {
 
                 <button type="submit" className="submit-button px-2 py-1">
                   Schedule a Free Class
-                </button> 
+                </button>
               </form>
             </div>
-            <div className="position-absolute imganimation mt-5" >
-              <img src={img1} alt="" />
+            <div className="position-absolute imganimation mt-5">
+              <img src={img2} alt="" />
             </div>
           </div>
         </div>
       </div>
       <OurMission />
       <Ideas />
-      <CounterSection/> 
-      <Testimonials/> 
-   
-      {/* <StrengthInNumbers /> */}
-      {/* <PricingSection /> */}
+      <CounterSection />
+      <Testimonials />
     </>
   );
 };
