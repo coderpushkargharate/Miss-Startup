@@ -13,6 +13,8 @@ import { FaDigitalTachograph } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { TiTickOutline } from "react-icons/ti";
 import { CiMail } from "react-icons/ci";
+import img1 from './Aboutimg/about-story-bg.png';
+import img2 from './Aboutimg/img3.png'
 
 const AboutUs = () => {
     const values = [
@@ -187,7 +189,7 @@ const AboutUs = () => {
                         </div>
                         <div className="col-12 col-lg-6 ps-lg-5" data-aos="fade-left">
                             <img
-                                src="./src/assets/AboutUsimg/img3.png"
+                                src={img2}
                                 alt=""
                                 id="Providingbrilliantimg"
                                 className="img-fluid w-100"

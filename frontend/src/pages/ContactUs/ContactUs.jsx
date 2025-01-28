@@ -3,6 +3,7 @@ import '../ContactUs/ContactUs.css';
 import { CiMail } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
+import img1 from './ContactUsimg/img4.png'
 
 function ContactUs() {
     const [formData, setFormData] = useState({
@@ -65,7 +66,7 @@ function ContactUs() {
                         <div className="row">
                             <div className="col-6">
                                 <img
-                                    src="src/assets/ContactUs/img4.png"
+                                    src={img1}
                                     alt="Contact Us"
                                     id="ContactUsimg"
                                 />

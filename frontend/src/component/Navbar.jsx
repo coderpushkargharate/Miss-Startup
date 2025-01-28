@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { MdCall } from "react-icons/md";
+import img1 from './logoimg/logo.png';
 
 const Navbar = () => {
     const location = useLocation();
@@ -22,7 +23,7 @@ const Navbar = () => {
             <div className="container">
                 {/* Logo */}
                 <Link className="navbar-brand" to="/">
-                    <img src="./src/assets/Logo/logo.png" alt="Courselog" />
+                    <img src={img1} alt="Courselog" />
                 </Link>
 
                 {/* Mobile Toggler */}
