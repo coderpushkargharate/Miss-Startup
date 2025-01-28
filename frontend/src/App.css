@@ -14,7 +14,7 @@
 
   --font-weight:  bold;
 
-  --font-sizep: 20px;
+  --font-sizep: 28px;
 
   --font-sizeh5: 15px;
 
@@ -31,4 +31,8 @@
   --card-bgcolor:rgb(239, 243, 247);
 
   --btn-color:orange;
+  
+}
+p{
+  /* font-size: 200?px; */
 }

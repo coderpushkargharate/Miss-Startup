@@ -142,6 +142,7 @@ function ContactUs() {
                                                 required
                                                 className='inbtn'
                                             />
+                                            
                                         </div>
                                         <button type="submit" className="ms-3">Send Message</button>
                                     </form>
