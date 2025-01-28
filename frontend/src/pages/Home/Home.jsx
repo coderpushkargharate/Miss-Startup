@@ -7,6 +7,8 @@ import Ideas from "./Ideas";
 import OurMission from "./OurMission";
 import Testimonials from "./Testimonials";
 import CounterSection from "./CounterSection";
+import img1 from "/src/assets/homeimg/hero_area_pattern_4 (1).png"
+
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -186,7 +188,7 @@ const Home = () => {
               </form>
             </div>
             <div className="position-absolute imganimation mt-5" >
-              <img src="/src/assets/homeimg/hero_area_pattern_4 (1).png" alt="" />
+              <img src={img1} alt="" />
             </div>
           </div>
         </div>

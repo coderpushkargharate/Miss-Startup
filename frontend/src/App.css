@@ -32,3 +32,16 @@
 
   --btn-color:orange;
 }
+p{
+  font-size: 18px;
+}
+input {
+  font-size: 14px;
+}
+button {
+  font-size: 14px;
+}
+textarea {
+  font-size: 14px;
+}
+
