@@ -69,8 +69,7 @@ function ContactUs() {
                                     src={img1}
                                     alt="Contact Us"
                                     id="ContactUsimg"
-                                />
-                            </div>
+                                />                            </div>
                             <div className="col-6">
                                 <div className="contact-form">
                                     <h2>Send us a message</h2>
