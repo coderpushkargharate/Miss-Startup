@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Company Section */}
           <div className="col-12 col-md-3 mb-4">
             <Link to="#" className="text-white text-decoration-none">
-              <img src="./src/assets/Logo/logo-white.png" alt="Logo" className="img-fluid w-75" />
+              <img src="./src/assets/Logo/download__1_-removebg-preview.png" alt="Logo" className="img-fluid w-75" />
             </Link>
             <p className="mb-1 mt-3">
               <Link to="#" className="text-white text-decoration-none d-block">
@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="col-6 col-md-3 mb-4 ps-lg-5">
             <h5 className="text-white mb-3">Support</h5>
             <ul className="list-unstyled">
-              <li><Link to="/FAQ" className="text-white text-decoration-none">Faq</Link></li>
+              <li><Link to="/FAQ" className="text-white text-decoration-none mt-2">Faq</Link></li>
               <li><Link to="/ContactUs" className="text-white text-decoration-none">Contact Us</Link></li>
               <li><Link to="/Login" className="text-white text-decoration-none">Login</Link></li>
             </ul>

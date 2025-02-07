@@ -1,49 +1,48 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI)
-    .then(() => console.log("Connected to MongoDB"))
-    .catch((err) => console.error("MongoDB connection error:", err));
-
-// Schema and Model
-const contactSchema = new mongoose.Schema({
-    name: String,
-    phone: String,
-    email: String,
-    subject: String,
-    message: String,
-    submittedAt: { type: Date, default: Date.now },
+mongoose.connect("mongodb://localhost:27017/blogdb", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-const Contact = mongoose.model("Contact", contactSchema);
+// Define a Blog schema
+const blogSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  imageUrl: String,
+  date: Date,
+  readTime: String,
+});
 
-// API Route to Save Form Data
-app.post("/api/contact", async (req, res) => {
-    try {
-        const { name, phone, email, subject, message } = req.body;
+const Blog = mongoose.model("Blog", blogSchema);
 
-        const newContact = new Contact({ name, phone, email, subject, message });
-        await newContact.save();
+// GET all blogs
+app.get("/api/blogs", async (req, res) => {
+  try {
+    const blogs = await Blog.find();
+    res.json(blogs);
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
 
-        res.status(201).json({ message: "Form data saved successfully" });
-    } catch (error) {
-        console.error("Error saving form data:", error);
-        res.status(500).json({ message: "Internal Server Error" });
+// GET a single blog by ID
+app.get("/api/blogs/:blogId", async (req, res) => {
+  try {
+    const blog = await Blog.findById(req.params.blogId);
+    if (!blog) {
+      return res.status(404).json({ error: "Blog not found" });
     }
+    res.json(blog);
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
 });
 
-// Start Server
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+// Start the server
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
 });

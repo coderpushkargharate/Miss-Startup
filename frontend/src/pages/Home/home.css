@@ -159,6 +159,7 @@ canvas {
 .hero-section .form-container .send-otp-button {
   width: 100%;
   margin-top: 0.5rem;
+  padding-top: 9px;
 }
 
 .hero-section .form-container .submit-button {

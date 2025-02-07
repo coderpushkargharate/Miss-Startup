@@ -15,6 +15,7 @@ import FAQ from "./pages/FAQ/Faq";
 import Home from "./pages/Home/Home";
 import Dashboard from "./dashboard/Dashboard";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import BlogDetail from "./pages/Blog/BlogDetail";
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -46,6 +47,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        {/* <Route path="/blog/:blogId" element={<BlogDetail/>}/> */}
         {/* <Route path="/course/:courseId" element={<CourseDetails />} /> */}
         <Route path="/mainideas" element={<Mainideas />} />
         <Route path="/aboutus" element={<AboutUs />} />

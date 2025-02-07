@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Blog.css"; // Assuming you have a CSS file for styling
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import "./Blog.css";
 
 function Blog() {
   const [blogs, setBlogs] = useState([]);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -17,10 +19,20 @@ function Blog() {
     fetchBlogs();
   }, []);
 
+  // Function to handle card click
+  const handleCardClick = (blogId) => {
+    navigate(`/blog/${blogId}`); // Navigate to the detailed blog page
+  };
+
   return (
     <div className="card-container" id="Blog">
       {blogs.map((blog, index) => (
-        <div className="card mt-5" key={index}>
+        <div
+          className="card mt-5"
+          key={index}
+          onClick={() => handleCardClick(blog._id)} // Add click handler
+          style={{ cursor: "pointer" }} // Make it look clickable
+        >
           <img
             src={blog.imageUrl || "default-image.jpg"} // Handle default image
             className="card-img-top"
@@ -28,7 +40,9 @@ function Blog() {
           />
           <div className="card-body">
             <h5 className="card-title">{blog.title}</h5>
-            <p className="card-text">{blog.description}</p>
+            <p className="card-text">
+              {blog.description.slice(0, 100)}... {/* Show only the first 100 characters */}
+            </p>
             <div className="card-footer">
               <small className="date">{new Date(blog.date).toLocaleDateString()}</small>
               <small className="read-time">{blog.readTime}</small>

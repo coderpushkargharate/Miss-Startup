@@ -78,3 +78,60 @@
 #Blog .read-time {
   font-size: 0.9rem;
 }
+
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add deeper shadow */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Ensure all images are the same height */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); /* Slightly zoom the image */
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.date,
+.read-time {
+  color: gray;
+}

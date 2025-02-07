@@ -80,7 +80,7 @@ const Dashboard = () => {
           <ul>
             <li>
               <select
-                className="form-select"
+                className="form-select mt-3 w-75 ms-4"
                 value={selectedPage}
                 onChange={(e) => setSelectedPage(e.target.value)}
               >
