@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Section */}
           <div className="col-12 col-md-3 mb-4">
             <Link to="#" className="text-white text-decoration-none">
-              <img src="./src/assets/Logo/logo-white.png" alt="Logo" className="img-fluid w-75" />
+              <img src="./src/component/logoimg/download__1_-removebg-preview.png" alt="Logo" className="img-fluid w-75" />
             </Link>
             <p className="mb-1 mt-3">
               <Link to="#" className="text-white text-decoration-none d-block">

@@ -90,7 +90,7 @@ const Home = () => {
               />
             </div>
             <div className="col-lg-6 text-md-start text-center herotext mt-lg-5 ps-lg-5">
-              <form
+              {/* <form
                 className="form-container mt-5 mt-lg-1"
                 onSubmit={handleSubmit}
                 data-aos="fade-up"
@@ -192,7 +192,10 @@ const Home = () => {
                 <button type="submit" className="submit-button px-2 py-1">
                   Schedule a Free Class
                 </button>
-              </form>
+              </form> */}
+              <h2>Empowering Women to Build Their Dreams</h2>
+              <p>From Idea to Launch – Your Journey Starts Here!</p>
+              <button className="p-2">Join Our Program Today!</button>
             </div>
             <div className="position-absolute imganimation mt-5">
               <img src={img2} alt="" />

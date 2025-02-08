@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className="container">
                 {/* Logo */}
                 <Link className="navbar-brand" to="/">
-                    <img src="./src/assets/Logo/logo.png" alt="Courselog" />
+                    <img src="./src/component/logoimg/download__1_-removebg-preview.png" alt="Courselog" />
                 </Link>
 
                 {/* Mobile Toggler */}
@@ -57,7 +57,7 @@ const Navbar = () => {
                                 to="/startupcourse"
                                 onClick={closeNavbar}
                             >
-                                StartupCourse
+                                Startup Program
                             </Link>
                         </li>
                         <li className="nav-item me-5">
