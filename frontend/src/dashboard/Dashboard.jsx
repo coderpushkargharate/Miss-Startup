@@ -85,10 +85,10 @@ const Dashboard = () => {
                 onChange={(e) => setSelectedPage(e.target.value)}
               >
 
-                <option value="science">Science</option>
-                <option value="business">Business</option>
+                <option value="science">Creative & Artistic Services</option>
+                <option value="business">Technology & Digital Services</option>
                 <option value="ai">Food & Beverage</option>
-                <option value="designArchitect">Design Architect</option>
+                <option value="designArchitect">Education & Personal Development</option>
               </select>
             </li>
           </ul>
