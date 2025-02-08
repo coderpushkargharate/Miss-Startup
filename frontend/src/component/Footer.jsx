@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Footer.css";
 import { BsTwitterX } from "react-icons/bs";
+import img from './logoimg/logo-white.png'
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
           {/* Company Section */}
           <div className="col-12 col-md-3 mb-4">
             <Link to="#" className="text-white text-decoration-none">
-              <img src="./src/assets/Logo/download__1_-removebg-preview.png" alt="Logo" className="img-fluid w-75" />
+              <img src="./src/assets/Logo/logo-white.png" alt="Logo" className="img-fluid w-75" />
             </Link>
             <p className="mb-1 mt-3">
               <Link to="#" className="text-white text-decoration-none d-block">

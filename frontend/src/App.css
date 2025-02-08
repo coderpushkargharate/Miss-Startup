@@ -14,7 +14,7 @@
 
   --font-weight:  bold;
 
-  --font-sizep: 20px;
+  --font-sizep: 28px;
 
   --font-sizeh5: 15px;
 
@@ -31,18 +31,17 @@
   --card-bgcolor:rgb(239, 243, 247);
 
   --btn-color:orange;
+  
 }
 p{
-  font-size: 17px;
+  font-size: 15px;
 }
-input {
-  font-size: 13px;
+input{
+  font-size: 15px;
 }
-button {
-  font-size: 13px;
+button{
+  font-size: 15px;
 }
-textarea {
-  font-size: 13px;
+textarea{
+  font-size: 20px;
 }
-
-

@@ -2,14 +2,14 @@
     margin-top: 80px;
 }
 
-#about .about-us-header {
+/* #about .about-us-header {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url(src/assets/AboutUsimg/banner_image1.png);
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 45vh;
 
-}
+} */
 
 #about .about-us-header h1 {
     font-size: 2.5rem;
@@ -88,7 +88,7 @@
 }
 
 #about-storyimg {
-    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(./src/assets/AboutUsimg/about-story-bg.png);
+    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(./Aboutimg/about-story-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;

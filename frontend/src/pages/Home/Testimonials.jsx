@@ -1,58 +1,65 @@
 import React, { useState, useEffect } from "react";
 import "./Testimonials.css";
+import img1 from './Homeimg/about-story-bg.png';
+import img2 from './Homeimg/logo-white.png';
+import img3 from './Homeimg/about-story-bg.png';
+import img4 from './Homeimg/logo-white.png';
+import img5 from './Homeimg/logo-white.png';
+import img6 from './Homeimg/about-story-bg.png';
+import img7 from './Homeimg/hero_area_pattern_4 (1).png';
+import img8 from './Homeimg/logo-white.png';
 
 const testimonials = [
     {
         name: "Chirag",
         handle: "@tweetsbychirag",
         message: "Great experience, fantastic support team! Highly recommended.",
-        image: "./src/assets/homeimg/course_image7.jpg",
+        image: img1,
     },
     {
         name: "Rahul",
         handle: "@rahulspeaks",
         message: "Great experience, fantastic support team! Highly recommended.",
-        image: "./src/assets/homeimg/course_image8.jpg",
+        image: img2,
     },
     {
         name: "Sonia",
         handle: "@soniatweets",
         message: "Super impressed with the service. Thank you for the quick resolution.",
-        image: "./src/assets/homeimg/course_image9.jpg",
+        image: img3,
     },
     {
         name: "Priya",
         handle: "@priyathinks",
         message: "This is the best customer service I have experienced so far. Keep it up!",
-        image: "./src/assets/homeimg/course_image7.jpg",
+        image: img4,
     },
     {
         name: "Vikram",
         handle: "@vikramchats",
         message: "Professional and responsive. Couldn't ask for better assistance!",
-        image: "./src/assets/homeimg/course_image8.jpg",
+        image: img5,
     },
     {
         name: "Aditi",
         handle: "@aditishares",
         message: "Absolutely delightful experience! Will recommend to others.",
-        image: "./src/assets/homeimg/course_image9.jpg",
+        image: img6,
     },
     {
         name: "Rohan",
         handle: "@rohanspeaks",
         message: "Efficient and reliable service, very happy with the outcome.",
-        image: "./src/assets/homeimg/course_image7.jpg",
+        image: img7,
     },
     {
         name: "Neha",
         handle: "@neha_tweets",
         message: "Such a smooth process. Hats off to the team!",
-        image: "./src/assets/homeimg/course_image9.jpg",
-
+        image: img8,
     },
-    
 ];
+
 
 const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
