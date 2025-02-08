@@ -5,6 +5,7 @@ import "./Dashboard.css";
 const Dashboard = () => {
   const [selectedPage, setSelectedPage] = useState("blog");
 
+  // State for each category
   const [blog, setBlog] = useState({
     title: "",
     description: "",
@@ -45,6 +46,79 @@ const Dashboard = () => {
     rating: 0,
   });
 
+  const [foodBeverage, setFoodBeverage] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [technology, setTechnology] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [creativeArtistic, setCreativeArtistic] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [educationDevelopment, setEducationDevelopment] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [eventsEntertainment, setEventsEntertainment] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [healthWellness, setHealthWellness] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [homeLifestyle, setHomeLifestyle] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [financialServices, setFinancialServices] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  const [miscellaneous, setMiscellaneous] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    price: "",
+    rating: 0,
+  });
+
+  // Handle input changes dynamically
   const handleInputChange = (setter) => (e) => {
     const { name, value } = e.target;
     setter((prevState) => ({
@@ -53,6 +127,7 @@ const Dashboard = () => {
     }));
   };
 
+  // Handle form submission
   const handleSubmit = async (url, data, setter, successMessage) => {
     try {
       await axios.post(url, data);
@@ -80,20 +155,26 @@ const Dashboard = () => {
           <ul>
             <li>
               <select
-                className="form-select mt-3 w-75 ms-4"
+                className="form-select"
                 value={selectedPage}
                 onChange={(e) => setSelectedPage(e.target.value)}
               >
-
-                <option value="science">Creative & Artistic Services</option>
-                <option value="business">Technology & Digital Services</option>
-                <option value="ai">Food & Beverage</option>
-                <option value="designArchitect">Education & Personal Development</option>
+                <option>--Ideas--</option>
+                <option value="foodBeverage">Food & Beverage</option>
+                <option value="technology">Technology & Digital Services</option>
+                <option value="creativeArtistic">Creative & Artistic Services</option>
+                <option value="educationDevelopment">Education & Personal Development</option>
+                <option value="eventsEntertainment">Events & Entertainment</option>
+                <option value="healthWellness">Health & Wellness</option>
+                <option value="homeLifestyle">Home & Lifestyle</option>
+                <option value="financialServices">Financial Services</option>
+                <option value="miscellaneous">Miscellaneous Services</option>
               </select>
             </li>
           </ul>
         </div>
         <div className="content">
+          {/* Blog Form */}
           {selectedPage === "blog" && (
             <Form
               title="Add Blog"
@@ -110,6 +191,7 @@ const Dashboard = () => {
             />
           )}
 
+          {/* Business Form */}
           {selectedPage === "business" && (
             <Form
               title="Add Business"
@@ -125,6 +207,8 @@ const Dashboard = () => {
               }
             />
           )}
+
+          {/* AI Course Form */}
           {selectedPage === "ai" && (
             <Form
               title="Add AI Course"
@@ -140,6 +224,8 @@ const Dashboard = () => {
               }
             />
           )}
+
+          {/* Design Architect Form */}
           {selectedPage === "designArchitect" && (
             <Form
               title="Add Design Architect Course"
@@ -155,6 +241,8 @@ const Dashboard = () => {
               }
             />
           )}
+
+          {/* Science Course Form */}
           {selectedPage === "science" && (
             <Form
               title="Add Science Course"
@@ -170,6 +258,159 @@ const Dashboard = () => {
               }
             />
           )}
+
+          {/* Food & Beverage Form */}
+          {selectedPage === "foodBeverage" && (
+            <Form
+              title="Add Food & Beverage Service"
+              data={foodBeverage}
+              onChange={handleInputChange(setFoodBeverage)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/foodBeverage",
+                  foodBeverage,
+                  setFoodBeverage,
+                  "Food & Beverage Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Technology & Digital Services Form */}
+          {selectedPage === "technology" && (
+            <Form
+              title="Add Technology & Digital Service"
+              data={technology}
+              onChange={handleInputChange(setTechnology)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/technology",
+                  technology,
+                  setTechnology,
+                  "Technology & Digital Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Creative & Artistic Services Form */}
+          {selectedPage === "creativeArtistic" && (
+            <Form
+              title="Add Creative & Artistic Service"
+              data={creativeArtistic}
+              onChange={handleInputChange(setCreativeArtistic)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/creativeArtistic",
+                  creativeArtistic,
+                  setCreativeArtistic,
+                  "Creative & Artistic Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Education & Personal Development Form */}
+          {selectedPage === "educationDevelopment" && (
+            <Form
+              title="Add Education & Personal Development Service"
+              data={educationDevelopment}
+              onChange={handleInputChange(setEducationDevelopment)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/educationDevelopment",
+                  educationDevelopment,
+                  setEducationDevelopment,
+                  "Education & Personal Development Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Events & Entertainment Form */}
+          {selectedPage === "eventsEntertainment" && (
+            <Form
+              title="Add Events & Entertainment Service"
+              data={eventsEntertainment}
+              onChange={handleInputChange(setEventsEntertainment)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/eventsEntertainment",
+                  eventsEntertainment,
+                  setEventsEntertainment,
+                  "Events & Entertainment Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Health & Wellness Form */}
+          {selectedPage === "healthWellness" && (
+            <Form
+              title="Add Health & Wellness Service"
+              data={healthWellness}
+              onChange={handleInputChange(setHealthWellness)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/healthWellness",
+                  healthWellness,
+                  setHealthWellness,
+                  "Health & Wellness Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Home & Lifestyle Form */}
+          {selectedPage === "homeLifestyle" && (
+            <Form
+              title="Add Home & Lifestyle Service"
+              data={homeLifestyle}
+              onChange={handleInputChange(setHomeLifestyle)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/homeLifestyle",
+                  homeLifestyle,
+                  setHomeLifestyle,
+                  "Home & Lifestyle Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Financial Services Form */}
+          {selectedPage === "financialServices" && (
+            <Form
+              title="Add Financial Service"
+              data={financialServices}
+              onChange={handleInputChange(setFinancialServices)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/financialServices",
+                  financialServices,
+                  setFinancialServices,
+                  "Financial Service added successfully!"
+                )
+              }
+            />
+          )}
+
+          {/* Miscellaneous Services Form */}
+          {selectedPage === "miscellaneous" && (
+            <Form
+              title="Add Miscellaneous Service"
+              data={miscellaneous}
+              onChange={handleInputChange(setMiscellaneous)}
+              onSubmit={() =>
+                handleSubmit(
+                  "https://miss-startup-1913.onrender.com/api/miscellaneous",
+                  miscellaneous,
+                  setMiscellaneous,
+                  "Miscellaneous Service added successfully!"
+                )
+              }
+            />
+          )}
         </div>
       </div>
       <div className="navbar-bottom">
@@ -181,6 +422,7 @@ const Dashboard = () => {
   );
 };
 
+// Reusable Form Component
 const Form = ({ title, data, onChange, onSubmit }) => {
   return (
     <>
@@ -214,7 +456,3 @@ const Form = ({ title, data, onChange, onSubmit }) => {
 };
 
 export default Dashboard;
-
-
-
-
