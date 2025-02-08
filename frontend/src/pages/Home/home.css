@@ -7,8 +7,9 @@ body {
   margin: 0;
   padding: 0;
 }
-.heroimg img{
-  margin-top: 410px;
+
+.heroimg img {
+  margin-top: 70%;
 }
 
 
@@ -16,7 +17,7 @@ body {
 
 body {
   margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
+  font: normal 75% Arial, Helvetica, sans-serif;
 }
 
 canvas {
@@ -39,10 +40,10 @@ canvas {
 
 /* ---- stats.js ---- */
 
-.count-particles{
+.count-particles {
   background: #000022;
   position: absolute;
-  top: 48px;
+  top: 8px;
   left: 0;
   width: 80px;
   color: #13E8E9;
@@ -55,23 +56,24 @@ canvas {
   font-weight: bold;
 }
 
-.js-count-particles{
+.js-count-particles {
   font-size: 1.1em;
 }
 
 #stats,
-.count-particles{
+.count-particles {
   -webkit-user-select: none;
 }
 
-#stats{
+#stats {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 
-.count-particles{
+.count-particles {
   border-radius: 0 0 3px 3px;
 }
+
 /* Hero Section */
 .hero-section {
   background: white;
@@ -92,10 +94,13 @@ canvas {
 
 @keyframes zoomBackground {
   0% {
-    background-size: 100%; /* Start with normal size */
+    background-size: 100%;
+    /* Start with normal size */
   }
+
   100% {
-    background-size: 110%; /* Slight zoom effect */
+    background-size: 110%;
+    /* Slight zoom effect */
   }
 }
 
@@ -113,7 +118,12 @@ canvas {
   font-size: var(--font-sizeh2);
   color: var(--font-colorh2);
   font-weight: var(--font-weight);
-  font-family: var(--font-familyh2);
+
+  /* .open-sans-<uniquifier> { */
+  font-family: "Roboto", serif;
+
+  /* } */
+
 }
 
 .herotext p {
@@ -148,8 +158,10 @@ canvas {
 .hero-section .form-container .form-group select,
 .hero-section .form-container .send-otp-button,
 .hero-section .form-container .submit-button {
-  height: 2rem; /* Consistent height for all fields */
-  box-sizing: border-box; /* Padding doesn't affect height */
+  height: 2rem;
+  /* Consistent height for all fields */
+  box-sizing: border-box;
+  /* Padding doesn't affect height */
 }
 
 .hero-section .form-container .form-group {
@@ -204,20 +216,22 @@ canvas {
   .form-container .form-group select,
   .form-container .send-otp-button,
   .form-container .submit-button {
-    height: 2rem; /* Slightly smaller height for smaller screens */
-    
+    height: 2rem;
+    /* Slightly smaller height for smaller screens */
+
   }
 }
 
 /* Image Animation */
 .hero-section .imganimation {
   position: relative;
-bottom: 1000px;
-right: 0px;
-
+  bottom: 72%;
+  right: 0px;
+  left: 10px;
 
 }
-.hero-section .imganimation img{
+
+.hero-section .imganimation img {
   width: 28%;
 }
 
@@ -227,50 +241,62 @@ right: 0px;
   animation: smoothRound 5s infinite ease-in-out;
 }
 
-.send-otp-button{
+.send-otp-button {
   padding-bottom: 30px;
   border-radius: 5px;
 }
-.hero-section input, textarea {
+
+.hero-section input,
+textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
 }
+
 @keyframes smoothRound {
   0% {
     border-radius: 50%;
   }
+
   50% {
     border-radius: 10%;
   }
+
   100% {
     border-radius: 50%;
   }
 }
-.hero-section .hero_aera img{
-  margin-top: 400px;
+
+.hero-section .hero_aera img {
+  /* margin-top: 400px; */
 }
+
+
+
 /* Mobile Adjustments */
 @media (min-width: 576px) {
-  .hero_aera img{
+  .hero_aera img {
     margin-top: 1px;
   }
+
   /* Image Animation */
   .hero-section .imganimation {
-  position: relative;
-  top:60px;
-  left: 70px;
-}
-.hero-section .imganimation img{
-  width: 10%;
-}
+    position: relative;
+    top: 50px;
+    left: 60px;
+  }
 
-.hero-section {
+  .hero-section .imganimation img {
+    width: 10%;
+  }
 
-  height: 100vh;
+  .hero-section {
 
-}
-.heroimg img{
-  margin-top: 0px;
-}
+    height: 100vh;
+
+  }
+
+  .heroimg img {
+    margin-top: 20%;
+  }
 }

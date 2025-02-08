@@ -12,10 +12,10 @@ function OurMission() {
                             Our Journey
                         </div>
                         <h2 className="Our-mission">
-                            Our Mission is to Deliver Fresh, Healthy, and Affordable Meals.
+                            Our Mission.
                         </h2>
                         <p className="Our-mission-p">
-                            We specialize in home-cooked meals for students, professionals, and families, ensuring quality and taste in every bite.
+                        Our mission is to provide structured education, hands-on training, and ongoing mentorship to women who aspire to start their own businesses. Through comprehensive programs covering finance, marketing, operations, and scaling strategies, we aim to bridge the gap between ambition and execution.
                         </p>
                     </div>
                     <div className="col-12 col-lg-6 mt-5  position-relative" id="Mission-storyimg" data-aos="fade-left">

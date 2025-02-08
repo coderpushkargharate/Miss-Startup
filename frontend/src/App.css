@@ -8,23 +8,23 @@
   /* Font Colors */
   --font-colorh2: #1d1c1c; /* Primary text color */
 
-  --font-colorp: #034EA2; /* Primary text color */
+  --font-colorp: #6c757d; /* Primary text color */
 
-  --font-sizeh2:  38px;
+  --font-sizeh2:  48px;
 
   --font-weight:  bold;
 
-  --font-sizep: 28px;
+  --font-sizep: 20px;
 
   --font-sizeh5: 15px;
 
   /* Fonts */
-  --font-familyh2: 'Arial, sans-serif';
+  --font-familyh2:""Roboto", serif'";
 
   --font-familyp: 'Arial, sans-serif';
 
   /* Background Colors */
-  --bg-color1: rgb(86, 178, 234); /* Light background */
+  --bg-color1: #fef7e5; /* Light background */
 
   --bg-color2: #fcfcfc; /* Light background */
 

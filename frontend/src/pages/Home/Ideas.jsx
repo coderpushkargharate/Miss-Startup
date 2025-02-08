@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../Home/ideas.css"
+import "../Home/ideas.css";
 
 const Ideas = () => {
   const [courses, setCourses] = useState([]);
@@ -14,7 +14,6 @@ const Ideas = () => {
 
   // Define categories with their respective API endpoints
   const categories = [
-    // { name: "Food & Beverage", endpoint: "/api/courses" },
     { name: "Food & Beverage", endpoint: "/api/ai" },
     { name: "Technology & Digital Services", endpoint: "/api/business" },
     { name: "Creative & Artistic Services", endpoint: "/api/science" },
@@ -57,40 +56,47 @@ const Ideas = () => {
   };
 
   return (
-    <div className="container-fulid" id="Ideas">
-       <h2 className="text-center mb-4 pt-5">
-          Ideas
-        </h2>
-        
-        <div className="container pb-5" >
-      
+    <div className="container-fluid" id="Ideas">
+      <h2 className="text-center mb-4 pt-5">Startup Ideas</h2>
+
+      <div className="container pb-5">
         {/* Category Buttons */}
-        <div className="d-flex justify-content-center mb-4 flex-wrap mt-5">
+        <div className="text-center mb-3">
           {categories.map((category) => (
             <button
-              key={category.name}
-              className={`btn ${selectedCategory?.name === category.name ? "btn" : "btn-outline-secondary"}`}
-              style={{
-                margin: "10px",
-                borderRadius: "20px",
-                padding: "10px 20px",
-                fontSize: "1rem",
-                fontWeight: "500",
-                backgroundColor: "var(--btn-color)"
-              }}
-              onClick={() => handleCategoryClick(category)}
-            >
-              {category.name}
-            </button>
+            key={category.name}
+            className={`btn ${selectedCategory?.name === category.name ? "active-btn" : ""}`}
+            style={{
+              margin: "10px",
+              borderRadius: "10px",
+              padding: "10px 20px",
+              fontSize: "1rem",
+              fontWeight: "700",
+              backgroundColor: selectedCategory?.name === category.name ? "orange" : "#fef7e5",
+              color: "#132B44",
+              border: "1px solid orange",
+              transition: "all 0.3s ease-in-out",
+              boxShadow: selectedCategory?.name === category.name ? "0px 4px 10px rgba(0, 0, 0, 0.2)" : "none",
+            }}
+            onClick={() => handleCategoryClick(category)}
+          >
+            {category.name}
+          </button>
+          
           ))}
         </div>
 
         {/* Course Cards */}
-        <div className="row px-lg-5 pt-2">
+        <div className="row px-lg-5 pt-2 ">
           {displayedCourses.length > 0 ? (
             displayedCourses.map((course) => (
-              <div key={course._id} className="col-lg-4 col-md-6  mb-4" style={{ cursor: "pointer" }} onClick={() => handleCardClick(course._id)}>
-                <div className="card h-100  shadow-sm">
+              <div
+                key={course._id}
+                className="col-lg-4 col-md-6 mb-5"
+                style={{ cursor: "pointer" }}
+                onClick={() => handleCardClick(course._id)}
+              >
+                <div className="card h-100 shadow-sm ">
                   <img
                     src={course.imageUrl || course.image}
                     alt={course.title}
@@ -101,15 +107,9 @@ const Ideas = () => {
                     <h5 className="card-title" style={{ fontWeight: "600", color: "#444" }}>
                       {course.title}
                     </h5>
-
-                    {/* Fill the card body */}
-                    <p className="card-text" style={{ flexGrow: "1", fontSize: "0.9rem" }}>
+                    <p className="card-text p-2" style={{ flexGrow: "1", fontSize: "1rem" }}>
                       {course.description || "No description available."}
                     </p>
-                    <p className="text-primary fw-bold" style={{ fontSize: "1.1rem" }}>
-                      {course.price}
-                    </p>
-
                   </div>
                 </div>
               </div>
@@ -123,13 +123,13 @@ const Ideas = () => {
         {courses.length > 6 && (
           <div className="text-center mt-4">
             <button
-              className="btn "
+              className="btn"
               style={{
-                borderRadius: "20px",
+                borderRadius: "10px",
                 padding: "10px 30px",
-                fontSize: "1rem",
-                fontWeight: "500",
-                backgroundColor: "var(--btn-color)"
+                fontSize: "1.1rem",
+                fontWeight: "600",
+                backgroundColor: "var(--btn-color)",
               }}
               onClick={handleShowMore}
             >
@@ -139,7 +139,6 @@ const Ideas = () => {
         )}
       </div>
     </div>
-
   );
 };
 

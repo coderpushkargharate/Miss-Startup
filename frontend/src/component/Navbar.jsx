@@ -57,7 +57,7 @@ const Navbar = () => {
                                 to="/startupcourse"
                                 onClick={closeNavbar}
                             >
-                                Startup Program
+                                Startup Programs
                             </Link>
                         </li>
                         <li className="nav-item me-5">
@@ -69,7 +69,7 @@ const Navbar = () => {
                                 Ideas
                             </Link>
                         </li>
-                        <li className="nav-item me-5">
+                        {/* <li className="nav-item me-5">
                             <Link
                                 className={`nav-link ${isActive("/blog")}`}
                                 to="/blog"
@@ -77,27 +77,27 @@ const Navbar = () => {
                             >
                                 Stories
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item me-5">
                             <Link
                                 className={`nav-link ${isActive("/aboutus")}`}
                                 to="/aboutus"
                                 onClick={closeNavbar}
                             >
-                                About
+                                About Us
                             </Link>
                         </li>
                     </ul>
                     {/* Contact Section */}
-                    <div className="d-flex me-5 align-items-center">
+                    <div className="d-flex me-5 align-items-center phonenummain">
                         <MdCall className="fs-5 me-2" />
                         <a
-                            href="https://wa.me/9970753038"
+                            href="https://wa.me/9420839096"
                             className="phonenum text-decoration-none text-dark"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            9970753038
+                            Call Us: 9420839096
                         </a>
                     </div>
                 </div>

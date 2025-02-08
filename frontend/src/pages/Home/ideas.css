@@ -3,9 +3,6 @@
     height: 30px;
   }
   
-  #Ideas .card:hover {
-    transform: translateY(-10px);
-  }
   
   #Ideas .badge {
     font-size: 0.75rem;
@@ -30,4 +27,37 @@
   #Ideas {
     background-color: var(--bg-color2);
   }
+
+  .card {
+    height: 100%; /* Ensures equal height */
+    width: 94%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: none;
+  }
+  
+  .card:hover {
+    box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    border: none;
+  }
+  
+  .card-body {
+    padding: 15px; /* Reduce inner padding */
+  }
+  
+  .card-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #666;
+    padding: 5px 0;
+  }
+  
+  .card-img-top {
+    height: 180px; /* Reduced height */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
   

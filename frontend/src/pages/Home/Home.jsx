@@ -6,10 +6,9 @@ import "aos/dist/aos.css";
 import Ideas from "./Ideas";
 import OurMission from "./OurMission";
 import Testimonials from "./Testimonials";
-import CounterSection from "./CounterSection";
 import img1 from "./Homeimg/homemade_cakes_4-removebg-preview.png";
 import img2 from "./Homeimg/hero_area_pattern_4 (1).png";
-
+import { FaWhatsapp } from "react-icons/fa";
 const Home = () => {
   const [formData, setFormData] = useState({
     childName: "",
@@ -70,142 +69,43 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration (in milliseconds)
-      once: true, // Whether animation should happen only once
-      offset: 200, // Offset (in pixels) from the original trigger point
+      duration: 1000,
+      once: true,
+      offset: 200,
     });
   }, []);
 
   return (
     <>
-      <div className="hero-section d-flex mt-4">
+      <div className="hero-section d-flex align-items-center">
         <div className="container position-relative mt-5">
-          <div className="row align-items-center mt-3">
-            <div className="col-lg-6 mt-lg-5 ps-lg-5 heroimg text-center">
+          <div className="row align-items-center ">
+            <div className="col-lg-6 text-center heroimg">
               <img
                 src={img1}
                 alt="Learning"
-                className="img-fluid ps-lg-5 ms-lg-5"
-                style={{ borderRadius: "15px" }}
+                className="img-fluid rounded"
               />
             </div>
-            <div className="col-lg-6 text-md-start text-center herotext mt-lg-5 ps-lg-5">
-              {/* <form
-                className="form-container mt-5 mt-lg-1"
-                onSubmit={handleSubmit}
-                data-aos="fade-up"
-              >
-                <h2>Book your Free Session</h2>
-                <p>Learn from India’s best teachers</p>
-
-                <div className="session-mode">
-                  <label>
-                    <input
-                      type="radio"
-                      name="sessionMode"
-                      value="Online"
-                      checked={formData.sessionMode === "Online"}
-                      onChange={handleInputChange}
-                    />
-                    Online
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="sessionMode"
-                      value="Offline"
-                      checked={formData.sessionMode === "Offline"}
-                      onChange={handleInputChange}
-                    />
-                    Offline
-                  </label>
-                </div>
-
-                <div className="form-group">
-                  <input
-                    type="text"
-                    name="childName"
-                    placeholder="Enter Name of your Child"
-                    value={formData.childName}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <input
-                    type="text"
-                    name="mobileNumber"
-                    placeholder="Enter your Mobile Number"
-                    value={formData.mobileNumber}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <button
-                    type="button"
-                    onClick={handleSendOtp}
-                    className="send-otp-button"
-                  >
-                    Send OTP
-                  </button>
-                </div>
-
-                {otpSent && (
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      name="otp"
-                      placeholder="Enter OTP"
-                      value={otp}
-                      onChange={(e) => setOtp(e.target.value)}
-                      required
-                    />
-                  </div>
-                )}
-
-                <div className="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <select
-                    name="state"
-                    value={formData.state}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">State</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Tamil Nadu">Tamil Nadu</option>
-                  </select>
-                </div>
-
-                <button type="submit" className="submit-button px-2 py-1">
-                  Schedule a Free Class
-                </button>
-              </form> */}
-              <h2>Empowering Women to Build Their Dreams</h2>
-              <p>From Idea to Launch – Your Journey Starts Here!</p>
-              <button className="p-2">Join Our Program Today!</button>
+            <div className="col-lg-6 text-md-start  herotext mt-5">
+              <p className="text-muted">Join Our Program Today!</p>
+              <h2 className="fw-bold " style={{color:"orange"}}>Empowering Women to Build Their Dreams</h2>
+              <p className="text-muted">From Idea to Launch – Your Journey Starts Here!</p>
+              <a  href="https://wa.me/9420839096"
+                            className="phonenum text-decoration-none text-dark"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                      <button className="btn px-4 py-2 d-flex align-items-center"style={{backgroundColor:"orange",fontSize:"18px",fontWeight:"bold"}}><FaWhatsapp style={{fontSize:"30px"}} className="me-2"/> WhatApp Us </button></a>
             </div>
-            <div className="position-absolute imganimation mt-5">
-              <img src={img2} alt="" />
-            </div>
+          </div>
+          <div className="position-absolute imganimation">
+            <img src={img2} alt="Background Pattern" className="img-fluid" />
           </div>
         </div>
       </div>
-      <OurMission />
       <Ideas />
-      <CounterSection />
+      <OurMission />
       <Testimonials />
     </>
   );

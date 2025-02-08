@@ -22,7 +22,7 @@
 
 /* Navbar Links */
 .navbar .navbar-nav .nav-link {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #333;
     transition: color 0.3s ease-in-out;
@@ -50,6 +50,13 @@
 .navbar .phonenum:hover {
     color: #007bff;
     text-decoration: underline;
+}
+
+.phonenummain{
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: orange;
 }
 
 /* Small Screen Navbar Styles */
