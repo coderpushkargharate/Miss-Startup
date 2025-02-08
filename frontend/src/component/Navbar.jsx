@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className="container">
                 {/* Logo */}
                 <Link className="navbar-brand" to="/">
-                    <img src="./src/component/logoimg/download__1_-removebg-preview.png" alt="Courselog" />
+                    <img src="src/assets/logo7-removebg-preview.png" alt="Courselog" className="Logoimg" />
                 </Link>
 
                 {/* Mobile Toggler */}

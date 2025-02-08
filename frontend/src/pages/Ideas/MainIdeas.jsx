@@ -98,7 +98,7 @@ const MainIdeas = () => {
                     <div className="course-info ps-4">
                       <h5 className="course-title">{course.title}</h5>
                       <p className="course-description w-75">{course.description}</p>
-                      <p className="course-price">${course.price}</p>
+                      {/* <p className="course-price">${course.price}</p> */}
                     </div>
                   </div>
                 </div>

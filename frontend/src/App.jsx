@@ -17,6 +17,7 @@ import Dashboard from "./dashboard/Dashboard";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import BlogDetail from "./pages/Blog/BlogDetail";
 import PrivacyPolicy from "./pages/Privacy Policy/Privacy Policy";
+import RefundPolicy from "./pages/RefundPolicy/RefunPolicy";
 
 
 const App = () => {
@@ -55,6 +56,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/RefundPolicy" element={<RefundPolicy/>} />
 
         <Route
           path="/dashboard"
