@@ -16,7 +16,8 @@ import Home from "./pages/Home/Home";
 import Dashboard from "./dashboard/Dashboard";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import BlogDetail from "./pages/Blog/BlogDetail";
-import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"; // Ensure this path is correct
+import PrivacyPolicy from "./pages/Privacy Policy/Privacy Policy";
+
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
