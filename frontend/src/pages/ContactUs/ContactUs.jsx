@@ -198,7 +198,7 @@ function ContactUs() {
                         <div className="row">
                             {[{ icon: <IoLocationOutline />, title: "Head Office", text: "Jln Cempaka Wangi No 22\nJakarta - Indonesia" },
                               { icon: <FaPhoneAlt />, title: "Let's Talk", text: "Phone: +6221.2002.2012\nFax: +6221.2002.2013" },
-                              { icon: <CiMail />, title: "Email Support", text: "support@yourdomain.tld\nhello@yourdomain.tld" }]
+                              { icon: <CiMail />, title: "Email Support", text: "hello@yourdomain.tld" }]
                                 .map((card, index) => (
                                     <div className="col-md-4" key={index}>
                                         <div className="card">

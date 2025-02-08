@@ -49,7 +49,7 @@ const Home = () => {
     }
 
     try {
-      const response = await axios.post("https://your-backend-endpoint.com/api/sessions", formData);
+      const response = await axios.post("http://localhost:5000/api/sessions", formData);
       if (response.status === 200) {
         alert("Thank you for submitting your details.");
         setFormData({

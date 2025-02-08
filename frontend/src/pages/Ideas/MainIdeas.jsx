@@ -12,15 +12,15 @@ const MainIdeas = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const categories = [
-    { name: "Artificial Intelligence", endpoint: "/api/ai" },
-    { name: "Business", endpoint: "/api/business" },
-    { name: "Computer Science", endpoint: "/api/science" },
-    { name: "Design Architect", endpoint: "/api/designArchitect" },
+    { name: "Food & Beverage", endpoint: "/api/ai" },
+    { name: "Technology & Digital Services", endpoint: "/api/business" },
+    { name: "Creative & Artistic Services", endpoint: "/api/science" },
+    { name: "Education & Personal Development", endpoint: "/api/designArchitect" },
   ];
 
   useEffect(() => {
     axios
-      .get(`https://miss-startup-1913.onrender.com${selectedCategory.endpoint}`)
+      .get(`http://localhost:5000${selectedCategory.endpoint}`)
       .then((response) => setCourses(response.data))
       .catch((err) => console.error(err));
 
@@ -111,6 +111,9 @@ const MainIdeas = () => {
           </div>
         </div>
       </div>
+
+
+
     </div>
   );
 };

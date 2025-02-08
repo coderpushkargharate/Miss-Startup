@@ -16,9 +16,9 @@ const Ideas = () => {
   const categories = [
     // { name: "Food & Beverage", endpoint: "/api/courses" },
     { name: "Food & Beverage", endpoint: "/api/ai" },
-    { name: "Business", endpoint: "/api/business" },
-    { name: "Computer Science", endpoint: "/api/science" },
-    { name: "Design Architect", endpoint: "/api/designArchitect" },
+    { name: "Technology & Digital Services", endpoint: "/api/business" },
+    { name: "Creative & Artistic Services", endpoint: "/api/science" },
+    { name: "Education & Personal Development", endpoint: "/api/designArchitect" },
   ];
 
   // Fetch courses based on the selected category endpoint
