@@ -14,9 +14,10 @@
     transform: scale(1.05); /* Slight zoom effect */
 }
 
-#Footer .footerlogo {
-    height: 50px;
-    width: 250px;
+#Footer .img-fluid {
+    margin-top: 5px;
+    height: 25%;
+    width: 70%;
 }
 
 #Footer .footer p,

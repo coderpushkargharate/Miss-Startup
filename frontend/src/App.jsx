@@ -16,6 +16,8 @@ import Home from "./pages/Home/Home";
 import Dashboard from "./dashboard/Dashboard";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import BlogDetail from "./pages/Blog/BlogDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"; // Ensure this path is correct
+
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -39,23 +41,19 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
 
   return (
     <>
-      {shouldShowHeaderFooter && (
-        <>
-          <Navbar />
-        </>
-      )}
+      {shouldShowHeaderFooter && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
-        {/* <Route path="/blog/:blogId" element={<BlogDetail/>}/> */}
+        {/* <Route path="/blog/:blogId" element={<BlogDetail />} /> */}
         {/* <Route path="/course/:courseId" element={<CourseDetails />} /> */}
         <Route path="/mainideas" element={<Mainideas />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/startupcourse" element={<StartupCourse/>}/>
+        <Route path="/startupcourse" element={<StartupCourse />} />
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/faq" element={<FAQ/>}/>
-        <Route path="/ContactUs" element={<ContactUs/>}/>
-        
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 
         <Route
           path="/dashboard"

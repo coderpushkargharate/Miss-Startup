@@ -13,22 +13,22 @@ const Footer = () => {
           {/* Company Section */}
           <div className="col-12 col-md-3 mb-4">
             <Link to="#" className="text-white text-decoration-none">
-              <img src="./src/component/logoimg/download__1_-removebg-preview.png" alt="Logo" className="img-fluid w-75" />
+              <img src="src/assets/logo7-removebg-preview.png" alt="Logo" className="img-fluid " />
             </Link>
             <p className="mb-1 mt-3">
               <Link to="#" className="text-white text-decoration-none d-block">
-                <i className="bi bi-geo-alt-fill"></i> 500 Treat Ave, Suite 200<br />
-                San Francisco, CA 94110
+                <i className="bi bi-geo-alt-fill"></i> 2nd Floor, Saikripa Building, <br />
+                Trimurti Chowk, Pune-46
               </Link>
             </p>
             <p className="mb-1">
               <Link to="tel:1-702-800-2690" className="text-white text-decoration-none d-block">
-                <i className="bi bi-telephone-fill"></i> 1-702-800-2690 (Support)
+                <i className="bi bi-telephone-fill"></i> 9960756292 (Support)
               </Link>
             </p>
             <p className="mb-3">
               <Link to="mailto:support@courselog.com" className="text-white text-decoration-none d-block">
-                <i className="bi bi-envelope-fill"></i> support@courselog.com
+                <i className="bi bi-envelope-fill"></i> contact@finlectechnologies.com
               </Link>
             </p>
             <div className="d-flex gap-3" id="socialmediaimg">
@@ -41,7 +41,7 @@ const Footer = () => {
 
           {/* Platform Section */}
           <div className="col-6 col-md-3 mb-4 ps-lg-5">
-            <h5 className="text-white mb-3">Support</h5>
+            <h5 className="text-white mb-3 text-bold">Support</h5>
             <ul className="list-unstyled">
               <li><Link to="/FAQ" className="text-white text-decoration-none mt-2">Faq</Link></li>
               <li><Link to="/ContactUs" className="text-white text-decoration-none">Contact Us</Link></li>
@@ -51,11 +51,12 @@ const Footer = () => {
 
           {/* Company Section */}
           <div className="col-6 col-md-3 mb-4 ps-lg-5">
-            <h5 className="text-white mb-3">Company</h5>
+            <h5 className="text-white mb-3 Text-bold">Company</h5>
             <ul className="list-unstyled">
               <li><Link to="/AboutUs" className="text-white text-decoration-none mt-2">About Us</Link></li>
               <li><Link to="/StartupCourse" className="text-white text-decoration-none mt-2">Pricing</Link></li>
               <li><Link to="/Blog" className="text-white text-decoration-none mt-2  ">Blog</Link></li>
+              <li><Link to="/PrivacyPolicy" className="text-white text-decoration-none mt-2  ">Privacy Policy</Link></li>
               
             </ul>
           </div>

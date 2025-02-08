@@ -87,8 +87,8 @@
     font-size: 18px;
 }
 
-#about-storyimg {
-    background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(./Aboutimg/about-story-bg.png);
+#about #Vision-storyimg {
+    background: url(src/assets/vision1.avif);
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;
@@ -96,7 +96,15 @@
     border-radius: 10px;
     box-shadow: 1px 2px 190px rgb(149, 149, 227);
 }
+#about #Mission-storyimg{
 
+    background-image: url(../../assets/mission.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+
+}
+/* 
 #about .logo {
     padding: 20px;
     position: absolute;
@@ -112,7 +120,7 @@
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
     animation: pulsate 1.5s infinite;
     cursor: pointer;
-}
+} */
 
 
 @keyframes pulsate {

@@ -73,7 +73,7 @@ const AboutUs = () => {
 
     return (
         <div className="container-fluid" id="about">
-            {/* Mission Section */}
+            {/* Vision Section */}
             <div className="container-fluid">
                 <div className="row mx-lg-5 py-lg-4">
                     <div className="col-12 ps-lg-5 col-lg-6 mt-lg-4 d-flex flex-column ">
@@ -81,14 +81,13 @@ const AboutUs = () => {
                             Our Journey
                         </div>
                         <h2 className="Our-mission">
-                            Our Mission is to Deliver Fresh, Healthy, and Affordable Meals.
+                        Our Vision.
                         </h2>
                         <p className="Our-mission-p">
-                            We specialize in home-cooked meals for students, professionals, and families, ensuring quality and taste in every bite.
-                        </p>
+                        To create a world where every woman has the knowledge, confidence, and resources to build and scale her own business, fostering financial independence and entrepreneurial success.                        </p>
                     </div>
-                    <div className="col-12 col-lg-6 mt-5  position-relative" id="Mission-storyimg">
-                        <VscTriangleRight className="logo" />
+                    <div className="col-12 col-lg-6 mt-5  position-relative" id="Vision-storyimg">
+                        
                     </div>
                 </div>
             </div>
@@ -96,7 +95,31 @@ const AboutUs = () => {
 
 
 
-            {/* Fun Fact Section */}
+            {/* Mission Section */}
+            <div className="container-fluid mt-5 py-5">
+                <div className="row mx-lg-5 py-lg-4">
+                <div className="col-12 col-lg-6  " id="Mission-storyimg">
+                        
+                </div>
+
+                    <div className="col-12 ps-lg-5 col-lg-6 mt-lg-4 d-flex flex-column ">
+                        <div className="col-12 py-3 fs-5 " id="ourstudy">
+                            Our Journey
+                        </div>
+                        <h2 className="Our-mission">
+                        Our Mission.
+                        </h2>
+                        <p className="Our-mission-p">
+                        Our mission is to provide structured education, hands-on training, and ongoing mentorship to women who aspire to start their own businesses. Through comprehensive programs covering finance, marketing, operations, and scaling strategies, we aim to bridge the gap between ambition and execution.                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+            {/* Fun Fact Section
             <div className="container-flui text-dark py-5">
                 <div className="container py-5">
                     <div className="row justify-content-center">
@@ -116,10 +139,10 @@ const AboutUs = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Providingbrilliant Section */}
-            <div className="container-fluid" id="Providingbrilliant">
+            <div className="container-fluid mt-5 py-5" id="Providingbrilliant">
                 <div className="container">
                     <div className="row px-lg-5">
                         <div className="col-12 col-lg-6 ps-lg-5 py-5" data-aos="fade-right">

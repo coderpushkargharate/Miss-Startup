@@ -25,7 +25,7 @@
 }
 
 /* Image Background and Position */
-#Mission-storyimg {
+#Mission #Mission-storyimg {
     background: linear-gradient(rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)),
         url(./Homeimg/about-story-bg.png);
     background-repeat: no-repeat;
